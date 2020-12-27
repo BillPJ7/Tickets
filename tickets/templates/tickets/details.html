@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Ticket distributer</title>
+    <link rel="stylesheet" type="text/css" href="1-col.css">
+  </head>
+    <h1>Details</h1>
+    <form action="{% url 'tickets:details' owner.id %}" method="post">
+    {% csrf_token %}
+      <body>
+        <input type="submit" name="btnBack" value="Back">
+        &emsp;&emsp;&emsp;
+        Number {{tenbestnbr}} of 10 best
+        <input value="{{tenbestnbr}}" name="TenBestNbr" style="visibility:hidden">
+        <p></p>
+        <table>
+            <tr>
+                <td>People:&emsp;&emsp;&emsp;&emsp;</td>
+                <td>Duplicate&emsp;&emsp;&emsp;&emsp;</td>
+                <td>Back to back&emsp;&emsp;&emsp;&emsp;</td>
+                <td>Average rating</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>teams:</td>
+                <td>home games:</td>
+                <td>per ticket:</td>
+            </tr>
+            {% for p in peoplestatus %}
+                <tr>
+                    <td>{{p.person.name}}</td>
+                    <td>{{p.DuplicateTeams}}</td>
+                    <td>{{p.BackToBack}}</td>
+                    <td>{{p.AverageRating}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <p></p>
+      </body>
+    </form>
+</html>

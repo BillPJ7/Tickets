@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <h1>Ticket info</h1>
+    <form action="{% url 'tickets:ticketinfo' owner.id %}" method="post">
+    {% csrf_token %}
+    <script>
+        function ClearTeam() {
+            document.getElementById('HomeTeam').length = 0;
+        }
+        function RevealSubmit() {
+            document.getElementById("btnSubmitAll").style.visibility = "visible"; 
+        }
+    </script>
+    <p></p>
+    <p></p>
+    <table>
+    <label>League:</label>
+    <select onchange="ClearTeam()" name="HomeLeague" id="HomeLeague">
+        {% for l in leagues %}
+            <option value={{ l.name }} {% if l.name == league %} selected="selected" {% endif %}>{{ l.name }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" name="btnSubmitLeague" value="Submit">
+    <label>Team:</label>
+    <select name="HomeTeam" id="HomeTeam">
+        {% for t in teams %}
+            <option value='{{ t.name }}' {% if t.name == team %} selected="selected" {% endif %}>{{ t.name }}</option>
+        {% endfor %}
+    </select>
+    </table>
+    <p></p>
+    <label>Number of tickets per game:</label>
+    <input value={{ ticsper|default_if_none:"&nbsp" }} name="TicsPer" id="TicsPer">
+    <p></p>
+    <input type="submit" name="btnSubmitAll" id="btnSubmitAll" value="Submit" {% if fromdist == True %} style="visibility:hidden" {% endif %}>
+    <input type="submit" name="btnBack" name="btnBack" value="Back" {% if fromdist == False %} style="visibility:hidden" {% endif %}>
+    <button type="button" onclick="RevealSubmit()" id="EditButton" name="EditButton" {% if fromdist == False %} style="visibility:hidden" {% endif %}>Edit</button>
+    <input {% if fromdist == True %} value="FDYes" {% endif %}{% if fromdist == False %} value="FDNo" {% endif %} name="FromDist" id="FromDist" style="visibility:hidden">
+    </form>    
+
+</html>

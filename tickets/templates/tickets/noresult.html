@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Ticket distributer</title>
+    <link rel="stylesheet" type="text/css" href="1-col.css">
+  </head>
+    <h1>No results</h1>
+    <form action="{% url 'tickets:noresult' owner.id %}" method="post">
+    {% csrf_token %}
+      <body>
+        <input type="submit" name="btnBack" id="btnBack" value="Back">
+        <p></p>
+
+            {% for n in noresultmessages %}
+
+                    {{n.causeinfo}}<p></p>
+
+            {% endfor %}
+            <input value={{ from }} name="From" id="From" style="visibility:hidden">
+      </body>
+    </form>
+</html>

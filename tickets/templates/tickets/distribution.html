@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Ticket Distributer</title>
+    <link rel="stylesheet" type="text/css" href="1-col.css">
+  </head>
+    <h1>Distribution</h1>
+    <form action="{% url 'tickets:distribution' owner.id %}" method="post">
+    {% csrf_token %}
+<script>
+var TenBestNbr = 1;
+var ShrinkGrow = "Shrink";
+var PersonCnt, GameCnt, TB1, TB2, TB3, TB4, TB5, TB6, TB7, TB8, TB9, TB10;
+function LoadJobs(PersonCount, GameCount, BestTen, TenBest1, TenBest2, TenBest3, TenBest4, TenBest5, TenBest6, TenBest7, TenBest8, TenBest9, TenBest10, TenBestNumber) {
+    PersonCnt = PersonCount; GameCnt = GameCount
+    TB1 = TenBest1; TB2 = TenBest2; TB3 = TenBest3; TB4 = TenBest4; TB5 = TenBest5; TB6 = TenBest6; TB7 = TenBest7; TB8 = TenBest8; TB9 = TenBest9; TB10 = TenBest10;
+    FindBestTen(BestTen);
+    TenBestNbr = TenBestNumber;
+    FindTenBest(TenBestNbr);
+    e = document.getElementById("TenBestNumber");
+    e.value = TenBestNbr.toString();
+}
+function Resize(){
+    if(ShrinkGrow == "Shrink"){
+        ShrinkGrow = "Grow";
+        for (var d = 1; d <= GameCnt; d++){
+            e = document.getElementById("D" + d.toString());
+            e.style="width:10px";
+            e = document.getElementById("C" + d.toString());
+            e.style="width:10px";
+        }
+        for (var p = 1; p <= PersonCnt; p++){
+            for (var g = 1; g <= GameCnt; g++){
+                e = document.getElementById("R" + p.toString() + "C" + g.toString());
+                e.style="width:10px";
+            }
+        }
+    }else{
+        ShrinkGrow = "Shrink";
+        for (var d = 1; d <= GameCnt; d++){
+            e = document.getElementById("D" + d.toString());
+            e.style="width:35px";
+            e = document.getElementById("C" + d.toString());
+            e.style="width:35px";
+        }
+        for (var p = 1; p <= PersonCnt; p++){
+            for (var g = 1; g <= GameCnt; g++){
+                e = document.getElementById("R" + p.toString() + "C" + g.toString());
+                e.style="width:35px";
+            }
+        }
+    }
+    e = document.getElementById("btnShrink");
+    e.value = ShrinkGrow;
+}
+function string2Array(BestTen) {
+    eval("var result = " + BestTen);
+    return result;
+}
+function FindBestTen(BestTen) {
+    BT = string2Array(BestTen);
+    var bCount = 0;
+    for (var b in BT) {
+        bCount += 1;
+        diff = BT[b][0];
+        bads = BT[b][1];
+        e = document.getElementById("Bads"+bCount);
+        e.value = bads.toString();
+        e = document.getElementById("Result"+bCount);
+        e.value = diff.toString();
+    }
+}
+function ClearCells(){
+    for (var p = 1; p <= PersonCnt; p++){
+        for (var g = 1; g <= GameCnt; g++){
+            e = document.getElementById("R" + p.toString() + "C" + g.toString());
+            e.value = "";
+        }
+    }
+}
+function PlusMinus(PlusMinus){
+    if(TenBestNbr + PlusMinus < 11 && TenBestNbr + PlusMinus > 0){
+        ClearCells(PersonCnt, GameCnt);
+        TenBestNbr += PlusMinus;
+        e = document.getElementById("TenBestNumber");
+        e.value = TenBestNbr.toString();
+        FindTenBest();
+    }
+}
+function FindTenBest(){
+    switch (TenBestNbr) {
+        case 1:
+            TB = string2Array(TB1);
+            break;
+        case 2:
+            TB = string2Array(TB2);
+            break;
+        case 3:
+            TB = string2Array(TB3);
+            break;
+        case 4:
+            TB = string2Array(TB4);
+            break;
+        case 5:
+            TB = string2Array(TB5);
+            break;
+        case 6:
+            TB = string2Array(TB6);
+            break;
+        case 7:
+            TB = string2Array(TB7);
+            break;
+        case 8:
+            TB = string2Array(TB8);
+            break;
+        case 9:
+            TB = string2Array(TB9);
+            break;
+        case 10:
+            TB = string2Array(TB10);
+            break;
+        default:
+            window.alert('oops');
+    }  
+    for (var t in TB) {
+        Person = TB[t][0].toString();
+        Game = TB[t][1].toString();
+        Val = TB[t][2].toString();
+        CellName = "R" + Person + "C" + Game;
+        e = document.getElementById(CellName);
+        e.value = Val;
+    }
+}
+</script>
+  <body onload="LoadJobs({{personcnt}}, {{gamecnt}}, '{{bestten}}', '{{tenbest1}}', '{{tenbest2}}', '{{tenbest3}}', '{{tenbest4}}', '{{tenbest5}}', '{{tenbest6}}', '{{tenbest7}}', '{{tenbest8}}', '{{tenbest9}}', '{{tenbest10}}', {{tenbestnbr}})">
+    <p></p>
+    <table>
+        <tr>
+            <td><label>Minutes to run</label></td>
+            <td>&emsp;&emsp;</td>
+            <td><label>10 best results</label></td>
+            <td>Top 10 stats:</td>
+            <td><label>Bads</label></td>
+            <td><label>Rating spread</label></td>
+        </tr>
+        <tr>
+            <td>
+                <input value="1" name="Minutes" id="Minutes" style="width:40px">
+                <input value="Run" type="submit" name="btnRun" id="btnRun">
+            </td>
+            <td>&emsp;&emsp;</td>
+            <td>
+                <input value="1" name="TenBestNumber" id="TenBestNumber" style="width:40px">
+                <button type="button" onclick="PlusMinus(1)" id="btnPlus" name="btnPlus" style="width:30px">+</button>
+                <button type="button" onclick="PlusMinus(-1)" id="btnMinus" name="btnMinus" style="width:30px">-</button>
+            </td>
+            <td>&emsp;&emsp;</td>
+            <td><input name="Bads1" id="Bads1" style="width:40px"></td>
+            <td><input name="Result1" id="Result1"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>&emsp;&emsp;</td>
+            <td>
+                <label>Of:</label>
+                <input value={{tries}} name="TotalTries" id="TotalTries" style="width:80px">
+            </td>
+            <td>&emsp;&emsp;</td>
+            <td><input name="Bads2" id="Bads2" style="width:40px"></td>
+            <td><input name="Result2" id="Result2"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>&emsp;&emsp;</td>
+            <td>
+                <button type="submit" id="btnDetails" name="btnDetails">Details</button>
+                <button type="submit" id="btnReport" name="btnReport">Report</button>
+            </td>
+            <td>&emsp;&emsp;</td>
+            <td><input name="Bads3" id="Bads3" style="width:40px"></td>
+            <td><input name="Result3" id="Result3"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>&emsp;&emsp;</td>
+            <td></td>
+            <td>&emsp;&emsp;</td>
+            <td><input name="Bads4" id="Bads4" style="width:40px"></td>
+            <td><input name="Result4" id="Result4"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>&emsp;&emsp;</td>
+            <td></td>
+            <td>&emsp;&emsp;</td>
+            <td><input name="Bads5" id="Bads5" style="width:40px"></td>
+            <td><input name="Result5" id="Result5"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>&emsp;&emsp;</td>
+            <td></td>
+            <td>&emsp;&emsp;</td>
+            <td><input name="Bads6" id="Bads6" style="width:40px"></td>
+            <td><input name="Result6" id="Result6"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>&emsp;&emsp;</td>
+            <td></td>
+            <td>&emsp;&emsp;</td>
+            <td><input name="Bads7" id="Bads7" style="width:40px"></td>
+            <td><input name="Result7" id="Result7"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>&emsp;&emsp;</td>
+            <td></td>
+            <td>&emsp;&emsp;</td>
+            <td><input name="Bads8" id="Bads8" style="width:40px"></td>
+            <td><input name="Result8" id="Result8"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>&emsp;&emsp;</td>
+            <td></td>
+            <td>&emsp;&emsp;</td>
+            <td><input name="Bads9" id="Bads9" style="width:40px"></td>
+            <td><input name="Result9" id="Result9"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>&emsp;&emsp;</td>
+            <td></td>
+            <td>&emsp;&emsp;</td>
+            <td><input name="Bads10" id="Bads10" style="width:40px"></td>
+            <td><input name="Result10" id="Result10"></td>
+        </tr>
+    </table>
+    <p></p>
+<div class="divScroll">
+    <table>
+        <tr>
+            <td></td>
+            {% for s in schedule %}
+                <td><input value={{ s.0 }} name="D{{forloop.counter}}" id="D{{forloop.counter}}" style="width:35px"></td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td></td>
+            {% for s in schedule %}
+                <td><input type="text" name="C{{forloop.counter}}" id="C{{forloop.counter}}" value={{s.1}} style="width:35px"></td>
+            {% endfor %}
+        </tr>
+
+        {% for p in people %}
+        <tr>
+            <td>{{ p.name }}</td>
+            {% for s in schedule %}
+                <td><input name="R{{forloop.parentloop.counter}}C{{forloop.counter}}" id="R{{forloop.parentloop.counter}}C{{forloop.counter}}" style="width:35px"></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+    <p></p>
+    <label>Edit info:</label>
+    <button type="submit" name="btnTickets">Tickets</button>
+    <button type="submit" name="btnPeople">People</button>
+    <button type="submit" name="btnRequirements">Requirements</button>
+    &emsp;&emsp;
+    <input type="button" value="Shrink" onclick="Resize()" id="btnShrink" name="btnShrink">
+  </body>
+
+        
+    </form>
+</html>

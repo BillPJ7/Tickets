@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Ticket distributer</title>
+    <link rel="stylesheet" type="text/css" href="1-col.css">
+  </head>
+    <h1>Requirements</h1>
+    <form action="{% url 'tickets:requirements' owner.id %}" method="post">
+    {% csrf_token %}
+<script>
+var s = 0;
+function No(){
+    s = -1;
+}
+function PreAssign(){
+    let t=document.getElementById('PACombo');
+    s = t.value;
+}
+function Clear(){
+    s = 0;
+}
+function CellIt(ElemID){
+    if(s == -1){
+        let t=document.getElementById(ElemID);
+        t.value = 'no';
+    }else if(s == 0){
+        let t=document.getElementById(ElemID);
+        t.value = '';
+    }else{ //s is a string now
+        let t=document.getElementById(ElemID);
+        t.value = s;
+    }
+}
+function RevealSubmit() {
+    document.getElementById("Submission").style.visibility = "visible"; 
+}
+function string2Array(ReqString) {
+    eval("var result = " + ReqString);
+    return result;
+}
+function FindReqs(ReqString) {
+    Reqs = string2Array(ReqString);
+    for (var r in Reqs) {
+        person = Reqs[r][0];
+        game = Reqs[r][1];
+        req = Reqs[r][2];
+        e = document.getElementById("R"+person.toString()+"C"+game.toString());
+        if(req == 0){
+            s = 'no';
+        }else{
+            s = req.toString();
+        }
+        e.value = s;
+    }
+}
+</script>
+  <body onload="FindReqs('{{reqstring}}')">
+    <p></p>
+    <table>
+        <tr>
+            <td>
+                <button type="button" onclick="No()" id="NoButton" name="NoButton">Cannot Attend</button>
+            </td>
+            <td>
+                <select onchange="PreAssign()" name="PAComo" id="PACombo">
+                    {% for t in ticsperrange %}
+                        <option value={{t}}>{{t}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+            <td>
+                <button type="button" onclick="PreAssign()" id="PAButton" name="PAButton">Pre-assign</button>
+            </td>
+            <td>
+                <button type="button" onclick="Clear()" id="ClearButton" name="ClearButton">Clear</button>
+            </td>
+        </tr>
+    </table>
+    <p></p>
+
+  <table>
+        <tr>
+            <td></td>
+            {% for s in schedule %}
+                <td>{{ s.0 }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td></td>
+            {% for s in schedule %}
+                <td>{{ s.1 }}</td>
+            {% endfor %}
+        </tr>
+
+        {% for p in people %}
+        <tr>
+            <td>{{ p.name }}</td>
+            {% for s in schedule %}
+                <td><input readonly onclick="CellIt('R{{forloop.parentloop.counter}}C{{forloop.counter}}')" name="R{{forloop.parentloop.counter}}C{{forloop.counter}}" id="R{{forloop.parentloop.counter}}C{{forloop.counter}}" style="width:30px"></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+
+    <p></p>
+    <input type="submit" value="Submit" name="Submission" id="Submission" {% if fromdist == True %} style="visibility:hidden" {% endif %}>
+    <input type="submit" name="btnBack" id="btnBack" value="Back" {% if fromdist == False %} style="visibility:hidden" {% endif %}>
+    <button type="button" onclick="RevealSubmit()" id="EditButton" name="EditButton" {% if fromdist == False %} style="visibility:hidden" {% endif %}>Edit</button>   
+  </body>
+
+        
+    </form>
+</html>

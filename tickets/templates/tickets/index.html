@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <form method="post">
+    {% csrf_token %}
+        <h1>Welcome to Ticket Distributer</h1>
+        <p></p>
+    <table>
+        <tr>
+            <td></td>
+            <td>Before you start check----</td>
+            <td>Available leagues:</td>
+        </tr>
+        <tr>
+            <td>Username:</td>
+            <td><input type="text" id="Name" name="Name" required></td>
+             <td>&emsp;
+                <select name="list_box_name">
+                {% for l in leagues %}
+                    <option>{{ l.name }}</option>
+                {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="text" id="Pwd" name="Pwd" required></td>
+             <td>&emsp;
+                <a href="mailto:billwillspill@yahoo.com?subject=League request">Request league</a>
+            </td>
+        </tr>
+        <tr>
+            <td><button type="submit" name="btnNewUser">New user</button></td>
+            <td><button type="submit" name="btnExistingUser">Existing user</button></td>
+        </tr>
+    </form> 
+
+</html>

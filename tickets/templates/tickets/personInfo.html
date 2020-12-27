@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <h1>Person info</h1>
+    <form action="{% url 'tickets:personinfo' owner.id %}" method="post">
+    {% csrf_token %}
+<script>
+    function RevealSubmit() {
+        document.getElementById("Submission").style.visibility = "visible"; 
+    }
+</script>
+    <p></p>
+    <label>Tickets remaining:</label>
+    <input value={{ ticsremaining }}>
+    <p></p>
+  <table>
+        <tr>
+            <td>Name</td>
+            {% for t in ticsperrange %}
+                <td>{{ forloop.counter }} tickets</td>
+            {% endfor %}
+        </tr>
+        {% for p in people %}
+            <tr>         
+            {% for t in p %}
+                <td><input value={{ t|default_if_none:"&nbsp" }} name="T{{forloop.parentloop.counter}},{{forloop.counter}}" id="T{{forloop.parentloop.counter}},{{forloop.counter}}" style="width:70px"></td>
+            {% endfor %}
+            </tr>
+            
+        {% endfor %}
+        {% if fromdist == False %}
+            <td><input name="T{{nextperson}},1" id="T{{nextperson}},1" style="width:70px"></td>
+            {% for t in ticsperrange2 %}
+                <td><input value="&nbsp" name="T{{nextperson}},{{t}}" id="T{{nextperson}},{{t}}" style="width:70px"></td>
+            {% endfor %}
+        {% endif %}
+  </table>
+
+
+    <input type="submit" id="Submission" name="Submission" value="Submit" {% if fromdist == True %} style="visibility:hidden" {% endif %}>
+    <input type="submit" name="btnBack" name="btnBack" value="Back" {% if fromdist == False %} style="visibility:hidden" {% endif %}>
+    <button type="button" onclick="RevealSubmit()" id="EditButton" name="EditButton" {% if fromdist == False %} style="visibility:hidden" {% endif %}>Edit</button>
+    <input {% if fromdist == True %} value="FDYes" {% endif %}{% if fromdist == False %} value="FDNo" {% endif %} name="FromDist" id="FromDist" style="visibility:hidden">
+    </form>
+</html>
