@@ -24,13 +24,17 @@ class DataJobs:
     def GetLeagues():
         return League.objects.all()
     
+    def GetLeagueID(LeagueName):
+        L = League.objects.get(name=LeagueName)
+        return L.id
+    
     def DeleteTeams(LeagueName):
         L = League.objects.get(name=LeagueName)
         Team.objects.filter(league_id = L.id).delete()
         
     def DeleteSchedule(LeagueName):
         L = League.objects.get(name=LeagueName)
-        T = Team.objects.filter(league=LeagueName)
+        T = Team.objects.filter(league=L.id)
         for t in T:
             Schedule.objects.filter(Q(league_id = t.id) | Q(hometeam = t.id)).delete()
     

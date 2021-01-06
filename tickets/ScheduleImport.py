@@ -44,9 +44,10 @@ class ImportSchedule:
             content = f.readlines()
         for line in content:
             words = line.split('|')
-            H = Team.objects.get(name=words[1], league_id=5)
+            id = DataJobs.GetLeagueID('NHL')
+            H = Team.objects.get(name=words[1], league_id=id)
             HomeID = H.id
-            A = Team.objects.get(name=words[2].rstrip('\n'), league_id=5)
+            A = Team.objects.get(name=words[2].rstrip('\n'), league_id=id)
             date_object = datetime.strptime(words[0], "%m/%d/%y")
             post_instance = Schedule.objects.create(date = date_object, hometeam = HomeID, awayteam = A)   
             
@@ -57,9 +58,10 @@ class ImportSchedule:
             content = f.readlines()
         for line in content:
             words = line.split('|')
-            H = Team.objects.get(name=words[1], league_id=5)
+            id = DataJobs.GetLeagueID('NBA')
+            H = Team.objects.get(name=words[1], league_id=id)
             HomeID = H.id
-            A = Team.objects.get(name=words[2].rstrip('\n'), league_id=5)
+            A = Team.objects.get(name=words[2].rstrip('\n'), league_id=id)
             date_object = datetime.strptime(words[0], "%m/%d/%y")
             post_instance = Schedule.objects.create(date = date_object, hometeam = HomeID, awayteam = A) 
             
@@ -70,8 +72,9 @@ class ImportSchedule:
             content = f.readlines()
         for line in content:
             words = line.split('|')
-            H = Team.objects.get(name=words[1], league_id=5)
+            id = DataJobs.GetLeagueID('NFL')
+            H = Team.objects.get(name=words[1], league_id=id)
             HomeID = H.id
-            A = Team.objects.get(name=words[2].rstrip('\n'), league_id=5)
+            A = Team.objects.get(name=words[2].rstrip('\n'), league_id=id)
             date_object = datetime.strptime(words[0], "%m/%d/%y")
             post_instance = Schedule.objects.create(date = date_object, hometeam = HomeID, awayteam = A) 

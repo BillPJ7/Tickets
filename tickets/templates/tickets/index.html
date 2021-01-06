@@ -28,7 +28,7 @@ function MyPhone(){
         </tr>
         <tr>
             <td>Username:</td>
-            <td><input type="text" id="Name" name="Name" onkeypress="MyPhone()" required></td>
+            <td><input type="text" id="Name" name="Name" {% if admin == True %} value="6107314184" {% endif %} onkeypress="MyPhone()" required></td>
              <td>&emsp;
                 <select name="list_box_name">
                 {% for l in leagues %}
@@ -39,7 +39,7 @@ function MyPhone(){
         </tr>
         <tr>
             <td>Password:</td>
-            <td><input type="text" id="Pwd" name="Pwd" required></td>
+            <td><input type="text" id="Pwd" name="Pwd" {% if admin == True %} value="something" {% endif %} required></td>
              <td>&emsp;
                 <a href="mailto:billwillspill@yahoo.com?subject=League request">Request league</a>
             </td>
@@ -51,14 +51,14 @@ function MyPhone(){
     </table>
     <table>
         <tr>
-            <td><button type="submit" name="btnNHLTeams" id="btnNHLTeams" style="visibility:hidden">NHL teams</button></td>
-            <td><button type="submit" name="btnNBATeams" id="btnNBATeams" style="visibility:hidden">NBA teams</button></td>
-            <td><button type="submit" name="btnNFLTeams" id="btnNFLTeams" style="visibility:hidden">NFL teams</button></td>
+            <td><button type="submit" name="btnNHLTeams" id="btnNHLTeams" {% if admin != True %} style="visibility:hidden" {% endif %}>NHL teams</button></td>
+            <td><button type="submit" name="btnNBATeams" id="btnNBATeams" {% if admin != True %} style="visibility:hidden" {% endif %}>NBA teams</button></td>
+            <td><button type="submit" name="btnNFLTeams" id="btnNFLTeams" {% if admin != True %} style="visibility:hidden" {% endif %}>NFL teams</button></td>
         </tr>
         <tr>
-            <td><button type="submit" name="btnNHLSchedule" id="btnNHLSchedule" style="visibility:hidden">NHL schedule</button></td>
-            <td><button type="submit" name="btnNBASchedule" id="btnNBASchedule" style="visibility:hidden">NBA schedule</button></td>
-            <td><button type="submit" name="btnNFLSchedule" id="btnNFLSchedule" style="visibility:hidden">NFL schedule</button></td>
+            <td><button type="submit" name="btnNHLSchedule" id="btnNHLSchedule" {% if admin != True %} style="visibility:hidden" {% endif %}>NHL schedule</button></td>
+            <td><button type="submit" name="btnNBASchedule" id="btnNBASchedule" {% if admin != True %} style="visibility:hidden" {% endif %}>NBA schedule</button></td>
+            <td><button type="submit" name="btnNFLSchedule" id="btnNFLSchedule" {% if admin != True %} style="visibility:hidden" {% endif %}>NFL schedule</button></td>
         </tr>
     </table>
     </form> 
