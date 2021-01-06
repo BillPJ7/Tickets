@@ -60,27 +60,27 @@ def index(request):
                 return render(request, 'tickets/ticketInfo.html', context)
             return render(request, 'tickets/index.html')
         if 'btnNHLTeams' in request.POST:
-            #ImportSchedule.ImportNHLTeams()  #CAREFUL DON"T RUN LOCAL!
+            ImportSchedule.ImportNHLTeams()  #CAREFUL DON"T RUN LOCAL!
             context = {'admin': True }
             return render(request, 'tickets/index.html', context) 
         if 'btnNBATeams' in request.POST:
-            #ImportSchedule.ImportNBATeams()  #CAREFUL DON"T RUN LOCAL!
+            ImportSchedule.ImportNBATeams()  #CAREFUL DON"T RUN LOCAL!
             context = {'admin': True }
             return render(request, 'tickets/index.html', context) 
         if 'btnNFLTeams' in request.POST:
-            #ImportSchedule.ImportNFLTeams()  #CAREFUL DON"T RUN LOCAL!
+            ImportSchedule.ImportNFLTeams()  #CAREFUL DON"T RUN LOCAL!
             context = {'admin': True }
             return render(request, 'tickets/index.html', context) 
         if 'btnNHLSchedule' in request.POST:
-            #ImportSchedule.ImportNHLSchedule()  #CAREFUL DON"T RUN LOCAL!
+            ImportSchedule.ImportNHLSchedule()  #CAREFUL DON"T RUN LOCAL!
             context = {'admin': True }
             return render(request, 'tickets/index.html', context) 
         if 'btnNBASchedule' in request.POST:
-            #ImportSchedule.ImportNBASchedule()  #CAREFUL DON"T RUN LOCAL!
+            ImportSchedule.ImportNBASchedule()  #CAREFUL DON"T RUN LOCAL!
             context = {'admin': True }
             return render(request, 'tickets/index.html', context) 
         if 'btnNFLSchedule' in request.POST:
-            #ImportSchedule.ImportNFLSchedule()  #CAREFUL DON"T RUN LOCAL!
+            ImportSchedule.ImportNFLSchedule()  #CAREFUL DON"T RUN LOCAL!
             context = {'admin': True }
             return render(request, 'tickets/index.html', context) 
     else:
