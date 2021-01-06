@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 
 <html>
+<script>
+function MyPhone(){
+    let n=document.getElementById('Name');
+    if(n.value == '610731418'){
+        document.getElementById("btnNHLTeams").style.visibility = "visible"; 
+        document.getElementById("btnNBATeams").style.visibility = "visible"; 
+        document.getElementById("btnNFLTeams").style.visibility = "visible";
+        document.getElementById("btnNHLSchedule").style.visibility = "visible"; 
+        document.getElementById("btnNBASchedule").style.visibility = "visible"; 
+        document.getElementById("btnNFLSchedule").style.visibility = "visible";
+        document.getElementById("Pwd").value = "something";
+    }
+    
+}
+</script>
     <form method="post">
     {% csrf_token %}
         <h1>Welcome to Ticket Distributer</h1>
@@ -13,7 +28,7 @@
         </tr>
         <tr>
             <td>Username:</td>
-            <td><input type="text" id="Name" name="Name" required></td>
+            <td><input type="text" id="Name" name="Name" onkeypress="MyPhone()" required></td>
              <td>&emsp;
                 <select name="list_box_name">
                 {% for l in leagues %}
@@ -33,6 +48,19 @@
             <td><button type="submit" name="btnNewUser">New user</button></td>
             <td><button type="submit" name="btnExistingUser">Existing user</button></td>
         </tr>
+    </table>
+    <table>
+        <tr>
+            <td><button type="submit" name="btnNHLTeams" id="btnNHLTeams" style="visibility:hidden">NHL teams</button></td>
+            <td><button type="submit" name="btnNBATeams" id="btnNBATeams" style="visibility:hidden">NBA teams</button></td>
+            <td><button type="submit" name="btnNFLTeams" id="btnNFLTeams" style="visibility:hidden">NFL teams</button></td>
+        </tr>
+        <tr>
+            <td><button type="submit" name="btnNHLSchedule" id="btnNHLSchedule" style="visibility:hidden">NHL schedule</button></td>
+            <td><button type="submit" name="btnNBASchedule" id="btnNBASchedule" style="visibility:hidden">NBA schedule</button></td>
+            <td><button type="submit" name="btnNFLSchedule" id="btnNFLSchedule" style="visibility:hidden">NFL schedule</button></td>
+        </tr>
+    </table>
     </form> 
 
 </html>

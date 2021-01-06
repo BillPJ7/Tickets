@@ -25,7 +25,7 @@ SECRET_KEY = '-l#aj2me$r0!bmf4xnm$4@+mmv!@@gr^ju(p#c(zlx1#99u5+m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', '.jugact.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', 'www.jugact.com']
 
 
 # Application definition

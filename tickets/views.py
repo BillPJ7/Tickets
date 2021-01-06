@@ -59,6 +59,24 @@ def index(request):
                 context = {'owner': newOwner, 'leagues': leagues, 'ticsper': TicsPer, 'fromdist': FromDist}
                 return render(request, 'tickets/ticketInfo.html', context)
             return render(request, 'tickets/index.html')
+        if 'btnNHLTeams' in request.POST:
+            #ImportSchedule.ImportNHLTeams()  #CAREFUL DON"T RUN LOCAL!
+            return render(request, 'tickets/index.html')
+        if 'btnNBATeams' in request.POST:
+            #ImportSchedule.ImportNBATeams()  #CAREFUL DON"T RUN LOCAL!
+            return render(request, 'tickets/index.html')
+        if 'btnNFLTeams' in request.POST:
+            #ImportSchedule.ImportNFLTeams()  #CAREFUL DON"T RUN LOCAL!
+            return render(request, 'tickets/index.html')
+        if 'btnNHLSchedule' in request.POST:
+            #ImportSchedule.ImportNHLSchedule()  #CAREFUL DON"T RUN LOCAL!
+            return render(request, 'tickets/index.html')
+        if 'btnNBASchedule' in request.POST:
+            #ImportSchedule.ImportNBASchedule()  #CAREFUL DON"T RUN LOCAL!
+            return render(request, 'tickets/index.html')
+        if 'btnNFLSchedule' in request.POST:
+            #ImportSchedule.ImportNFLSchedule()  #CAREFUL DON"T RUN LOCAL!
+            return render(request, 'tickets/index.html')
     else:
        # ImportSchedule.ImportNHLTeams() #administrative tool
       #  Distribute.Test()
