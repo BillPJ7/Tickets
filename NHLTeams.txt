@@ -24,7 +24,7 @@ CHI|Blackhawks|18
 MTL|Canadiens|19
 NJD|Devils|20
 BUF|Sabres|20
-ANA|Ducks|21
+ANA|Mighty Ducks|21
 LAK|Kings|22
 SJS|Sharks|23
 OTT|Senators|24
