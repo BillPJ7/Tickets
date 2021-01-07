@@ -16,7 +16,7 @@ VAN|Canucks|13
 FLA|Panthers|13
 NSH|Predators|13
 NYR|Rangers|14
-CGY|Thrashers|14
+CGY|Flames|14
 WPG|Jets|15
 MIN|Wild|16
 ARI|Coyotes|17
@@ -29,3 +29,4 @@ LAK|Kings|22
 SJS|Sharks|23
 OTT|Senators|24
 DET|Red Wings|25
+ATL|Thrashers|10
