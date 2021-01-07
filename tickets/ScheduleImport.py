@@ -40,7 +40,7 @@ class ImportSchedule:
     def ImportNHLSchedule():
         file_path = settings.BASE_DIR
         DataJobs.DeleteSchedule('NHL')
-        with open(file_path + '//NHLSchedule.TXT', 'r', encoding = 'utf-8') as f:
+        with open(file_path + '//NHLSchedule.txt', 'r', encoding = 'utf-8') as f:
             content = f.readlines()
         for line in content:
             words = line.split('|')
@@ -54,7 +54,7 @@ class ImportSchedule:
     def ImportNBASchedule():
         file_path = settings.BASE_DIR
         DataJobs.DeleteSchedule('NBA')
-        with open(file_path + '//NBASchedule.TXT', 'r', encoding = 'utf-8') as f:
+        with open(file_path + '//NBASchedule.txt', 'r', encoding = 'utf-8') as f:
             content = f.readlines()
         for line in content:
             words = line.split('|')
@@ -68,7 +68,7 @@ class ImportSchedule:
     def ImportNFLSchedule():
         file_path = settings.BASE_DIR
         DataJobs.DeleteSchedule('NFL')
-        with open(file_path + '//NFLSchedule.TXT', 'r', encoding = 'utf-8') as f:
+        with open(file_path + '//NFLSchedule.txt', 'r', encoding = 'utf-8') as f:
             content = f.readlines()
         for line in content:
             words = line.split('|')
