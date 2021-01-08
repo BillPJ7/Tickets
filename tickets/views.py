@@ -51,7 +51,7 @@ def index(request):
                     #newOwner = get_object_or_404(Owner, pk=ownerID)
                     peopleTics = DataJobs.GetPeopleTics(ownerID)
                     context = {'owner': newOwner, 'ticsperrange': range(TicsPer), 'ticsperrange2': range(2, int(TicsPer)+2), 'ticsremaining': TicsRemaining, 'personcount': range(PersonCount), 'people': peopleTics, 'nextperson': PersonCount+1, 'fromdist': FromDist}
-                    return render(request, 'tickets/personinfo.html', context)
+                    return render(request, 'tickets/personInfo.html', context)
                 # On tickets
                 #newOwner = get_object_or_404(Owner, pk=ownerID)
                 leagues = DataJobs.GetLeagues()
@@ -114,7 +114,7 @@ def ticketinfo(request, owner_id):
         peopleTics = DataJobs.GetPeopleTics(owner_id)
         FromDist = False
         context = {'owner': newOwner, 'ticsperrange': range(int(TicsPer)), 'ticsperrange2': range(2, int(TicsPer)+2), 'ticsremaining': TotalTics, 'personcount': range(0), 'people': peopleTics, 'nextperson': 1, 'fromdist': FromDist}
-        return render(request, 'tickets/personinfo.html', context)
+        return render(request, 'tickets/personInfo.html', context)
     else:
         return render(request, 'tickets/ticketInfo.html')
     
@@ -160,7 +160,7 @@ def personinfo(request, owner_id):
         peopleTics = DataJobs.GetPeopleTics(owner_id)
         FromDist = False
         context = {'owner': newOwner, 'ticsperrange': range(TicsPer), 'ticsperrange2': range(2, int(TicsPer)+2), 'ticsremaining': TicsRemaining, 'personcount': range(PersonCount), 'people': peopleTics, 'nextperson': PersonCount+1, 'fromdist': FromDist}
-        return render(request, 'tickets/personinfo.html', context)
+        return render(request, 'tickets/personInfo.html', context)
     else:
         print('hey')
         newOwner = get_object_or_404(Owner, pk=owner_id)
@@ -214,7 +214,7 @@ def distribution(request, owner_id):
         if 'btnPeople' in request.POST: 
             TicsRemaining = DataJobs.GetTotalTics(owner_id) - DataJobs.GetTicketsAssigned(owner_id)
             context = {'owner': newOwner, 'ticsperrange': range(TicsPer), 'ticsperrange2': range(2, TicsPer+2), 'ticsremaining': TicsRemaining, 'personcount': range(0), 'people': peopleTics, 'nextperson': 1, 'fromdist': FromDist}
-            return render(request, 'tickets/personinfo.html', context) 
+            return render(request, 'tickets/personInfo.html', context) 
         if 'btnRequirements' in request.POST: 
             ReqString = DataJobs.GetReqSched(owner_id)
             people = DataJobs.GetPeople(owner_id)
@@ -262,11 +262,11 @@ def noresult(request, owner_id):
         FromDist = False
         From = request.POST['From']
         if From == 'People':
-            peopleTics = DataJobs.GetPeopleTics(owner_id) # people in personinfo.html
+            peopleTics = DataJobs.GetPeopleTics(owner_id) # people in personInfo.html
             PersonCount = DataJobs.GetPersonCount(owner_id)
             TicsRemaining = DataJobs.GetTotalTics(owner_id) - DataJobs.GetTicketsAssigned(owner_id)
             context = {'owner': newOwner, 'ticsperrange': range(TicsPer), 'ticsperrange2': range(2, TicsPer+2), 'ticsremaining': TicsRemaining, 'personcount': range(PersonCount), 'people': peopleTics, 'nextperson': PersonCount+1, 'fromdist': FromDist}
-            return render(request, 'tickets/personinfo.html', context) 
+            return render(request, 'tickets/personInfo.html', context) 
         if From == 'Run':
             ReqString = DataJobs.GetReqSched(owner_id)
             people = DataJobs.GetPeople(owner_id)
