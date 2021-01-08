@@ -174,7 +174,7 @@ def requirements(request, owner_id):
     if request.method == "POST":
         if 'btnBack' in request.POST:
             context = DataJobs.DistributionContext(owner_id, 1)
-            return render(request, 'tickets/', context)
+            return render(request, 'tickets/distribution.html', context)
         DataJobs.DeleteReqs(owner_id)
         games = DataJobs.GetGames(owner_id)
         PersonCount = 0
