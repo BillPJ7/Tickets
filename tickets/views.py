@@ -141,7 +141,7 @@ def personinfo(request, owner_id):
                     if (NumberOfGames.strip()).isnumeric():    
                         DataJobs.AddTicket(personID, t-1, NumberOfGames)
         if DataJobs.GetTotalTics(owner_id) - DataJobs.GetTicketsAssigned(owner_id) == 0:
-            success = Distribute.DoCombos(owner_id, 'People')
+            success = Distribute.DoCombos('People')
             if success == True:
                 schedule = DataJobs.GetSchedule(owner_id)
                 people = DataJobs.GetPeople(owner_id)
