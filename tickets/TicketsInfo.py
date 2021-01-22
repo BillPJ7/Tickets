@@ -29,10 +29,17 @@ class DataJobs:
         return L.id
     
     def DeleteTeams(LeagueName):
+        '''
+Deletes all teams of the league, happens before league teams and schedule are imported each season
+        '''
         L = League.objects.get(name=LeagueName)
         Team.objects.filter(league_id = L.id).delete()
         
     def DeleteSchedule(LeagueName):
+        '''
+Deletes all games in schedule where home or away team is in the league, happens before 
+league schedule is imported each season
+        '''
         L = League.objects.get(name=LeagueName)
         T = Team.objects.filter(league=L.id)
         for t in T:
@@ -42,6 +49,9 @@ class DataJobs:
         return League.objects.filter(name=LeagueName)
     
     def GetLeagueName(OwnerID):
+        '''
+Uses the owner's team to get the league name
+        '''
         O = Owner.objects.get(id=OwnerID)
         T = Team.objects.get(id=O.team_id)
         L = League.objects.get(id=T.league_id)
@@ -56,15 +66,24 @@ class DataJobs:
         return T.name
     
     def GetTicsPer(OwnerID):
+        '''
+This is the number of tickets, or seats, the owner has for each game
+        '''
         O = Owner.objects.get(id=OwnerID)
         return O.tickets 
         
     def GetTotalTics(OwnerID):
+        '''
+Total tickets is the number of games in the season, times tickets per game
+        '''
         O = Owner.objects.get(id=OwnerID)
         T = O.team_id
         return Schedule.objects.filter(hometeam=T).count() * O.tickets
     
     def GetTeamID(OwnerID):
+        '''
+Returns the owner's team id, however a new owner won't have a team when first created.
+        '''
         O = Owner.objects.get(id=OwnerID)
         T = O.team
         if T:
@@ -72,6 +91,11 @@ class DataJobs:
         return 0 # Team not selected yet
     
     def GetTicketsAssigned(OwnerID):
+        '''
+These are the tickets the owner assigns to people, each person can have multiple sets
+of tickets per game and number of games (like 5 2 ticket games and 1 4 ticket game).
+Used to keep track until tickets assigned = total tickets.
+        '''
         TicketsAssigned = 0
         P = Person.objects.filter(owner_id=OwnerID)
         for p in P:
@@ -186,6 +210,10 @@ to populate table, each cell named as row/column like R1C4 (1st person, 4th game
         return post_instance.pk
     
     def AddTicket(PersonID, TicsPer, NumberGames):
+        '''
+Each person can have multiple sets of tickets per game and number of games 
+Example: 5 2 ticket games and 1 4 ticket game.
+        '''
         P = Person.objects.get(id=PersonID)
         Ticket.objects.create(person = P, ticketsper = TicsPer, numbergames = NumberGames)
     
@@ -263,6 +291,10 @@ On person means get directed to person info page. Check if team was assigned
         BestTen.objects.filter(owner_id = OwnerID, TenBestNumber = 10).update(difference = Diff, bads = Bads)
         
     def BumpBestTen(OwnerID, Diff, Bads, TenBestNbr, TlBestTen):
+        '''
+When new results fall in the top 10, it bumps the rest and inserts the new results. For example if
+ten best number is 5, bump the old 5 to 6, 6 to 7 etc. then insert 5
+        '''
         if TlBestTen > 0:
             for t in range(TlBestTen, TenBestNbr - 1, -1):
                 if t < 10:
@@ -272,9 +304,15 @@ On person means get directed to person info page. Check if team was assigned
         DataJobs.AddBestTen(OwnerID, Diff, Bads, TenBestNbr)
         
     def Update10thStatus(PersonID, Dups, BackToBacks, AverageRating):
+        '''
+This and BumpStatus needed when new results fall in the top 10
+        '''
         Status.objects.filter(person_id = PersonID, TenBestNumber = 10).update(DuplicateTeams = Dups, BackToBack = BackToBacks, AverageRating = AverageRating)
         
     def BumpStatus(PersonID, Dups, BackToBacks, AverageRating, TenBestNbr, TlBestTen):
+        '''
+Same idea as BumpBestTen
+        '''
         for t in range(TlBestTen, TenBestNbr - 1, -1):
             if t < 10:
                 Status.objects.filter(person_id = PersonID, TenBestNumber = t).update(TenBestNumber = t + 1)
@@ -283,6 +321,9 @@ On person means get directed to person info page. Check if team was assigned
         DataJobs.AddStatus(PersonID, Dups, BackToBacks, AverageRating, TenBestNbr)
         
     def BumpTenBest(OwnerID, TenBestNbr, TlBestTen):
+        '''
+Same idea as BumpBestTen
+        '''
         P = Person.objects.filter(owner_id = OwnerID)
         if TlBestTen == 10:
             TenBest.objects.filter(person_id__in = P, TenBestNumber = 10).delete()
@@ -291,6 +332,9 @@ On person means get directed to person info page. Check if team was assigned
                 TenBest.objects.filter(person_id__in = P, TenBestNumber = t).update(TenBestNumber = t + 1)
             
     def AddTries(OwnerID, Tries):
+        '''
+This is the number of results, so we can show the total results of which the top 10 are.
+        '''
         Owner.objects.filter(id = OwnerID).update(tries = Tries)
     
     def GetTries(OwnerID):
@@ -315,13 +359,19 @@ of bads, difference rows
         return BestTen.objects.filter(owner_id = OwnerID).order_by('TenBestNumber')
     
     def GetGameIDs(OwnerID):
+        '''
+Helper function for GetTenBest, GetGameArray, GetPersonArray
+        '''
         IDs = []
-        S = DataJobs.GetGames(OwnerID)
-        for s in S:
-            IDs.append(s.id)
+        G = DataJobs.GetGames(OwnerID)
+        for g in G:
+            IDs.append(g.id)
         return IDs
     
     def GetPersonIDs(OwnerID):
+        '''
+Helper function for GetTenBest
+        '''
         P = Person.objects.filter(owner_id = OwnerID)
         IDs = []
         for p in P:
@@ -350,6 +400,9 @@ distribution.html, plus minus buttons show each one.
         return tenbest
         
     def GetPersonNbrFromID(ID, IDs):
+        '''
+Needed in GetTenBest, so people can be numbered 1 2 3... for html element names 
+        '''
         PersonNbr = 0
         for id in IDs:
             PersonNbr += 1
@@ -357,6 +410,9 @@ distribution.html, plus minus buttons show each one.
                 return PersonNbr
                     
     def GetGameNbrFromID(ID, IDs):
+        '''
+Needed in GetTenBest, so games can be numbered 1 2 3... for html element names 
+        '''
         GameNbr = 0
         for id in IDs:
             GameNbr += 1
@@ -377,7 +433,7 @@ repeated several times for all the back buttons that send you there.
         GameCnt = DataJobs.GetGameCount(OwnerID)
         TenBest1 = DataJobs.GetTenBest(OwnerID, 1) # best results
         TenBest2 = DataJobs.GetTenBest(OwnerID, 2) # 2nd best results
-        TenBest3 = DataJobs.GetTenBest(OwnerID, 3)
+        TenBest3 = DataJobs.GetTenBest(OwnerID, 3) # ...
         TenBest4 = DataJobs.GetTenBest(OwnerID, 4)
         TenBest5 = DataJobs.GetTenBest(OwnerID, 5)
         TenBest6 = DataJobs.GetTenBest(OwnerID, 6)
@@ -388,29 +444,66 @@ repeated several times for all the back buttons that send you there.
         return {'owner': newOwner, 'schedule': schedule, 'people': people, 'tries': Tries, 'bestten': BestTen, 'personcnt': PersonCnt, 'gamecnt': GameCnt, 'tenbest1': TenBest1, 'tenbest2': TenBest2, 'tenbest3': TenBest3, 'tenbest4': TenBest4, 'tenbest5': TenBest5, 'tenbest6': TenBest6, 'tenbest7': TenBest7, 'tenbest8': TenBest8, 'tenbest9': TenBest9, 'tenbest10': TenBest10, 'tenbestnbr': TenBestNbr}
 
     def GetPeopleStatus(OwnerID, TenBestNbr):
+        '''
+This is used when you want to view the status of each person, for the result you're on
+        '''
         return Status.objects.select_related().filter(person__owner__id = OwnerID, TenBestNumber = TenBestNbr)
 
     def GetReportInfo(OwnerID, TenBestNbr):
+        '''
+This is used when you want to view the report of the result you're on. It's the actual tickets
+you give each person (away team, date, number of tickets, team rating)
+        '''
         return TenBest.objects.select_related().filter(person__owner__id = OwnerID, TenBestNumber = TenBestNbr).order_by('person', 'game__date')
     
     def NoResultEntry(OwnerID, CauseInfo):
+        '''
+Puts entry into NoResult table, with info about why no results were possible for how the 
+tickets and requirements were assigned.
+        '''
         NoResult.objects.create(owner_id = OwnerID, causeinfo = CauseInfo)
     
     def GetNoResultMessages(OwnerID):
+        '''
+Info to display when directed to the no result page.
+        '''
         return NoResult.objects.filter(owner_id = OwnerID)
 
     def CheckPersonMsg(PersonID):
+        '''
+Used to create the cause info for no result entry
+        '''
         P = Person.objects.get(id=PersonID)
         return 'Check person ' + P.name
         
     def CheckGameMsg(GameID):
+        '''
+Used to create the cause info for no result entry
+        '''
         S = Schedule.objects.get(id = GameID)
         return 'Check game ' + str(S.date)
         
-    def DeleteNoResultMessages(OwnerID):
+    def DeleteNoResultMessages(OwnerID): 
+        '''
+Removes no result entry before next attempt
+        '''
         NoResult.objects.filter(owner_id=OwnerID).delete()
+        
+    def GetReq(PersonID, GameID):
+        '''
+Helper function for GetGameArray, the sub array of person requirements for each game.
+        '''
+        R = Req.objects.filter(game_id = GameID, person_id = PersonID)
+        if R.count() == 0:
+            return None
+        for r in R: # there's only one now, but had to use filter because could have been 0.
+            return r
     
     def GetGameArray(OwnerID):
+        '''
+Returns an array of game info and sub array of person requirements for each game. Info the
+distribution code needs up front, to avoid hitting the database again.
+        '''
         Game = []
         games = DataJobs.GetGames(OwnerID)
         GameIDs = DataJobs.GetGameIDs(OwnerID)
@@ -441,36 +534,20 @@ repeated several times for all the back buttons that send you there.
         return Game
     
     def GetPersonTlTics(PersonID):
+        '''
+Returns total tickets for one person. Each person can have multiple sets of tickets per game 
+and number of games (like 5 2 ticket games and 1 4 ticket game)
+        '''
         TlTics = 0
         T = Ticket.objects.filter(person_id = PersonID)
         for t in T:
             TlTics += t.ticketsper * t.numbergames
         return TlTics
     
-    def GetPersonGame(OwnerID):#, Combos):
+    def GetPersonGame(OwnerID):
         '''
-        PersonGame = []
-        G = DataJobs.GetGames(OwnerID)
-        GameIDs = DataJobs.GetGameIDs(OwnerID)
-        P = DataJobs.GetPeople(OwnerID)
-        for pCount, p in enumerate(P):
-            Person = []
-            Person.append(p.id)
-            Game = []
-            for gCount, g in enumerate(G):
-                Combo = Combos[gCount][pCount]
-                if Combo > 0:
-                    Dict = {
-                        "Tics": Combo,
-                        "GameID": GameIDs[gCount],
-                        "TeamID": g.awayteam_id,
-                        "GameDate": g.date,
-                        "TeamRating": DataJobs.GetTeamRating(g.awayteam_id)
-                    }
-                    Game.append(Dict)
-            Person.append(Game)
-            PersonGame.append(Person)
-        return PersonGame
+Returns an array of people info, with sub array of game info for each person. Info the
+distribution code needs up front, to avoid hitting the database again.
         '''
         PersonGame = []
         G = DataJobs.GetGames(OwnerID)
@@ -495,6 +572,9 @@ repeated several times for all the back buttons that send you there.
         return PersonGame
 
     def GetTicketGames(PersonID):
+        '''
+Helper function for GetPersonGame
+        '''
         TicketGames = 0
         N = Ticket.objects.filter(person_id = PersonID)
         for n in N:
@@ -505,33 +585,31 @@ repeated several times for all the back buttons that send you there.
         T = Team.objects.get(id=TeamID)  
         return T.rating   
     
-            
     def AreBackToBack(OwnerID, CurrDate, PrevDate):
+        '''
+Back to back home games, means there's no games in between, home or away
+(2 games may appear back to back on the grid, but aren't if there are away games between).
+        '''
         TeamID = DataJobs.GetTeamID(OwnerID)
         B = Schedule.objects.filter(Q(awayteam_id = TeamID) | Q(hometeam = TeamID), date__gt = PrevDate, date__lt = CurrDate)
-       # print('CurrDate')
-     #   print(str(CurrDate))
-      #  print('PrevDate')
-     #   print(str(PrevDate))
-     #   print('B.count() is ' + str(B.count()))
         if B.count() == 0:
             return True
         return False 
     
     def IsReqGame(OwnerID, GameID):
+        '''
+Means one or more people have a requirement for that game. 
+Helper function for GetReqGames and NoGetReqGames.
+        '''
         P = Person.objects.filter(owner_id=OwnerID)
         if Req.objects.filter(game_id = GameID, person_id__in = P).count() > 0:
             return True
         return False
-            
-    def GetReq(PersonID, GameID):
-        R = Req.objects.filter(game_id = GameID, person_id = PersonID)
-        if R.count() == 0:
-            return None
-        for r in R: # there's only one but had to use filter
-            return r.req
         
     def GetReqGames(OwnerID, Games):
+        '''
+Returns the games where one or more people have a requirement for that game.
+        '''
         ReqGames = []
         for g in Games:
             if DataJobs.IsReqGame(OwnerID, g['GameID']):
@@ -539,6 +617,9 @@ repeated several times for all the back buttons that send you there.
         return ReqGames
     
     def NoGetReqGames(OwnerID, Games):
+        '''
+Returns the games where no people have a requirement for that game.
+        '''
         NoReqGames = []
         for g in Games:
             if DataJobs.IsReqGame(OwnerID, g['GameID']):

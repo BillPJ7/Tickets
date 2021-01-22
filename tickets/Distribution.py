@@ -53,6 +53,8 @@ class Distribute:
             if Distribute.Attempt():
                 Distribute.UseCombos()
                 GoodTries += 1
+            else:
+                return False
             Tries += 1
             Distribute.Tries1 += 1
             #if Tries > 10:
@@ -63,6 +65,7 @@ class Distribute:
       #  Dummy.PrintCombos(Distribute.Combos)
         DataJobs.AddTries(OwnerID, Tries)
         Best10Cnt = len(DataJobs.GetBestTen(OwnerID))
+        print(str(Best10Cnt)+'#################################')#was 2 when expected 0
         if Tries == 0 or Best10Cnt == 0:
             return False 
         return True

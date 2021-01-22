@@ -19,30 +19,60 @@ function MyPhone(){
     <form method="post">
     {% csrf_token %}
         <h1>Welcome to Ticket Distributer</h1>
-        <p></p>
+    <table>
+        <tr>
+            <td>&emsp;&emsp;For distributing season tickets to a group of people, as fairly as possible, here's what defines fair:</td>
+        </tr>
+        <tr>
+            <td>&emsp;&emsp;&#8226;&emsp;Evenly spaced throughout the season</td>
+        </tr>
+        <tr>
+            <td>&emsp;&emsp;&#8226;&emsp;Average rating per ticket- based on team ratings so everyone gets an average balance.</td>
+        </tr>
+        <tr>
+            <td>&emsp;&emsp;&#8226;&emsp;Lowest amount of "bads":</td>
+        </tr>
+        <tr>
+            <td>&emsp;&emsp;&emsp;&emsp;> Back to back home games.</td>
+        </tr>
+        <tr>
+            <td>&emsp;&emsp;&emsp;&emsp;> Seeing the same team twice.</td>
+        </tr>
+        <tr>
+            <td>&emsp;&emsp;&#8226;&emsp;Requirements:</td>
+        </tr>
+        <tr>
+            <td>&emsp;&emsp;&emsp;&emsp;> Pre-assign games manually.</td>
+        </tr>
+        <tr>
+            <td>&emsp;&emsp;&emsp;&emsp;> Specify games a person cannot attend.</td>
+        </tr>
+    </table>
+    <br></br>
     <table>
         <tr>
             <td></td>
-            <td>Before you start check----</td>
+            <td>Before you start check-------------------------</td>
             <td>Available leagues:</td>
         </tr>
+        {% for l in leagues %}
+            <tr>
+                <td></td><td></td><td>&emsp;&emsp;{{ l.name }}</td>
+            <tr>
+        {% endfor %}
+        <tr>
+            <td></td><td></td><td>
+                <a href="mailto:billwillspill@yahoo.com?subject=League request">Request league</a>
+                </td><td>(If league not in list)</td>
+            </td>
         <tr>
             <td>Username:</td>
             <td><input type="text" id="Name" name="Name" {% if admin == True %} value="6107314184" {% endif %} onkeypress="MyPhone()" required></td>
-             <td>&emsp;
-                <select name="list_box_name">
-                {% for l in leagues %}
-                    <option>{{ l.name }}</option>
-                {% endfor %}
-                </select>
-            </td>
         </tr>
         <tr>
             <td>Password:</td>
             <td><input type="text" id="Pwd" name="Pwd" {% if admin == True %} value="something" {% endif %} required></td>
-             <td>&emsp;
-                <a href="mailto:billwillspill@yahoo.com?subject=League request">Request league</a>
-            </td>
+
         </tr>
         <tr>
             <td><button type="submit" name="btnNewUser">New user</button></td>
