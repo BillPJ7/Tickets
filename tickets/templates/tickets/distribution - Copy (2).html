@@ -172,7 +172,8 @@ function FindTenBest(){
             <td></td>
             <td>&emsp;&emsp;</td>
             <td>
-
+                <button type="submit" id="btnDetails" name="btnDetails">Details</button>
+                <button type="submit" id="btnReport" name="btnReport">Report</button>
             </td>
             <td>&emsp;&emsp;</td>
             <td><input name="Bads3" id="Bads3" style="width:40px"></td>
@@ -219,35 +220,22 @@ function FindTenBest(){
             <td><input name="Result8" id="Result8"></td>
         </tr>
         <tr>
-            <td>10 best results</td>
             <td></td>
+            <td>&emsp;&emsp;</td>
             <td></td>
             <td>&emsp;&emsp;</td>
             <td><input name="Bads9" id="Bads9" style="width:40px"></td>
             <td><input name="Result9" id="Result9"></td>
         </tr>
-        <tr>
-        <td>
-            <input value="1" name="TenBestNumber" id="TenBestNumber" style="width:40px">
-            <button type="button" onclick="PlusMinus(1)" id="btnPlus" name="btnPlus" style="width:30px">+</button>
-            <button type="button" onclick="PlusMinus(-1)" id="btnMinus" name="btnMinus" style="width:30px">-</button>
-        </td>
-        <td>
 
-        </td>
-        <td>    
-            <button type="submit" id="btnDetails" name="btnDetails">Details</button>
-            <button type="submit" id="btnReport" name="btnReport">Report</button>            
-        </td>
-            <td>&emsp;&emsp;</td>
-            <td><input name="Bads10" id="Bads10" style="width:40px"></td>
-            <td><input name="Result10" id="Result10"></td>
-        </tr>
     </table>
-<p></p>
+
 <div style="overflow-x:auto;">
     <table>
-
+        <tr>
+            <td></td>
+            <td>Result</td>
+        </tr>
         <tr>
             <td></td>
             {% for s in schedule %}

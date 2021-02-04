@@ -6,6 +6,8 @@ from django.conf import settings
 from decimal import Decimal
 
 class DataJobs:
+    GameIDs = []
+    PersonIDs = []
     def GetOwner(UserName, Password): 
         return Owner.objects.filter(username=UserName, password=Password)
     
@@ -384,40 +386,34 @@ Rendered in distribution.html, tenbest is a 2D array to populate the results
 table. It's one of the ten best (TenBestNbr), all 10 are sent to 
 distribution.html, plus minus buttons show each one.
         '''
-        GameIDs = DataJobs.GetGameIDs(OwnerID) # Cells of the table are named as
-        PersonIDs = DataJobs.GetPersonIDs(OwnerID) # row/column, like R2C1. What
-        tenbest = []                        # this does is provide person number,
-        P = Person.objects.filter(owner_id = OwnerID) # game number (row, col),
+        tenbest = []                        
+        P = Person.objects.filter(owner_id = OwnerID) 
         T = TenBest.objects.filter(TenBestNumber=TenBestNbr, person_id__in=P)
-        for t in T:                   # and number of tickets for each result.
+        for t in T:                  
             RowCol = []
-            p = DataJobs.GetPersonNbrFromID(t.person_id, PersonIDs)
-            g = DataJobs.GetGameNbrFromID(t.game_id, GameIDs)
+            p = DataJobs.GetPersonNbrFromID(t.person_id)
+            g = DataJobs.GetGameNbrFromID(t.game_id)
             RowCol.append(p)
             RowCol.append(g)
             RowCol.append(t.NumberTickets)  
             tenbest.append(RowCol)
         return tenbest
         
-    def GetPersonNbrFromID(ID, IDs):
+    def GetPersonNbrFromID(ID):
         '''
-Needed in GetTenBest, so people can be numbered 1 2 3... for html element names 
+Needed in GetTenBest, to get row number for html table element names 
         '''
-        PersonNbr = 0
-        for id in IDs:
-            PersonNbr += 1
+        for PersonCnt, id in enumerate(DataJobs.PersonIDs):
             if id == ID:
-                return PersonNbr
+                return PersonCnt + 1
                     
-    def GetGameNbrFromID(ID, IDs):
+    def GetGameNbrFromID(ID):
         '''
-Needed in GetTenBest, so games can be numbered 1 2 3... for html element names 
+Needed in GetTenBest, to get column number for html table element names 
         '''
-        GameNbr = 0
-        for id in IDs:
-            GameNbr += 1
+        for GameCnt, id in enumerate(DataJobs.GameIDs):
             if id == ID:
-                return GameNbr
+                return GameCnt + 1
     
     def DistributionContext(OwnerID, TenBestNbr):
         '''
@@ -431,6 +427,8 @@ repeated several times for all the back buttons that send you there.
         BestTen = DataJobs.GetBestTen(OwnerID) # For the stats table
         PersonCnt = DataJobs.GetPersonCount(OwnerID)
         GameCnt = DataJobs.GetGameCount(OwnerID)
+        DataJobs.GameIDs = DataJobs.GetGameIDs(OwnerID)
+        DataJobs.PersonIDs = DataJobs.GetPersonIDs(OwnerID)
         TenBest1 = DataJobs.GetTenBest(OwnerID, 1) # best results
         TenBest2 = DataJobs.GetTenBest(OwnerID, 2) # 2nd best results
         TenBest3 = DataJobs.GetTenBest(OwnerID, 3) # ...
