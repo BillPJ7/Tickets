@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <h1>Schedule options</h1>
+    <form action="{% url 'tickets:payment' owner.id %}" method="post">
+    {% csrf_token %}
+    <p></p>
+
+  <table>
+        <tr>
+            <td><button type="submit" name="btnDemo">Demo</button></td>
+            <td><label >Previous schedule</label></td>
+        </tr>
+        <tr>
+            <td><button type="submit" name="btnPay">Pay</button></td>
+            <td><label>Current schedule</label></td>
+        </tr>
+  </table>
+  <input {% if user == "new" %} value="UserNew" {% endif %}{% if user == "existing" %} value="UserExisting" {% endif %} name="NewExisting" id="NewExisting" style="visibility:hidden">
+    </form>
+</html>

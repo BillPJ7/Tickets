@@ -79,6 +79,10 @@ function ClearCells(){
         }
     }
 }
+function RevealSubmit(){
+    document.getElementById("btnStartDate").style.visibility = "visible";
+    document.getElementById("btnCancel").style.visibility = "visible";
+}
 function PlusMinus(PlusMinus){
     if(TenBestNbr + PlusMinus < 11 && TenBestNbr + PlusMinus > 0){
         ClearCells(PersonCnt, GameCnt);
@@ -132,9 +136,18 @@ function FindTenBest(){
         e.value = Val;
     }
 }
+
 </script>
   <body onload="LoadJobs({{personcnt}}, {{gamecnt}}, '{{bestten}}', '{{tenbest1}}', '{{tenbest2}}', '{{tenbest3}}', '{{tenbest4}}', '{{tenbest5}}', '{{tenbest6}}', '{{tenbest7}}', '{{tenbest8}}', '{{tenbest9}}', '{{tenbest10}}', {{tenbestnbr}})">
     <p></p>
+    <label>Start date:</label>
+    <select name="StartDate" id="StartDate" onChange="RevealSubmit()">
+        {% for d in dates %}
+            <option value={{d}} {% if d == selectdate %} selected="selected" {% endif %}>{{d}}</option>
+        {% endfor %}
+    </select>
+    <button type="submit" name="btnStartDate" id="btnStartDate" style="visibility:hidden">Submit</button>
+    <button type="submit" name="btnCancel" id="btnCancel" style="visibility:hidden">Cancel</button>
     <table>
         <tr>
             <td><label>Minutes to run</label></td>

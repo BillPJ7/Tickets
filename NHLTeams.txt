@@ -1,32 +1,31 @@
-BOS|Bruins|1
-STL|Blues|2
-COL|Avalanche|3
+BOS|Bruins|4
+BUF|Sabres|14
+NJD|Devils|14
+NYI|Islanders|7
+NYR|Rangers|13
+PHI|Flyers|7
+PIT|Penguins|7
+WSH|Capitals|6
+CAR|Hurricanes|3
+CHI|Blackhawks|4
+CBJ|Blue Jackets|7
+DAL|Stars|12
+DET|Red Wings|15
+FLA|Panthers|2
+NSH|Predators|12
 TBL|Lightning|3
-WSH|Capitals|4
-PHI|Flyers|5
-PIT|Penguins|6
-VGK|Golden Knights|7
-CAR|Hurricanes|8
-DAL|Stars|9
-NYI|Islanders|10
-EDM|Oilers|11
-CBJ|Blue Jackets|12
-TOR|Maple Leafs|12
-VAN|Canucks|13
-FLA|Panthers|13
-NSH|Predators|13
-NYR|Rangers|14
-CGY|Flames|14
-WPG|Jets|15
-MIN|Wild|16
-ARI|Coyotes|17
-CHI|Blackhawks|18
-MTL|Canadiens|19
-NJD|Devils|20
-BUF|Sabres|20
-ANA|Mighty Ducks|21
-LAK|Kings|22
-SJS|Sharks|23
-OTT|Senators|24
-DET|Red Wings|25
-ATL|Thrashers|10
+ANA|Ducks|13
+ARI|Coyotes|9
+COL|Avalanche|9
+LAK|Kings|9
+MIN|Wild|10
+SJS|Sharks|12
+STL|Blues|6
+VGK|Golden Knights|5
+CGY|Flames|8
+EDM|Oilers|2
+MTL|Canadiens|6
+OTT|Senators|15
+TOR|Maple Leafs|1
+VAN|Canucks|10
+WPG|Jets|5

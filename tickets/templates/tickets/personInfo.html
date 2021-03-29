@@ -3,7 +3,7 @@
 <html>
     
     <h1>Person info</h1>
-    <form action="{% url 'tickets:personinfo' owner.id %}" method="post">
+    <form action="{% url 'tickets:personinfo' owner.id %}" method="post" autocomplete="xyz">
     {% csrf_token %}
 <script>
     function RevealSubmit() {
@@ -11,10 +11,17 @@
     }
 </script>
     <p></p>
-    <label>Tickets remaining:</label>
-    <input value={{ ticsremaining }}>
+    <label>Start date:</label>
+    <select name="StartDate" id="StartDate">
+        {% for d in dates %}
+            <option value={{d}} {% if d == selectdate %} selected="selected" {% endif %}>{{d}}</option>
+        {% endfor %}
+    </select>
+
+    <label>&emsp; Tickets remaining:</label>
+    <input value={{ ticsremaining }} style="width:70px">
     <p></p>
-  <table>
+  <table autocomplete="xyz">
         <tr>
             <td>Name</td>
             {% for t in ticsperrange %}
@@ -24,15 +31,15 @@
         {% for p in people %}
             <tr>         
             {% for t in p %}
-                <td><input value={{ t|default_if_none:"&nbsp" }} name="T{{forloop.parentloop.counter}},{{forloop.counter}}" id="T{{forloop.parentloop.counter}},{{forloop.counter}}" style="width:70px"></td>
+                <td><input value={{ t|default_if_none:"&nbsp" }} name="T{{forloop.parentloop.counter}},{{forloop.counter}}" id="T{{forloop.parentloop.counter}},{{forloop.counter}}" style="width:70px" autocomplete="xyz"></td>
             {% endfor %}
             </tr>
             
         {% endfor %}
         {% if fromdist == False %}
-            <td><input name="T{{nextperson}},1" id="T{{nextperson}},1" style="width:70px"></td>
+            <td><input name="T{{nextperson}},1" id="T{{nextperson}},1" style="width:70px" autocomplete="xyz"></td>
             {% for t in ticsperrange2 %}
-                <td><input value="&nbsp" name="T{{nextperson}},{{t}}" id="T{{nextperson}},{{t}}" style="width:70px"></td>
+                <td><input value="&nbsp" name="T{{nextperson}},{{t}}" id="T{{nextperson}},{{t}}" style="width:70px" autocomplete="xyz"></td>
             {% endfor %}
         {% endif %}
   </table>

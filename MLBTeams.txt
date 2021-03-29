@@ -1,0 +1,30 @@
+ARI|Diamondbacks|25
+ATL|Braves|6
+BAL|Orioles|26
+BOS|Red Sox|27
+CHC|Cubs|9
+CWS|White Sox|7
+CIN|Reds|13
+CLE|Indians|8
+COL|Rockies|20
+DET|Tigers|28
+FLA|Marlins|14
+HOU|Astros|15
+KAN|Royals|21
+LAA|Angels|22
+LAD|Dodgers|1
+MIL|Brewers|16
+MIN|Twins|4
+NYM|Mets|23
+NYY|Yankees|10
+OAK|Athletics|5
+PHI|Phillies|18
+PIT|Pirates|30
+SD|Padres|3
+SF|Giants|17
+SEA|Mariners|19
+STL|Cardinals|12
+TB|Rays|2
+TEX|Rangers|29
+TOR|Blue Jays|11
+WAS|Nationals|24

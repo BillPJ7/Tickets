@@ -8,9 +8,11 @@ function MyPhone(){
         document.getElementById("btnNHLTeams").style.visibility = "visible"; 
         document.getElementById("btnNBATeams").style.visibility = "visible"; 
         document.getElementById("btnNFLTeams").style.visibility = "visible";
+        document.getElementById("btnMLBTeams").style.visibility = "visible";       
         document.getElementById("btnNHLSchedule").style.visibility = "visible"; 
         document.getElementById("btnNBASchedule").style.visibility = "visible"; 
         document.getElementById("btnNFLSchedule").style.visibility = "visible";
+        document.getElementById("btnMLBSchedule").style.visibility = "visible"; 
         document.getElementById("Pwd").value = "something";
     }
     
@@ -55,11 +57,16 @@ function MyPhone(){
             <td>Before you start check-------------------------</td>
             <td>Available leagues:</td>
         </tr>
-        {% for l in leagues %}
-            <tr>
-                <td></td><td></td><td>&emsp;&emsp;{{ l.name }}</td>
-            <tr>
-        {% endfor %}
+        <tr>
+            <td></td><td></td><td>
+            <div style="width:70px;height:80px;overflow:auto">
+            <table>
+            {% for l in leagues %}
+                    <tr><td>{{ l.name }}</td</tr>
+            {% endfor %}
+            </table>
+            </div>
+        </tr>
         <tr>
             <td></td><td></td><td>
                 <a href="mailto:billwillspill@yahoo.com?subject=League request">Request league</a>
@@ -72,23 +79,26 @@ function MyPhone(){
         <tr>
             <td>Password:</td>
             <td><input type="text" id="Pwd" name="Pwd" {% if admin == True %} value="something" {% endif %} required></td>
-
+            
         </tr>
         <tr>
             <td><button type="submit" name="btnNewUser">New user</button></td>
             <td><button type="submit" name="btnExistingUser">Existing user</button></td>
         </tr>
+
     </table>
     <table>
         <tr>
             <td><button type="submit" name="btnNHLTeams" id="btnNHLTeams" {% if admin != True %} style="visibility:hidden" {% endif %}>NHL teams</button></td>
             <td><button type="submit" name="btnNBATeams" id="btnNBATeams" {% if admin != True %} style="visibility:hidden" {% endif %}>NBA teams</button></td>
             <td><button type="submit" name="btnNFLTeams" id="btnNFLTeams" {% if admin != True %} style="visibility:hidden" {% endif %}>NFL teams</button></td>
+            <td><button type="submit" name="btnMLBTeams" id="btnMLBTeams" {% if admin != True %} style="visibility:hidden" {% endif %}>MLB teams</button></td>
         </tr>
         <tr>
             <td><button type="submit" name="btnNHLSchedule" id="btnNHLSchedule" {% if admin != True %} style="visibility:hidden" {% endif %}>NHL schedule</button></td>
             <td><button type="submit" name="btnNBASchedule" id="btnNBASchedule" {% if admin != True %} style="visibility:hidden" {% endif %}>NBA schedule</button></td>
             <td><button type="submit" name="btnNFLSchedule" id="btnNFLSchedule" {% if admin != True %} style="visibility:hidden" {% endif %}>NFL schedule</button></td>
+            <td><button type="submit" name="btnMLBSchedule" id="btnMLBSchedule" {% if admin != True %} style="visibility:hidden" {% endif %}>MLB schedule</button></td>
         </tr>
     </table>
     </form> 

@@ -22,11 +22,14 @@ class Owner(models.Model):
     team = models.ForeignKey(Team, on_delete=models.CASCADE, blank=True, null=True)
     tickets = models.IntegerField(default=0)
     tries = models.IntegerField(default=0)
+    paid = models.BooleanField(default=False)
+    startdate = models.DateField(default=None, null=True)
     
 class Schedule(models.Model):
     hometeam = models.IntegerField() #.CharField(max_length=20)
     awayteam = models.ForeignKey(Team, on_delete=models.CASCADE)
     date = models.DateField()
+    lastyear = models.BooleanField(default=False)
     
 class Person(models.Model):
     owner = models.ForeignKey(Owner, on_delete=models.CASCADE)

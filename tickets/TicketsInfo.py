@@ -4,6 +4,7 @@ from .models import Owner, League, Team, Schedule, Person, Ticket, Req, BestTen,
 from django.db.models import Q
 from django.conf import settings
 from decimal import Decimal
+from datetime import datetime
 
 class DataJobs:
     GameIDs = []
@@ -36,16 +37,40 @@ Deletes all teams of the league, happens before league teams and schedule are im
         '''
         L = League.objects.get(name=LeagueName)
         Team.objects.filter(league_id = L.id).delete()
-        
-    def DeleteSchedule(LeagueName):
+    
+    def DeleteLastYear(LeagueName):
         '''
-Deletes all games in schedule where home or away team is in the league, happens before 
-league schedule is imported each season
+Deletes all games in schedule where home or away team is in the league, and lastyear = true 
+Happens before league schedule is imported each season
         '''
         L = League.objects.get(name=LeagueName)
         T = Team.objects.filter(league=L.id)
         for t in T:
-            Schedule.objects.filter(Q(awayteam_id = t.id) | Q(hometeam = t.id)).delete()
+            criterion1 = Q(awayteam_id = t.id) | Q(hometeam = t.id)
+            criterion2 = Q(lastyear = True)
+            Schedule.objects.filter(criterion1 & criterion2).delete()
+            
+    def FlagLastYear(LeagueName):
+        '''
+Updates lastyear field to true, of all games in schedule where home or away team is in the league.
+Happens before league schedule is imported each season
+        '''
+        L = League.objects.get(name=LeagueName)
+        T = Team.objects.filter(league=L.id)
+        for t in T:
+            Schedule.objects.filter(Q(awayteam_id = t.id) | Q(hometeam = t.id)).update(lastyear = True)
+    
+    def Paid(OwnerID):
+        O = Owner.objects.get(id=OwnerID)
+        return O.paid
+    
+    def Pay(OwnerID):
+        Owner.objects.filter(id=OwnerID).update(paid = True)
+        
+    def ClearDemo(OwnerID):
+        Owner.objects.filter(id = OwnerID).update(tries = 0)
+        BestTen.objects.filter(owner_id = OwnerID).delete()
+        Person.objects.filter(owner_id = OwnerID).delete() #also Ticket, Requirement, TenBest, Status
     
     def GetLeague(LeagueName):
         return League.objects.filter(name=LeagueName)
@@ -60,7 +85,7 @@ Uses the owner's team to get the league name
         return L.name
 
     def GetTeams(league):
-        return Team.objects.filter(league=league)
+        return Team.objects.filter(league=league).order_by('name')
     
     def GetTeam(OwnerID):
         O = Owner.objects.get(id=OwnerID)
@@ -78,9 +103,13 @@ This is the number of tickets, or seats, the owner has for each game
         '''
 Total tickets is the number of games in the season, times tickets per game
         '''
+        print('OwnerID is ' + str(OwnerID))
         O = Owner.objects.get(id=OwnerID)
         T = O.team_id
-        return Schedule.objects.filter(hometeam=T).count() * O.tickets
+        print('home team is ' + str(T))
+        if O.paid == True:
+            return Schedule.objects.filter(Q(date__gte = O.startdate), hometeam=T, lastyear=0).count() * O.tickets
+        return Schedule.objects.filter(Q(date__gte = O.startdate), hometeam=T, lastyear=1).count() * O.tickets
     
     def GetTeamID(OwnerID):
         '''
@@ -112,7 +141,9 @@ Used to keep track until tickets assigned = total tickets.
     def GetGameCount(OwnerID):
         O = Owner.objects.get(id=OwnerID)
         T = Team.objects.get(id = O.team_id)
-        return Schedule.objects.filter(hometeam = T.id).count()
+        if O.paid == True:
+            return Schedule.objects.filter(Q(date__gte = O.startdate), hometeam = T.id, lastyear=0).count()
+        return Schedule.objects.filter(Q(date__gte = O.startdate), hometeam = T.id, lastyear=1).count()
     
     def GetPeopleTics(OwnerID):
         '''
@@ -166,8 +197,46 @@ start with highest tickets
     def GetGames(OwnerID):
         O = Owner.objects.get(id=OwnerID)
         T = Team.objects.get(id = O.team_id)
-        return Schedule.objects.filter(hometeam = T.id).order_by('date')
+        if O.paid == True:
+            return Schedule.objects.filter(Q(date__gte = O.startdate), hometeam = T.id, lastyear = 0).order_by('date')
+        return Schedule.objects.filter(Q(date__gte = O.startdate), hometeam = T.id, lastyear = 1).order_by('date')
+
+    def GetAllGames(OwnerID):
+        O = Owner.objects.get(id=OwnerID)
+        T = Team.objects.get(id = O.team_id)
+        if O.paid == True:
+            return Schedule.objects.filter(hometeam = T.id, lastyear = 0).order_by('date')
+        return Schedule.objects.filter(hometeam = T.id, lastyear = 1).order_by('date')
     
+    def GetSeasonStartDate(OwnerID):
+        S = DataJobs.GetAllGames(OwnerID) # Ordered by date
+        for s in S:
+            return s.date # Get first one
+    
+    def SetStartDate(OwnerID, StartDate):
+        Owner.objects.filter(id=OwnerID).update(startdate=StartDate)
+
+    def GetStartDate(OwnerID):
+        O = Owner.objects.get(id=OwnerID)
+        return O.startdate
+       
+    def GetStartDateString(OwnerID):
+        O = Owner.objects.get(id=OwnerID)
+        print('hay what the f')
+        if O.startdate == None:
+            print('date is none')
+            d = DataJobs.GetSeasonStartDate(OwnerID)
+            DataJobs.SetStartDate(OwnerID, d)
+            return datetime.strftime(d, '%m/%d/%y')
+        return datetime.strftime(O.startdate, '%m/%d/%y')
+
+    def GetDates(OwnerID):
+        dates = []
+        S = DataJobs.GetAllGames(OwnerID)
+        for s in S:
+            dates.append((s.date).strftime("%m/%d/%y"))
+        return dates
+
     def GetSchedule(OwnerID):
         '''
 Rendered in requirements.html, and distribution.html, schedule is 2D array, 
@@ -176,6 +245,7 @@ for the 2 header rows of requirements and results tables.
         schedule = []
         S = DataJobs.GetGames(OwnerID)
         for s in S:
+            #if s.date >= StartDate:
             DateCode = [] # Array of date, team code
             DateCode.append((s.date).strftime("%m/%d"))
             a = s.awayteam
@@ -220,12 +290,23 @@ Example: 5 2 ticket games and 1 4 ticket game.
         Ticket.objects.create(person = P, ticketsper = TicsPer, numbergames = NumberGames)
     
     def DeletePeopleTics(OwnerID):
+        Owner.objects.filter(id = OwnerID).update(tries = 0)
         Person.objects.filter(owner_id=OwnerID).delete() #cascade delete for ticket
+        DataJobs.DeleteBestTen(OwnerID)
+        
+       # DataJobs.DeleteResults(OwnerID)
         
     def DeleteReqs(OwnerID):
         P = Person.objects.filter(owner_id=OwnerID)
         for p in P:
             Req.objects.filter(person_id=p.id).delete()
+        DataJobs.DeleteResults(OwnerID)
+    
+    def DeleteResults(OwnerID):
+        Owner.objects.filter(id = OwnerID).update(tries = 0)
+        DataJobs.DeleteBestTen(OwnerID)
+        DataJobs.DeleteStatus(OwnerID)
+        DataJobs.DeleteTenBest(OwnerID)
         
     def OnDistribution(OwnerID):
         ''' 
@@ -439,7 +520,9 @@ repeated several times for all the back buttons that send you there.
         TenBest8 = DataJobs.GetTenBest(OwnerID, 8)
         TenBest9 = DataJobs.GetTenBest(OwnerID, 9)
         TenBest10 = DataJobs.GetTenBest(OwnerID, 10)
-        return {'owner': newOwner, 'schedule': schedule, 'people': people, 'tries': Tries, 'bestten': BestTen, 'personcnt': PersonCnt, 'gamecnt': GameCnt, 'tenbest1': TenBest1, 'tenbest2': TenBest2, 'tenbest3': TenBest3, 'tenbest4': TenBest4, 'tenbest5': TenBest5, 'tenbest6': TenBest6, 'tenbest7': TenBest7, 'tenbest8': TenBest8, 'tenbest9': TenBest9, 'tenbest10': TenBest10, 'tenbestnbr': TenBestNbr}
+        dates = DataJobs.GetDates(OwnerID)
+        SelectDate = DataJobs.GetStartDateString(OwnerID)
+        return {'owner': newOwner, 'schedule': schedule, 'people': people, 'tries': Tries, 'bestten': BestTen, 'personcnt': PersonCnt, 'gamecnt': GameCnt, 'tenbest1': TenBest1, 'tenbest2': TenBest2, 'tenbest3': TenBest3, 'tenbest4': TenBest4, 'tenbest5': TenBest5, 'tenbest6': TenBest6, 'tenbest7': TenBest7, 'tenbest8': TenBest8, 'tenbest9': TenBest9, 'tenbest10': TenBest10, 'tenbestnbr': TenBestNbr, 'dates': dates, 'selectdate': SelectDate}
 
     def GetPeopleStatus(OwnerID, TenBestNbr):
         '''
@@ -495,7 +578,9 @@ Helper function for GetGameArray, the sub array of person requirements for each 
         if R.count() == 0:
             return None
         for r in R: # there's only one now, but had to use filter because could have been 0.
-            return r
+            #if r.req == 0:
+                #return None
+            return r.req
     
     def GetGameArray(OwnerID):
         '''

@@ -5,8 +5,10 @@ from .ScheduleImport import ImportSchedule
 from .TicketsInfo import DataJobs
 from .Distribution import Distribute
 from decimal import Decimal
+from datetime import datetime
 
 def index(request):
+    leagues = DataJobs.GetLeagues()
     if request.method == "POST":
         FromDist = False
         userName = request.POST['Name']
@@ -15,13 +17,12 @@ def index(request):
         if 'btnNewUser' in request.POST:
             #New user so don't expect existing userName/password, if found return to Index page
             if owner:
-                return render(request, 'tickets/index.html')
+                return render(request, 'tickets/index.html', {'leagues': leagues})
             ownerID = DataJobs.AddInitialOwner(userName, password) # Owner will be updated later
             newOwner = get_object_or_404(Owner, pk=ownerID)
-            leagues = DataJobs.GetLeagues()
-            TicsPer = None
-            context = {'owner': newOwner, 'leagues': leagues, 'ticsper': TicsPer, 'fromdist': FromDist}
-            return render(request, 'tickets/ticketInfo.html', context)
+            User = 'new'
+            context = {'owner': newOwner, 'user': User}
+            return render(request, 'tickets/payment.html', context)
         if 'btnExistingUser' in request.POST:
             #Existing user so expect existing userName/password, if not found return to Index page
             if owner:#There's only one owner but filter was used because there might not have
@@ -31,64 +32,132 @@ def index(request):
                 NoResultMessages = DataJobs.GetNoResultMessages(ownerID)
                 # NoResultMessages should only come from person info or requirements
                 # so only check there below
-                if DataJobs.OnDistribution(ownerID): # Successful results or requirements assigned
-                    context = DataJobs.DistributionContext(ownerID, 1)
-                    return render(request, 'tickets/distribution.html', context)
-                if DataJobs.OnRequirements(ownerID):
-                    if NoResultMessages.count() > 0:
-                        From = 'People'
-                        context = {'owner': newOwner, 'noresultmessages': NoResultMessages, 'from': From}
-                        return render(request, 'tickets/noresult.html', context)
-                    TicsPer = DataJobs.GetTicsPer(ownerID)
-                    schedule = DataJobs.GetSchedule(ownerID)
-                    people = DataJobs.GetPeople(ownerID)
-                    context = {'owner': newOwner, 'ticsperrange': range(1, TicsPer+1), 'schedule': schedule, 'people': people, 'fromdist': FromDist}
-                    return render(request, 'tickets/requirements.html', context)
-                if DataJobs.OnPerson(ownerID):
-                    TicsRemaining = DataJobs.GetTotalTics(ownerID) - DataJobs.GetTicketsAssigned(ownerID)
-                    TicsPer = DataJobs.GetTicsPer(ownerID)
-                    PersonCount = DataJobs.GetPersonCount(ownerID)
+                if DataJobs.Paid(ownerID):
+                    if DataJobs.OnDistribution(ownerID): # Successful results or requirements assigned
+                        context = DataJobs.DistributionContext(ownerID, 1)
+                        return render(request, 'tickets/distribution.html', context)
+                    if DataJobs.OnRequirements(ownerID):
+                        if NoResultMessages.count() > 0:
+                            From = 'People'
+                            context = {'owner': newOwner, 'noresultmessages': NoResultMessages, 'from': From}
+                            return render(request, 'tickets/noresult.html', context)
+                        TicsPer = DataJobs.GetTicsPer(ownerID)
+                        people = DataJobs.GetPeople(ownerID)
+                        context = {'owner': newOwner, 'ticsperrange': range(1, TicsPer+1), 'schedule': schedule, 'people': people, 'fromdist': FromDist}
+                        return render(request, 'tickets/requirements.html', context)
+                    if DataJobs.OnPerson(ownerID):
+                        TicsRemaining = DataJobs.GetTotalTics(ownerID) - DataJobs.GetTicketsAssigned(ownerID)
+                        print('TotalTics is ' + str(DataJobs.GetTotalTics(ownerID)))
+                        print('TicsRemaining is ' + str(TicsRemaining))
+                        TicsPer = DataJobs.GetTicsPer(ownerID)
+                        PersonCount = DataJobs.GetPersonCount(ownerID)
+                        #newOwner = get_object_or_404(Owner, pk=ownerID)
+                        peopleTics = DataJobs.GetPeopleTics(ownerID)
+                        dates = DataJobs.GetDates(ownerID)
+                        SelectDate = DataJobs.GetStartDateString(ownerID)
+                        context = {'owner': newOwner, 'ticsperrange': range(TicsPer), 'ticsperrange2': range(2, int(TicsPer)+2), 'ticsremaining': TicsRemaining, 'personcount': range(PersonCount), 'people': peopleTics, 'nextperson': PersonCount+1, 'fromdist': FromDist, 'dates': dates, 'selectdate': SelectDate}
+                        return render(request, 'tickets/personInfo.html', context)
+                    # On tickets
                     #newOwner = get_object_or_404(Owner, pk=ownerID)
-                    peopleTics = DataJobs.GetPeopleTics(ownerID)
-                    context = {'owner': newOwner, 'ticsperrange': range(TicsPer), 'ticsperrange2': range(2, int(TicsPer)+2), 'ticsremaining': TicsRemaining, 'personcount': range(PersonCount), 'people': peopleTics, 'nextperson': PersonCount+1, 'fromdist': FromDist}
-                    return render(request, 'tickets/personInfo.html', context)
-                # On tickets
-                #newOwner = get_object_or_404(Owner, pk=ownerID)
-                leagues = DataJobs.GetLeagues()
-                TicsPer = None
-                context = {'owner': newOwner, 'leagues': leagues, 'ticsper': TicsPer, 'fromdist': FromDist}
-                return render(request, 'tickets/ticketInfo.html', context)
-            return render(request, 'tickets/index.html')
+                    leagues = DataJobs.GetLeagues()
+                    TicsPer = None
+                    context = {'owner': newOwner, 'leagues': leagues, 'ticsper': TicsPer, 'fromdist': FromDist}
+                    return render(request, 'tickets/ticketInfo.html', context)
+                User = 'existing'
+                context = {'owner': newOwner, 'user': User}
+                return render(request, 'tickets/payment.html', context)
+            return render(request, 'tickets/index.html', {'leagues': leagues})
+        context = {'admin': True, 'leagues': leagues}
         if 'btnNHLTeams' in request.POST:
-            ImportSchedule.ImportNHLTeams()  #CAREFUL DON"T RUN LOCAL!
-            context = {'admin': True }
+            ImportSchedule.ImportTeams('NHL')  #CAREFUL DON"T RUN LOCAL!
             return render(request, 'tickets/index.html', context) 
         if 'btnNBATeams' in request.POST:
-            ImportSchedule.ImportNBATeams()  #CAREFUL DON"T RUN LOCAL!
+            ImportSchedule.ImportTeams('NBA')  #CAREFUL DON"T RUN LOCAL!
             context = {'admin': True }
             return render(request, 'tickets/index.html', context) 
         if 'btnNFLTeams' in request.POST:
-            ImportSchedule.ImportNFLTeams()  #CAREFUL DON"T RUN LOCAL!
+            ImportSchedule.ImportTeams('NFL')  #CAREFUL DON"T RUN LOCAL!
+            context = {'admin': True }
+            return render(request, 'tickets/index.html', context) 
+        if 'btnMLBTeams' in request.POST:
+            ImportSchedule.ImportTeams('MLB')  #CAREFUL DON"T RUN LOCAL!
             context = {'admin': True }
             return render(request, 'tickets/index.html', context) 
         if 'btnNHLSchedule' in request.POST:
-            ImportSchedule.ImportNHLSchedule()  #CAREFUL DON"T RUN LOCAL!
+            ImportSchedule.ImportSchedule('NHL')  #CAREFUL DON"T RUN LOCAL!
             context = {'admin': True }
             return render(request, 'tickets/index.html', context) 
         if 'btnNBASchedule' in request.POST:
-            ImportSchedule.ImportNBASchedule()  #CAREFUL DON"T RUN LOCAL!
+            ImportSchedule.ImportSchedule('NBA')  #CAREFUL DON"T RUN LOCAL!
             context = {'admin': True }
             return render(request, 'tickets/index.html', context) 
         if 'btnNFLSchedule' in request.POST:
-            ImportSchedule.ImportNFLSchedule()  #CAREFUL DON"T RUN LOCAL!
+            ImportSchedule.ImportSchedule('NFL')  #CAREFUL DON"T RUN LOCAL!
+            context = {'admin': True }
+            return render(request, 'tickets/index.html', context) 
+        if 'btnMLBSchedule' in request.POST:
+            ImportSchedule.ImportSchedule('MLB')  #CAREFUL DON"T RUN LOCAL!
             context = {'admin': True }
             return render(request, 'tickets/index.html', context) 
     else:
        # ImportSchedule.ImportNHLTeams() #administrative tool
       #  Distribute.Test()
-        leagues = DataJobs.GetLeagues()
+        
         return render(request, 'tickets/index.html', {'leagues': leagues}) 
-    
+
+def payment(request, owner_id):
+    FromDist = False
+    if request.method == "POST":
+        NoResultMessages = DataJobs.GetNoResultMessages(owner_id)
+        if 'btnDemo' in request.POST:
+            newOwner = get_object_or_404(Owner, pk=owner_id)
+            U = request.POST['NewExisting']
+            if U == 'UserNew':
+                newOwner = get_object_or_404(Owner, pk=owner_id)
+                leagues = DataJobs.GetLeagues()
+                TicsPer = None
+                context = {'owner': newOwner, 'leagues': leagues, 'ticsper': TicsPer, 'fromdist': FromDist}
+                return render(request, 'tickets/ticketInfo.html', context)
+            if DataJobs.OnDistribution(owner_id): # Successful results or requirements assigned
+                context = DataJobs.DistributionContext(owner_id, 1)
+                return render(request, 'tickets/distribution.html', context)
+            if DataJobs.OnRequirements(owner_id):
+                if NoResultMessages.count() > 0:
+                    From = 'People'
+                    context = {'owner': newOwner, 'noresultmessages': NoResultMessages, 'from': From}
+                    return render(request, 'tickets/noresult.html', context)
+                TicsPer = DataJobs.GetTicsPer(owner_id)
+                schedule = DataJobs.GetSchedule(owner_id)
+                people = DataJobs.GetPeople(owner_id)
+                context = {'owner': newOwner, 'ticsperrange': range(1, TicsPer+1), 'schedule': schedule, 'people': people, 'fromdist': FromDist}
+                return render(request, 'tickets/requirements.html', context)
+            if DataJobs.OnPerson(owner_id):
+                TicsRemaining = DataJobs.GetTotalTics(owner_id) - DataJobs.GetTicketsAssigned(owner_id)
+                TicsPer = DataJobs.GetTicsPer(owner_id)
+                PersonCount = DataJobs.GetPersonCount(owner_id)
+                #newOwner = get_object_or_404(Owner, pk=ownerID)
+                peopleTics = DataJobs.GetPeopleTics(owner_id)
+                dates = DataJobs.GetDates(owner_id)
+                SelectDate = DataJobs.GetStartDateString(owner_id)
+                context = {'owner': newOwner, 'ticsperrange': range(TicsPer), 'ticsperrange2': range(2, int(TicsPer)+2), 'ticsremaining': TicsRemaining, 'personcount': range(PersonCount), 'people': peopleTics, 'nextperson': PersonCount+1, 'fromdist': FromDist, 'dates': dates, 'selectdate': SelectDate}
+                return render(request, 'tickets/personInfo.html', context)
+            # On tickets
+            #newOwner = get_object_or_404(Owner, pk=ownerID)
+            leagues = DataJobs.GetLeagues()
+            TicsPer = None
+            context = {'owner': newOwner, 'leagues': leagues, 'ticsper': TicsPer, 'fromdist': FromDist}
+            return render(request, 'tickets/ticketInfo.html', context)
+        if 'btnPay' in request.POST:
+            DataJobs.ClearDemo(owner_id)
+            DataJobs.Pay(owner_id)
+            StartDate = DataJobs.GetSeasonStartDate(owner_id)
+            DataJobs.SetStartDate(owner_id, StartDate)
+            newOwner = get_object_or_404(Owner, pk=owner_id)
+            leagues = DataJobs.GetLeagues()
+            TicsPer = None
+            context = {'owner': newOwner, 'leagues': leagues, 'ticsper': TicsPer, 'fromdist': FromDist}
+            return render(request, 'tickets/ticketInfo.html', context)
+        
 def ticketinfo(request, owner_id):
     if request.method == "POST":
         league = request.POST['HomeLeague']
@@ -110,10 +179,13 @@ def ticketinfo(request, owner_id):
         team = request.POST['HomeTeam']
         TicsPer = request.POST['TicsPer']
         DataJobs.CompleteOwner(owner_id, league, team, TicsPer)
+        SelectDate = DataJobs.GetStartDateString(owner_id)
         TotalTics = DataJobs.GetTotalTics(owner_id)
         peopleTics = DataJobs.GetPeopleTics(owner_id)
         FromDist = False
-        context = {'owner': newOwner, 'ticsperrange': range(int(TicsPer)), 'ticsperrange2': range(2, int(TicsPer)+2), 'ticsremaining': TotalTics, 'personcount': range(0), 'people': peopleTics, 'nextperson': 1, 'fromdist': FromDist}
+        dates = DataJobs.GetDates(owner_id)
+        
+        context = {'owner': newOwner, 'ticsperrange': range(int(TicsPer)), 'ticsperrange2': range(2, int(TicsPer)+2), 'ticsremaining': TotalTics, 'personcount': range(0), 'people': peopleTics, 'nextperson': 1, 'fromdist': FromDist, 'dates': dates, 'selectdate': SelectDate}
         return render(request, 'tickets/personInfo.html', context)
     else:
         return render(request, 'tickets/ticketInfo.html')
@@ -140,7 +212,14 @@ def personinfo(request, owner_id):
                     NumberOfGames = request.POST['T'+str(p+1)+','+str(t)]
                     if (NumberOfGames.strip()).isnumeric():    
                         DataJobs.AddTicket(personID, t-1, NumberOfGames)
+        s = request.POST['StartDate']
+        StartDate = datetime.strptime(s, '%m/%d/%y')
+        #StartDate = StartDate.strftime("%yyyy-%m-%d")
+        #s = s.strftime("%yyyy-%m-%d")
+        DataJobs.SetStartDate(owner_id, StartDate)
         if DataJobs.GetTotalTics(owner_id) - DataJobs.GetTicketsAssigned(owner_id) == 0:
+            print('combos len is ' + str(len(Distribute.Combos)))
+            Distribute.Combos = []
             success = Distribute.DoCombos('People')
             if success == True:
                 schedule = DataJobs.GetSchedule(owner_id)
@@ -159,7 +238,9 @@ def personinfo(request, owner_id):
         PersonCount = DataJobs.GetPersonCount(owner_id) # after adding people
         peopleTics = DataJobs.GetPeopleTics(owner_id)
         FromDist = False
-        context = {'owner': newOwner, 'ticsperrange': range(TicsPer), 'ticsperrange2': range(2, int(TicsPer)+2), 'ticsremaining': TicsRemaining, 'personcount': range(PersonCount), 'people': peopleTics, 'nextperson': PersonCount+1, 'fromdist': FromDist}
+        dates = DataJobs.GetDates(owner_id)
+        SelectDate = s
+        context = {'owner': newOwner, 'ticsperrange': range(TicsPer), 'ticsperrange2': range(2, int(TicsPer)+2), 'ticsremaining': TicsRemaining, 'personcount': range(PersonCount), 'people': peopleTics, 'nextperson': PersonCount+1, 'fromdist': FromDist, 'dates': dates, 'selectdate': SelectDate}
         return render(request, 'tickets/personInfo.html', context)
     else:
         print('hey')
@@ -180,6 +261,7 @@ def requirements(request, owner_id):
         PersonCount = 0
         for p in people:
             PersonCount += 1
+            print('PersonCount is ' + str(PersonCount))
             GameCount = 0
             for g in games:
                 GameCount += 1
@@ -188,7 +270,9 @@ def requirements(request, owner_id):
                     DataJobs.AddRequirement(p, g, 0)
                 elif s.isnumeric():
                     DataJobs.AddRequirement(p, g, int(s))
-        context = {'owner': newOwner, 'schedule': schedule, 'people': people, 'tries': 0}
+        dates = DataJobs.GetDates(owner_id)
+        SelectDate = DataJobs.GetStartDateString(owner_id)
+        context = {'owner': newOwner, 'schedule': schedule, 'people': people, 'tries': 0, 'dates': dates, 'selectdate': SelectDate}
         return render(request, 'tickets/distribution.html', context)
     else:
         context = {'owner': newOwner, 'schedule': schedule, 'people': people}
@@ -201,6 +285,16 @@ def distribution(request, owner_id):
     peopleTics = DataJobs.GetPeopleTics(owner_id)
     schedule = DataJobs.GetSchedule(owner_id)
     if request.method == "POST":
+        if 'btnStartDate' in request.POST:
+            s = request.POST['StartDate']
+            StartDate = datetime.strptime(s, '%m/%d/%y')
+            DataJobs.SetStartDate(owner_id, StartDate)
+            TicsRemaining = DataJobs.GetTotalTics(owner_id) - DataJobs.GetTicketsAssigned(owner_id)
+            PersonCount = DataJobs.GetPersonCount(owner_id)
+            dates = DataJobs.GetDates(owner_id)
+            SelectDate = DataJobs.GetStartDateString(owner_id)
+            context = {'owner': newOwner, 'ticsperrange': range(TicsPer), 'ticsperrange2': range(2, TicsPer+2), 'ticsremaining': TicsRemaining, 'personcount': range(0), 'people': peopleTics, 'nextperson': PersonCount+1, 'dates': dates, 'selectdate': SelectDate, 'fromdist': False}
+            return render(request, 'tickets/personInfo.html', context) 
         if 'btnTickets' in request.POST:
             leagues = DataJobs.GetLeagues()
             league = DataJobs.GetLeagueName(owner_id)
@@ -213,7 +307,9 @@ def distribution(request, owner_id):
             return render(request, 'tickets/ticketInfo.html', context)
         if 'btnPeople' in request.POST: 
             TicsRemaining = DataJobs.GetTotalTics(owner_id) - DataJobs.GetTicketsAssigned(owner_id)
-            context = {'owner': newOwner, 'ticsperrange': range(TicsPer), 'ticsperrange2': range(2, TicsPer+2), 'ticsremaining': TicsRemaining, 'personcount': range(0), 'people': peopleTics, 'nextperson': 1, 'fromdist': FromDist}
+            dates = DataJobs.GetDates(owner_id)
+            SelectDate = DataJobs.GetStartDateString(owner_id)
+            context = {'owner': newOwner, 'ticsperrange': range(TicsPer), 'ticsperrange2': range(2, TicsPer+2), 'ticsremaining': TicsRemaining, 'personcount': range(0), 'people': peopleTics, 'nextperson': 1, 'fromdist': FromDist, 'dates': dates, 'selectdate': SelectDate}
             return render(request, 'tickets/personInfo.html', context) 
         if 'btnRequirements' in request.POST: 
             ReqString = DataJobs.GetReqSched(owner_id)
@@ -239,6 +335,8 @@ def distribution(request, owner_id):
             ReportInfo = DataJobs.GetReportInfo(owner_id, TB)
             context = {'owner': newOwner, 'reportinfo': ReportInfo, 'tenbestnbr': TB}
             return render(request, 'tickets/report.html', context)
+        TB = int(request.POST['TenBestNumber'])
+        context = DataJobs.DistributionContext(owner_id, TB)
         return render(request, 'tickets/distribution.html', context)
     else:
         return render(request, 'tickets/distribution.html', context)
@@ -265,7 +363,9 @@ def noresult(request, owner_id):
             peopleTics = DataJobs.GetPeopleTics(owner_id) # people in personInfo.html
             PersonCount = DataJobs.GetPersonCount(owner_id)
             TicsRemaining = DataJobs.GetTotalTics(owner_id) - DataJobs.GetTicketsAssigned(owner_id)
-            context = {'owner': newOwner, 'ticsperrange': range(TicsPer), 'ticsperrange2': range(2, TicsPer+2), 'ticsremaining': TicsRemaining, 'personcount': range(PersonCount), 'people': peopleTics, 'nextperson': PersonCount+1, 'fromdist': FromDist}
+            dates = DataJobs.GetDates(owner_id)
+            SelectDate = DataJobs.GetStartDateString(owner_id)
+            context = {'owner': newOwner, 'ticsperrange': range(TicsPer), 'ticsperrange2': range(2, TicsPer+2), 'ticsremaining': TicsRemaining, 'personcount': range(PersonCount), 'people': peopleTics, 'nextperson': PersonCount+1, 'fromdist': FromDist, 'dates': dates, 'selectdate': SelectDate}
             return render(request, 'tickets/personInfo.html', context) 
         if From == 'Run':
             ReqString = DataJobs.GetReqSched(owner_id)
