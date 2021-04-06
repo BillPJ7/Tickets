@@ -1,898 +1,2429 @@
-07/23/20|Dodgers|Giants
-07/23/20|Nationals|Yankees
-07/24/20|Red Sox|Orioles
-07/24/20|White Sox|Twins
-07/24/20|Cubs|Brewers
-07/24/20|Reds|Tigers
-07/24/20|Indians|Royals
-07/24/20|Astros|Mariners
-07/24/20|Dodgers|Giants
-07/24/20|Mets|Braves
-07/24/20|Athletics|Angels
-07/24/20|Phillies|Marlins
-07/24/20|Padres|Diamondbacks
-07/24/20|Cardinals|Pirates
-07/24/20|Rays|Blue Jays
-07/24/20|Rangers|Rockies
-07/25/20|Red Sox|Orioles
-07/25/20|White Sox|Twins
-07/25/20|Cubs|Brewers
-07/25/20|Reds|Tigers
-07/25/20|Indians|Royals
-07/25/20|Astros|Mariners
-07/25/20|Dodgers|Giants
-07/25/20|Mets|Braves
-07/25/20|Athletics|Angels
-07/25/20|Phillies|Marlins
-07/25/20|Padres|Diamondbacks
-07/25/20|Cardinals|Pirates
-07/25/20|Rays|Blue Jays
-07/25/20|Rangers|Rockies
-07/25/20|Nationals|Yankees
-07/26/20|Red Sox|Orioles
-07/26/20|White Sox|Twins
-07/26/20|Cubs|Brewers
-07/26/20|Reds|Tigers
-07/26/20|Indians|Royals
-07/26/20|Astros|Mariners
-07/26/20|Dodgers|Giants
-07/26/20|Mets|Braves
-07/26/20|Athletics|Angels
-07/26/20|Phillies|Marlins
-07/26/20|Padres|Diamondbacks
-07/26/20|Cardinals|Pirates
-07/26/20|Rays|Blue Jays
-07/26/20|Rangers|Rockies
-07/26/20|Nationals|Yankees
-07/27/20|Red Sox|Mets
-07/27/20|Reds|Cubs
-07/27/20|Tigers|Royals
-07/27/20|Astros|Mariners
-07/27/20|Athletics|Angels
-07/27/20|Pirates|Brewers
-07/27/20|Padres|Diamondbacks
-07/27/20|Rays|Braves
-07/27/20|Nationals|Blue Jays
-07/28/20|Angels|Mariners
-07/28/20|Red Sox|Mets
-07/28/20|Reds|Cubs
-07/28/20|Indians|White Sox
-07/28/20|Indians|White Sox
-07/28/20|Tigers|Royals
-07/28/20|Astros|Dodgers
-07/28/20|Twins|Cardinals
-07/28/20|Athletics|Rockies
-07/28/20|Pirates|Brewers
-07/28/20|Giants|Padres
-07/28/20|Rays|Braves
-07/28/20|Rangers|Diamondbacks
-07/28/20|Nationals|Blue Jays
-07/29/20|Angels|Mariners
-07/29/20|Braves|Rays
-07/29/20|Orioles|Yankees
-07/29/20|Reds|Cubs
-07/29/20|Indians|White Sox
-07/29/20|Tigers|Royals
-07/29/20|Astros|Dodgers
-07/29/20|Twins|Cardinals
-07/29/20|Mets|Red Sox
-07/29/20|Athletics|Rockies
-07/29/20|Pirates|Brewers
-07/29/20|Giants|Padres
-07/29/20|Rangers|Diamondbacks
-07/29/20|Nationals|Blue Jays
-07/30/20|Angels|Mariners
-07/30/20|Diamondbacks|Dodgers
-07/30/20|Braves|Rays
-07/30/20|Orioles|Yankees
-07/30/20|Tigers|Royals
-07/30/20|Twins|Indians
-07/30/20|Mets|Red Sox
-07/30/20|Giants|Padres
-07/30/20|Nationals|Blue Jays
-07/31/20|Angels|Astros
-07/31/20|Diamondbacks|Dodgers
-07/31/20|Braves|Mets
-07/31/20|Orioles|Rays
-07/31/20|Cubs|Pirates
-07/31/20|Rockies|Padres
-07/31/20|Tigers|Reds
-07/31/20|Royals|White Sox
-07/31/20|Twins|Indians
-07/31/20|Yankees|Red Sox
-07/31/20|Mariners|Athletics
-07/31/20|Giants|Rangers
-08/01/20|Angels|Astros
-08/01/20|Diamondbacks|Dodgers
-08/01/20|Braves|Mets
-08/01/20|Orioles|Rays
-08/01/20|Cubs|Pirates
-08/01/20|Rockies|Padres
-08/01/20|Royals|White Sox
-08/01/20|Twins|Indians
-08/01/20|Yankees|Red Sox
-08/01/20|Mariners|Athletics
-08/01/20|Giants|Rangers
-08/02/20|Angels|Astros
-08/02/20|Diamondbacks|Dodgers
-08/02/20|Braves|Mets
-08/02/20|Orioles|Rays
-08/02/20|Cubs|Pirates
-08/02/20|Rockies|Padres
-08/02/20|Tigers|Reds
-08/02/20|Tigers|Reds
-08/02/20|Royals|White Sox
-08/02/20|Twins|Indians
-08/02/20|Yankees|Red Sox
-08/02/20|Mariners|Athletics
-08/02/20|Giants|Rangers
-08/03/20|Braves|Mets
-08/03/20|Cubs|Royals
-08/03/20|Reds|Indians
-08/03/20|Rockies|Giants
-08/03/20|Brewers|White Sox
-08/03/20|Twins|Pirates
-08/03/20|Yankees|Phillies
-08/03/20|Padres|Dodgers
-08/03/20|Mariners|Athletics
-08/04/20|Diamondbacks|Astros
-08/04/20|Braves|Blue Jays
-08/04/20|Orioles|Marlins
-08/04/20|Cubs|Royals
-08/04/20|Reds|Indians
-08/04/20|Rockies|Giants
-08/04/20|Brewers|White Sox
-08/04/20|Twins|Pirates
-08/04/20|Athletics|Rangers
-08/04/20|Padres|Dodgers
-08/04/20|Mariners|Angels
-08/04/20|Rays|Red Sox
-08/04/20|Nationals|Mets
-08/05/20|Diamondbacks|Astros
-08/05/20|Braves|Blue Jays
-08/05/20|Orioles|Marlins
-08/05/20|Orioles|Marlins
-08/05/20|White Sox|Brewers
-08/05/20|Indians|Reds
-08/05/20|Rockies|Giants
-08/05/20|Royals|Cubs
-08/05/20|Athletics|Rangers
-08/05/20|Phillies|Yankees
-08/05/20|Phillies|Yankees
-08/05/20|Pirates|Twins
-08/05/20|Padres|Dodgers
-08/05/20|Mariners|Angels
-08/05/20|Rays|Red Sox
-08/05/20|Nationals|Mets
-08/06/20|Diamondbacks|Astros
-08/06/20|Braves|Blue Jays
-08/06/20|Orioles|Marlins
-08/06/20|White Sox|Brewers
-08/06/20|Indians|Reds
-08/06/20|Rockies|Giants
-08/06/20|Royals|Cubs
-08/06/20|Athletics|Rangers
-08/06/20|Phillies|Yankees
-08/06/20|Pirates|Twins
-08/06/20|Mariners|Angels
-08/07/20|Red Sox|Blue Jays
-08/07/20|White Sox|Indians
-08/07/20|Royals|Twins
-08/07/20|Dodgers|Giants
-08/07/20|Brewers|Reds
-08/07/20|Mets|Marlins
-08/07/20|Athletics|Astros
-08/07/20|Pirates|Tigers
-08/07/20|Padres|Diamondbacks
-08/07/20|Mariners|Rockies
-08/07/20|Rays|Yankees
-08/07/20|Rangers|Angels
-08/07/20|Nationals|Orioles
-08/08/20|Red Sox|Blue Jays
-08/08/20|White Sox|Indians
-08/08/20|Royals|Twins
-08/08/20|Dodgers|Giants
-08/08/20|Brewers|Reds
-08/08/20|Mets|Marlins
-08/08/20|Athletics|Astros
-08/08/20|Phillies|Braves
-08/08/20|Pirates|Tigers
-08/08/20|Padres|Diamondbacks
-08/08/20|Mariners|Rockies
-08/08/20|Rays|Yankees
-08/08/20|Rays|Yankees
-08/08/20|Rangers|Angels
-08/08/20|Nationals|Orioles
-08/09/20|Red Sox|Blue Jays
-08/09/20|White Sox|Indians
-08/09/20|Royals|Twins
-08/09/20|Dodgers|Giants
-08/09/20|Brewers|Reds
-08/09/20|Mets|Marlins
-08/09/20|Athletics|Astros
-08/09/20|Phillies|Braves
-08/09/20|Phillies|Braves
-08/09/20|Pirates|Tigers
-08/09/20|Padres|Diamondbacks
-08/09/20|Mariners|Rockies
-08/09/20|Rays|Yankees
-08/09/20|Rangers|Angels
-08/09/20|Nationals|Orioles
-08/10/20|Angels|Athletics
-08/10/20|Red Sox|Rays
-08/10/20|Rockies|Diamondbacks
-08/10/20|Tigers|White Sox
-08/10/20|Astros|Giants
-08/10/20|Dodgers|Padres
-08/10/20|Brewers|Twins
-08/10/20|Mets|Nationals
-08/10/20|Phillies|Braves
-08/10/20|Rangers|Mariners
-08/11/20|Angels|Athletics
-08/11/20|Red Sox|Rays
-08/11/20|Reds|Royals
-08/11/20|Indians|Cubs
-08/11/20|Rockies|Diamondbacks
-08/11/20|Tigers|White Sox
-08/11/20|Astros|Giants
-08/11/20|Dodgers|Padres
-08/11/20|Brewers|Twins
-08/11/20|Yankees|Braves
-08/11/20|Mets|Nationals
-08/11/20|Phillies|Orioles
-08/11/20|Rangers|Mariners
-08/11/20|Blue Jays|Marlins
-08/12/20|Angels|Athletics
-08/12/20|Red Sox|Rays
-08/12/20|Reds|Royals
-08/12/20|Indians|Cubs
-08/12/20|Rockies|Diamondbacks
-08/12/20|Tigers|White Sox
-08/12/20|Astros|Giants
-08/12/20|Dodgers|Padres
-08/12/20|Brewers|Twins
-08/12/20|Yankees|Braves
-08/12/20|Mets|Nationals
-08/12/20|Phillies|Orioles
-08/12/20|Rangers|Mariners
-08/12/20|Blue Jays|Marlins
-08/13/20|Red Sox|Rays
-08/13/20|Cubs|Brewers
-08/13/20|Reds|Pirates
-08/13/20|Dodgers|Padres
-08/13/20|Mets|Nationals
-08/13/20|Phillies|Orioles
-08/14/20|Angels|Dodgers
-08/14/20|Diamondbacks|Padres
-08/14/20|Orioles|Nationals
-08/14/20|Cubs|Brewers
-08/14/20|Reds|Pirates
-08/14/20|Rockies|Rangers
-08/14/20|Tigers|Indians
-08/14/20|Astros|Mariners
-08/14/20|Marlins|Braves
-08/14/20|Yankees|Red Sox
-08/14/20|Phillies|Mets
-08/14/20|Giants|Athletics
-08/14/20|Blue Jays|Rays
-08/15/20|Angels|Dodgers
-08/15/20|Diamondbacks|Padres
-08/15/20|Orioles|Nationals
-08/15/20|White Sox|Cardinals
-08/15/20|White Sox|Cardinals
-08/15/20|Cubs|Brewers
-08/15/20|Rockies|Rangers
-08/15/20|Tigers|Indians
-08/15/20|Astros|Mariners
-08/15/20|Marlins|Braves
-08/15/20|Twins|Royals
-08/15/20|Twins|Royals
-08/15/20|Yankees|Red Sox
-08/15/20|Phillies|Mets
-08/15/20|Giants|Athletics
-08/15/20|Blue Jays|Rays
-08/16/20|Angels|Dodgers
-08/16/20|Diamondbacks|Padres
-08/16/20|Orioles|Nationals
-08/16/20|White Sox|Cardinals
-08/16/20|Cubs|Brewers
-08/16/20|Rockies|Rangers
-08/16/20|Tigers|Indians
-08/16/20|Astros|Mariners
-08/16/20|Marlins|Braves
-08/16/20|Twins|Royals
-08/16/20|Yankees|Red Sox
-08/16/20|Phillies|Mets
-08/16/20|Giants|Athletics
-08/16/20|Blue Jays|Rays
-08/17/20|Angels|Giants
-08/17/20|Diamondbacks|Athletics
-08/17/20|Braves|Nationals
-08/17/20|Orioles|Blue Jays
-08/17/20|White Sox|Tigers
-08/17/20|Cubs|Cardinals
-08/17/20|Cubs|Cardinals
-08/17/20|Astros|Rockies
-08/17/20|Dodgers|Mariners
-08/17/20|Marlins|Mets
-08/17/20|Twins|Royals
-08/17/20|Yankees|Red Sox
-08/17/20|Rangers|Padres
-08/18/20|Angels|Giants
-08/18/20|Diamondbacks|Athletics
-08/18/20|Braves|Nationals
-08/18/20|Orioles|Blue Jays
-08/18/20|Red Sox|Phillies
-08/18/20|White Sox|Tigers
-08/18/20|Cubs|Cardinals
-08/18/20|Astros|Rockies
-08/18/20|Dodgers|Mariners
-08/18/20|Marlins|Mets
-08/18/20|Twins|Brewers
-08/18/20|Yankees|Rays
-08/18/20|Pirates|Indians
-08/18/20|Rangers|Padres
-08/19/20|Orioles|Blue Jays
-08/19/20|Red Sox|Phillies
-08/19/20|White Sox|Tigers
-08/19/20|Cubs|Cardinals
-08/19/20|Cubs|Cardinals
-08/19/20|Rockies|Astros
-08/19/20|Royals|Reds
-08/19/20|Royals|Reds
-08/19/20|Marlins|Mets
-08/19/20|Twins|Brewers
-08/19/20|Yankees|Rays
-08/19/20|Athletics|Diamondbacks
-08/19/20|Pirates|Indians
-08/19/20|Padres|Rangers
-08/19/20|Mariners|Dodgers
-08/19/20|Giants|Angels
-08/20/20|Orioles|Red Sox
-08/20/20|White Sox|Tigers
-08/20/20|Rockies|Astros
-08/20/20|Twins|Brewers
-08/20/20|Yankees|Rays
-08/20/20|Athletics|Diamondbacks
-08/20/20|Pirates|Indians
-08/20/20|Padres|Rangers
-08/20/20|Mariners|Dodgers
-08/20/20|Giants|Angels
-08/20/20|Cardinals|Reds
-08/20/20|Blue Jays|Phillies
-08/20/20|Blue Jays|Phillies
-08/21/20|Braves|Phillies
-08/21/20|Orioles|Red Sox
-08/21/20|Cubs|White Sox
-08/21/20|Indians|Tigers
-08/21/20|Royals|Twins
-08/21/20|Dodgers|Rockies
-08/21/20|Athletics|Angels
-08/21/20|Pirates|Brewers
-08/21/20|Padres|Astros
-08/21/20|Mariners|Rangers
-08/21/20|Giants|Diamondbacks
-08/21/20|Cardinals|Reds
-08/21/20|Rays|Blue Jays
-08/21/20|Nationals|Marlins
-08/22/20|Braves|Phillies
-08/22/20|Orioles|Red Sox
-08/22/20|Cubs|White Sox
-08/22/20|Indians|Tigers
-08/22/20|Royals|Twins
-08/22/20|Dodgers|Rockies
-08/22/20|Athletics|Angels
-08/22/20|Pirates|Brewers
-08/22/20|Padres|Astros
-08/22/20|Mariners|Rangers
-08/22/20|Giants|Diamondbacks
-08/22/20|Cardinals|Reds
-08/22/20|Rays|Blue Jays
-08/22/20|Nationals|Marlins
-08/22/20|Nationals|Marlins
-08/23/20|Braves|Phillies
-08/23/20|Orioles|Red Sox
-08/23/20|Cubs|White Sox
-08/23/20|Indians|Tigers
-08/23/20|Royals|Twins
-08/23/20|Dodgers|Rockies
-08/23/20|Athletics|Angels
-08/23/20|Pirates|Brewers
-08/23/20|Padres|Astros
-08/23/20|Mariners|Rangers
-08/23/20|Giants|Diamondbacks
-08/23/20|Cardinals|Reds
-08/23/20|Rays|Blue Jays
-08/23/20|Nationals|Marlins
-08/24/20|Diamondbacks|Rockies
-08/24/20|Indians|Twins
-08/24/20|Tigers|Cubs
-08/24/20|Astros|Angels
-08/24/20|Brewers|Reds
-08/24/20|Cardinals|Royals
-08/24/20|Rays|Blue Jays
-08/24/20|Rangers|Athletics
-08/24/20|Nationals|Marlins
-08/25/20|Diamondbacks|Rockies
-08/25/20|White Sox|Pirates
-08/25/20|Indians|Twins
-08/25/20|Tigers|Cubs
-08/25/20|Astros|Angels
-08/25/20|Astros|Angels
-08/25/20|Brewers|Reds
-08/25/20|Mets|Marlins
-08/25/20|Mets|Marlins
-08/25/20|Padres|Mariners
-08/25/20|Giants|Dodgers
-08/25/20|Cardinals|Royals
-08/25/20|Rays|Orioles
-08/25/20|Rangers|Athletics
-08/25/20|Blue Jays|Red Sox
-08/25/20|Nationals|Phillies
-08/26/20|Diamondbacks|Rockies
-08/26/20|Braves|Yankees
-08/26/20|Braves|Yankees
-08/26/20|White Sox|Pirates
-08/26/20|Indians|Twins
-08/26/20|Tigers|Cubs
-08/26/20|Mets|Marlins
-08/26/20|Cardinals|Royals
-08/26/20|Rays|Orioles
-08/26/20|Rangers|Athletics
-08/26/20|Blue Jays|Red Sox
-08/26/20|Nationals|Phillies
-08/27/20|Brewers|Reds
-08/27/20|Brewers|Reds
-08/27/20|Padres|Mariners
-08/27/20|Padres|Mariners
-08/27/20|Giants|Dodgers
-08/27/20|Giants|Dodgers
-08/27/20|Cardinals|Pirates
-08/27/20|Cardinals|Pirates
-08/28/20|Angels|Mariners
-08/28/20|Diamondbacks|Giants
-08/28/20|Red Sox|Nationals
-08/28/20|White Sox|Royals
-08/28/20|Reds|Cubs
-08/28/20|Rockies|Padres
-08/28/20|Marlins|Rays
-08/28/20|Brewers|Pirates
-08/28/20|Yankees|Mets
-08/28/20|Yankees|Mets
-08/28/20|Phillies|Braves
-08/28/20|Cardinals|Indians
-08/28/20|Rangers|Dodgers
-08/28/20|Blue Jays|Orioles
-08/29/20|Angels|Mariners
-08/29/20|Diamondbacks|Giants
-08/29/20|Red Sox|Nationals
-08/29/20|White Sox|Royals
-08/29/20|Reds|Cubs
-08/29/20|Reds|Cubs
-08/29/20|Rockies|Padres
-08/29/20|Tigers|Twins
-08/29/20|Tigers|Twins
-08/29/20|Astros|Athletics
-08/29/20|Astros|Athletics
-08/29/20|Marlins|Rays
-08/29/20|Brewers|Pirates
-08/29/20|Yankees|Mets
-08/29/20|Phillies|Braves
-08/29/20|Cardinals|Indians
-08/29/20|Rangers|Dodgers
-08/29/20|Blue Jays|Orioles
-08/30/20|Angels|Mariners
-08/30/20|Diamondbacks|Giants
-08/30/20|Red Sox|Nationals
-08/30/20|White Sox|Royals
-08/30/20|Reds|Cubs
-08/30/20|Rockies|Padres
-08/30/20|Tigers|Twins
-08/30/20|Marlins|Rays
-08/30/20|Brewers|Pirates
-08/30/20|Yankees|Mets
-08/30/20|Yankees|Mets
-08/30/20|Phillies|Braves
-08/30/20|Cardinals|Indians
-08/30/20|Rangers|Dodgers
-08/30/20|Blue Jays|Orioles
-08/31/20|Angels|Mariners
-08/31/20|Red Sox|Braves
-08/31/20|Reds|Cardinals
-08/31/20|Rockies|Padres
-08/31/20|Royals|Indians
-08/31/20|Brewers|Pirates
-08/31/20|Twins|White Sox
-08/31/20|Yankees|Rays
-08/31/20|Mets|Marlins
-08/31/20|Phillies|Nationals
-08/31/20|Blue Jays|Orioles
-09/01/20|Orioles|Mets
-09/01/20|Red Sox|Braves
-09/01/20|Reds|Cardinals
-09/01/20|Rockies|Giants
-09/01/20|Astros|Rangers
-09/01/20|Royals|Indians
-09/01/20|Dodgers|Diamondbacks
-09/01/20|Marlins|Blue Jays
-09/01/20|Brewers|Tigers
-09/01/20|Twins|White Sox
-09/01/20|Yankees|Rays
-09/01/20|Phillies|Nationals
-09/01/20|Pirates|Cubs
-09/02/20|Angels|Padres
-09/02/20|Orioles|Mets
-09/02/20|Red Sox|Braves
-09/02/20|Reds|Cardinals
-09/02/20|Rockies|Giants
-09/02/20|Astros|Rangers
-09/02/20|Royals|Indians
-09/02/20|Dodgers|Diamondbacks
-09/02/20|Marlins|Blue Jays
-09/02/20|Brewers|Tigers
-09/02/20|Twins|White Sox
-09/02/20|Yankees|Rays
-09/02/20|Phillies|Nationals
-09/02/20|Pirates|Cubs
-09/03/20|Angels|Padres
-09/03/20|Red Sox|Blue Jays
-09/03/20|Astros|Rangers
-09/03/20|Royals|White Sox
-09/03/20|Dodgers|Diamondbacks
-09/03/20|Mets|Yankees
-09/03/20|Phillies|Nationals
-09/03/20|Pirates|Cubs
-09/04/20|Angels|Astros
-09/04/20|Braves|Nationals
-09/04/20|Braves|Nationals
-09/04/20|Orioles|Yankees
-09/04/20|Orioles|Yankees
-09/04/20|Red Sox|Blue Jays
-09/04/20|Red Sox|Blue Jays
-09/04/20|Cubs|Cardinals
-09/04/20|Indians|Brewers
-09/04/20|Royals|White Sox
-09/04/20|Dodgers|Rockies
-09/04/20|Twins|Tigers
-09/04/20|Twins|Tigers
-09/04/20|Mets|Phillies
-09/04/20|Athletics|Padres
-09/04/20|Pirates|Reds
-09/04/20|Pirates|Reds
-09/04/20|Mariners|Rangers
-09/04/20|Giants|Diamondbacks
-09/04/20|Rays|Marlins
-09/05/20|Angels|Astros
-09/05/20|Angels|Astros
-09/05/20|Braves|Nationals
-09/05/20|Orioles|Yankees
-09/05/20|Red Sox|Blue Jays
-09/05/20|Cubs|Cardinals
-09/05/20|Cubs|Cardinals
-09/05/20|Indians|Brewers
-09/05/20|Royals|White Sox
-09/05/20|Dodgers|Rockies
-09/05/20|Twins|Tigers
-09/05/20|Mets|Phillies
-09/05/20|Athletics|Padres
-09/05/20|Pirates|Reds
-09/05/20|Mariners|Rangers
-09/05/20|Giants|Diamondbacks
-09/05/20|Rays|Marlins
-09/06/20|Angels|Astros
-09/06/20|Braves|Nationals
-09/06/20|Orioles|Yankees
-09/06/20|Red Sox|Blue Jays
-09/06/20|Cubs|Cardinals
-09/06/20|Indians|Brewers
-09/06/20|Royals|White Sox
-09/06/20|Dodgers|Rockies
-09/06/20|Twins|Tigers
-09/06/20|Mets|Phillies
-09/06/20|Athletics|Padres
-09/06/20|Pirates|Reds
-09/06/20|Mariners|Rangers
-09/06/20|Giants|Diamondbacks
-09/06/20|Rays|Marlins
-09/07/20|Braves|Marlins
-09/07/20|Cubs|Cardinals
-09/07/20|Indians|Royals
-09/07/20|Twins|Tigers
-09/07/20|Mets|Phillies
-09/07/20|Athletics|Astros
-09/07/20|Padres|Rockies
-09/07/20|Mariners|Rangers
-09/07/20|Giants|Diamondbacks
-09/07/20|Blue Jays|Yankees
-09/07/20|Nationals|Rays
-09/08/20|Diamondbacks|Dodgers
-09/08/20|Braves|Marlins
-09/08/20|Cubs|Reds
-09/08/20|Indians|Royals
-09/08/20|Tigers|Brewers
-09/08/20|Mets|Orioles
-09/08/20|Athletics|Astros
-09/08/20|Athletics|Astros
-09/08/20|Phillies|Red Sox
-09/08/20|Phillies|Red Sox
-09/08/20|Pirates|White Sox
-09/08/20|Padres|Rockies
-09/08/20|Giants|Mariners
-09/08/20|Cardinals|Twins
-09/08/20|Cardinals|Twins
-09/08/20|Rangers|Angels
-09/08/20|Blue Jays|Yankees
-09/08/20|Nationals|Rays
-09/09/20|Diamondbacks|Dodgers
-09/09/20|Braves|Marlins
-09/09/20|Cubs|Reds
-09/09/20|Indians|Royals
-09/09/20|Tigers|Brewers
-09/09/20|Mets|Orioles
-09/09/20|Athletics|Astros
-09/09/20|Pirates|White Sox
-09/09/20|Padres|Rockies
-09/09/20|Giants|Mariners
-09/09/20|Rangers|Angels
-09/09/20|Blue Jays|Yankees
-09/10/20|Diamondbacks|Dodgers
-09/10/20|Cubs|Reds
-09/10/20|Indians|Royals
-09/10/20|Marlins|Phillies
-09/10/20|Athletics|Astros
-09/10/20|Padres|Giants
-09/10/20|Cardinals|Tigers
-09/10/20|Cardinals|Tigers
-09/10/20|Rays|Red Sox
-09/10/20|Rangers|Angels
-09/10/20|Nationals|Braves
-09/11/20|Diamondbacks|Mariners
-09/11/20|White Sox|Tigers
-09/11/20|Rockies|Angels
-09/11/20|Royals|Pirates
-09/11/20|Marlins|Phillies
-09/11/20|Marlins|Phillies
-09/11/20|Brewers|Cubs
-09/11/20|Twins|Indians
-09/11/20|Yankees|Orioles
-09/11/20|Yankees|Orioles
-09/11/20|Cardinals|Reds
-09/11/20|Rays|Red Sox
-09/11/20|Rangers|Athletics
-09/11/20|Blue Jays|Mets
-09/11/20|Nationals|Braves
-09/12/20|Diamondbacks|Mariners
-09/12/20|White Sox|Tigers
-09/12/20|Rockies|Angels
-09/12/20|Royals|Pirates
-09/12/20|Dodgers|Astros
-09/12/20|Marlins|Phillies
-09/12/20|Brewers|Cubs
-09/12/20|Twins|Indians
-09/12/20|Yankees|Orioles
-09/12/20|Cardinals|Reds
-09/12/20|Rays|Red Sox
-09/12/20|Rangers|Athletics
-09/12/20|Rangers|Athletics
-09/12/20|Blue Jays|Mets
-09/12/20|Nationals|Braves
-09/13/20|Diamondbacks|Mariners
-09/13/20|White Sox|Tigers
-09/13/20|Rockies|Angels
-09/13/20|Royals|Pirates
-09/13/20|Dodgers|Astros
-09/13/20|Marlins|Phillies
-09/13/20|Marlins|Phillies
-09/13/20|Brewers|Cubs
-09/13/20|Twins|Indians
-09/13/20|Yankees|Orioles
-09/13/20|Padres|Giants
-09/13/20|Padres|Giants
-09/13/20|Cardinals|Reds
-09/13/20|Rays|Red Sox
-09/13/20|Rangers|Athletics
-09/13/20|Blue Jays|Mets
-09/13/20|Nationals|Braves
-09/14/20|Orioles|Braves
-09/14/20|White Sox|Twins
-09/14/20|Reds|Pirates
-09/14/20|Reds|Pirates
-09/14/20|Marlins|Phillies
-09/14/20|Brewers|Cardinals
-09/14/20|Brewers|Cardinals
-09/14/20|Padres|Dodgers
-09/14/20|Mariners|Athletics
-09/14/20|Mariners|Athletics
-09/15/20|Angels|Diamondbacks
-09/15/20|Orioles|Braves
-09/15/20|White Sox|Twins
-09/15/20|Cubs|Indians
-09/15/20|Reds|Pirates
-09/15/20|Rockies|Athletics
-09/15/20|Tigers|Royals
-09/15/20|Astros|Rangers
-09/15/20|Marlins|Red Sox
-09/15/20|Brewers|Cardinals
-09/15/20|Yankees|Blue Jays
-09/15/20|Phillies|Mets
-09/15/20|Padres|Dodgers
-09/15/20|Rays|Nationals
-09/16/20|Angels|Diamondbacks
-09/16/20|Orioles|Braves
-09/16/20|White Sox|Twins
-09/16/20|Cubs|Indians
-09/16/20|Reds|Pirates
-09/16/20|Rockies|Athletics
-09/16/20|Tigers|Royals
-09/16/20|Astros|Rangers
-09/16/20|Marlins|Red Sox
-09/16/20|Brewers|Cardinals
-09/16/20|Brewers|Cardinals
-09/16/20|Yankees|Blue Jays
-09/16/20|Phillies|Mets
-09/16/20|Padres|Dodgers
-09/16/20|Giants|Mariners
-09/16/20|Rays|Nationals
-09/17/20|Angels|Diamondbacks
-09/17/20|Orioles|Rays
-09/17/20|Orioles|Rays
-09/17/20|White Sox|Twins
-09/17/20|Rockies|Dodgers
-09/17/20|Tigers|Indians
-09/17/20|Astros|Rangers
-09/17/20|Marlins|Red Sox
-09/17/20|Yankees|Blue Jays
-09/17/20|Phillies|Mets
-09/17/20|Pirates|Cardinals
-09/17/20|Giants|Mariners
-09/18/20|Angels|Rangers
-09/18/20|Orioles|Rays
-09/18/20|Red Sox|Yankees
-09/18/20|Cubs|Twins
-09/18/20|Reds|White Sox
-09/18/20|Rockies|Dodgers
-09/18/20|Tigers|Indians
-09/18/20|Astros|Diamondbacks
-09/18/20|Marlins|Nationals
-09/18/20|Marlins|Nationals
-09/18/20|Brewers|Royals
-09/18/20|Mets|Braves
-09/18/20|Athletics|Giants
-09/18/20|Phillies|Blue Jays
-09/18/20|Phillies|Blue Jays
-09/18/20|Pirates|Cardinals
-09/18/20|Pirates|Cardinals
-09/18/20|Padres|Mariners
-09/19/20|Angels|Rangers
-09/19/20|Orioles|Rays
-09/19/20|Red Sox|Yankees
-09/19/20|Cubs|Twins
-09/19/20|Reds|White Sox
-09/19/20|Rockies|Dodgers
-09/19/20|Tigers|Indians
-09/19/20|Astros|Diamondbacks
-09/19/20|Marlins|Nationals
-09/19/20|Brewers|Royals
-09/19/20|Mets|Braves
-09/19/20|Athletics|Giants
-09/19/20|Phillies|Blue Jays
-09/19/20|Pirates|Cardinals
-09/19/20|Padres|Mariners
-09/20/20|Angels|Rangers
-09/20/20|Orioles|Rays
-09/20/20|Red Sox|Yankees
-09/20/20|Cubs|Twins
-09/20/20|Reds|White Sox
-09/20/20|Rockies|Dodgers
-09/20/20|Tigers|Indians
-09/20/20|Astros|Diamondbacks
-09/20/20|Marlins|Nationals
-09/20/20|Marlins|Nationals
-09/20/20|Brewers|Royals
-09/20/20|Mets|Braves
-09/20/20|Athletics|Giants
-09/20/20|Phillies|Blue Jays
-09/20/20|Pirates|Cardinals
-09/20/20|Padres|Mariners
-09/21/20|Angels|Rangers
-09/21/20|Braves|Marlins
-09/21/20|Reds|Brewers
-09/21/20|Indians|White Sox
-09/21/20|Royals|Cardinals
-09/21/20|Mets|Rays
-09/21/20|Pirates|Cubs
-09/21/20|Mariners|Astros
-09/21/20|Giants|Rockies
-09/21/20|Blue Jays|Yankees
-09/21/20|Nationals|Phillies
-09/22/20|Diamondbacks|Rangers
-09/22/20|Braves|Marlins
-09/22/20|Red Sox|Orioles
-09/22/20|Reds|Brewers
-09/22/20|Indians|White Sox
-09/22/20|Royals|Cardinals
-09/22/20|Dodgers|Athletics
-09/22/20|Twins|Tigers
-09/22/20|Mets|Rays
-09/22/20|Pirates|Cubs
-09/22/20|Padres|Angels
-09/22/20|Mariners|Astros
-09/22/20|Giants|Rockies
-09/22/20|Blue Jays|Yankees
-09/22/20|Nationals|Phillies
-09/22/20|Nationals|Phillies
-09/23/20|Diamondbacks|Rangers
-09/23/20|Braves|Marlins
-09/23/20|Red Sox|Orioles
-09/23/20|Reds|Brewers
-09/23/20|Indians|White Sox
-09/23/20|Royals|Cardinals
-09/23/20|Dodgers|Athletics
-09/23/20|Twins|Tigers
-09/23/20|Mets|Rays
-09/23/20|Pirates|Cubs
-09/23/20|Padres|Angels
-09/23/20|Mariners|Astros
-09/23/20|Giants|Rockies
-09/23/20|Blue Jays|Yankees
-09/23/20|Nationals|Phillies
-09/24/20|Braves|Marlins
-09/24/20|Red Sox|Orioles
-09/24/20|Indians|White Sox
-09/24/20|Royals|Tigers
-09/24/20|Dodgers|Athletics
-09/24/20|Pirates|Cubs
-09/24/20|Giants|Rockies
-09/24/20|Cardinals|Brewers
-09/24/20|Rangers|Astros
-09/24/20|Blue Jays|Yankees
-09/24/20|Nationals|Mets
-09/25/20|Diamondbacks|Rockies
-09/25/20|Diamondbacks|Rockies
-09/25/20|Braves|Red Sox
-09/25/20|White Sox|Cubs
-09/25/20|Indians|Pirates
-09/25/20|Royals|Tigers
-09/25/20|Dodgers|Angels
-09/25/20|Twins|Reds
-09/25/20|Yankees|Marlins
-09/25/20|Athletics|Mariners
-09/25/20|Giants|Padres
-09/25/20|Giants|Padres
-09/25/20|Cardinals|Brewers
-09/25/20|Cardinals|Brewers
-09/25/20|Rays|Phillies
-09/25/20|Rangers|Astros
-09/25/20|Blue Jays|Orioles
-09/26/20|Diamondbacks|Rockies
-09/26/20|Braves|Red Sox
-09/26/20|White Sox|Cubs
-09/26/20|Indians|Pirates
-09/26/20|Royals|Tigers
-09/26/20|Dodgers|Angels
-09/26/20|Twins|Reds
-09/26/20|Yankees|Marlins
-09/26/20|Athletics|Mariners
-09/26/20|Athletics|Mariners
-09/26/20|Giants|Padres
-09/26/20|Cardinals|Brewers
-09/26/20|Rays|Phillies
-09/26/20|Rangers|Astros
-09/26/20|Blue Jays|Orioles
-09/26/20|Nationals|Mets
-09/26/20|Nationals|Mets
-09/27/20|Diamondbacks|Rockies
-09/27/20|Braves|Red Sox
-09/27/20|White Sox|Cubs
-09/27/20|Indians|Pirates
-09/27/20|Royals|Tigers
-09/27/20|Dodgers|Angels
-09/27/20|Twins|Reds
-09/27/20|Yankees|Marlins
-09/27/20|Athletics|Mariners
-09/27/20|Giants|Padres
-09/27/20|Cardinals|Brewers
-09/27/20|Rays|Phillies
-09/27/20|Rangers|Astros
-09/27/20|Blue Jays|Orioles
-09/27/20|Nationals|Mets
+03/20/19|Athletics|Mariners
+03/21/19|Athletics|Mariners
+03/28/19|Reds|Pirates
+03/28/19|Royals|White Sox
+03/28/19|Dodgers|Diamondbacks
+03/28/19|Marlins|Rockies
+03/28/19|Brewers|Cardinals
+03/28/19|Twins|Indians
+03/28/19|Yankees|Orioles
+03/28/19|Athletics|Angels
+03/28/19|Phillies|Braves
+03/28/19|Padres|Giants
+03/28/19|Mariners|Red Sox
+03/28/19|Rays|Astros
+03/28/19|Rangers|Cubs
+03/28/19|Blue Jays|Tigers
+03/28/19|Nationals|Mets
+03/29/19|Dodgers|Diamondbacks
+03/29/19|Marlins|Rockies
+03/29/19|Brewers|Cardinals
+03/29/19|Athletics|Angels
+03/29/19|Padres|Giants
+03/29/19|Mariners|Red Sox
+03/29/19|Rays|Astros
+03/29/19|Blue Jays|Tigers
+03/30/19|Royals|White Sox
+03/30/19|Dodgers|Diamondbacks
+03/30/19|Marlins|Rockies
+03/30/19|Brewers|Cardinals
+03/30/19|Twins|Indians
+03/30/19|Yankees|Orioles
+03/30/19|Athletics|Angels
+03/30/19|Phillies|Braves
+03/30/19|Padres|Giants
+03/30/19|Mariners|Red Sox
+03/30/19|Rays|Astros
+03/30/19|Rangers|Cubs
+03/30/19|Blue Jays|Tigers
+03/30/19|Nationals|Mets
+03/31/19|Reds|Pirates
+03/31/19|Royals|White Sox
+03/31/19|Dodgers|Diamondbacks
+03/31/19|Marlins|Rockies
+03/31/19|Brewers|Cardinals
+03/31/19|Twins|Indians
+03/31/19|Yankees|Orioles
+03/31/19|Athletics|Angels
+03/31/19|Phillies|Braves
+03/31/19|Padres|Giants
+03/31/19|Mariners|Red Sox
+03/31/19|Rays|Astros
+03/31/19|Rangers|Cubs
+03/31/19|Blue Jays|Tigers
+03/31/19|Nationals|Mets
+04/01/19|Braves|Cubs
+04/01/19|Reds|Brewers
+04/01/19|Indians|White Sox
+04/01/19|Dodgers|Giants
+04/01/19|Marlins|Mets
+04/01/19|Yankees|Tigers
+04/01/19|Athletics|Red Sox
+04/01/19|Pirates|Cardinals
+04/01/19|Padres|Diamondbacks
+04/01/19|Mariners|Angels
+04/01/19|Rays|Rockies
+04/01/19|Rangers|Astros
+04/01/19|Blue Jays|Orioles
+04/02/19|Reds|Brewers
+04/02/19|Royals|Twins
+04/02/19|Dodgers|Giants
+04/02/19|Marlins|Mets
+04/02/19|Yankees|Tigers
+04/02/19|Athletics|Red Sox
+04/02/19|Padres|Diamondbacks
+04/02/19|Mariners|Angels
+04/02/19|Rays|Rockies
+04/02/19|Rangers|Astros
+04/02/19|Blue Jays|Orioles
+04/02/19|Nationals|Phillies
+04/03/19|Braves|Cubs
+04/03/19|Reds|Brewers
+04/03/19|Indians|White Sox
+04/03/19|Royals|Twins
+04/03/19|Dodgers|Giants
+04/03/19|Marlins|Mets
+04/03/19|Yankees|Tigers
+04/03/19|Athletics|Red Sox
+04/03/19|Pirates|Cardinals
+04/03/19|Padres|Diamondbacks
+04/03/19|Rays|Rockies
+04/03/19|Rangers|Astros
+04/03/19|Blue Jays|Orioles
+04/03/19|Nationals|Phillies
+04/04/19|Angels|Rangers
+04/04/19|Braves|Cubs
+04/04/19|Orioles|Yankees
+04/04/19|Indians|Blue Jays
+04/04/19|Tigers|Royals
+04/04/19|Mets|Nationals
+04/04/19|Athletics|Red Sox
+04/04/19|Pirates|Reds
+04/05/19|Angels|Rangers
+04/05/19|Diamondbacks|Red Sox
+04/05/19|Braves|Marlins
+04/05/19|White Sox|Mariners
+04/05/19|Indians|Blue Jays
+04/05/19|Rockies|Dodgers
+04/05/19|Astros|Athletics
+04/05/19|Brewers|Cubs
+04/05/19|Phillies|Twins
+04/05/19|Pirates|Reds
+04/05/19|Giants|Rays
+04/05/19|Cardinals|Padres
+04/06/19|Angels|Rangers
+04/06/19|Diamondbacks|Red Sox
+04/06/19|Braves|Marlins
+04/06/19|Orioles|Yankees
+04/06/19|White Sox|Mariners
+04/06/19|Indians|Blue Jays
+04/06/19|Rockies|Dodgers
+04/06/19|Tigers|Royals
+04/06/19|Astros|Athletics
+04/06/19|Brewers|Cubs
+04/06/19|Mets|Nationals
+04/06/19|Phillies|Twins
+04/06/19|Pirates|Reds
+04/06/19|Giants|Rays
+04/06/19|Cardinals|Padres
+04/07/19|Angels|Rangers
+04/07/19|Diamondbacks|Red Sox
+04/07/19|Braves|Marlins
+04/07/19|Orioles|Yankees
+04/07/19|White Sox|Mariners
+04/07/19|Indians|Blue Jays
+04/07/19|Rockies|Dodgers
+04/07/19|Tigers|Royals
+04/07/19|Astros|Athletics
+04/07/19|Brewers|Cubs
+04/07/19|Mets|Nationals
+04/07/19|Phillies|Twins
+04/07/19|Pirates|Reds
+04/07/19|Giants|Rays
+04/07/19|Cardinals|Padres
+04/08/19|Angels|Brewers
+04/08/19|Orioles|Athletics
+04/08/19|White Sox|Rays
+04/08/19|Cubs|Pirates
+04/08/19|Rockies|Braves
+04/08/19|Astros|Yankees
+04/08/19|Royals|Mariners
+04/08/19|Phillies|Nationals
+04/08/19|Giants|Padres
+04/08/19|Cardinals|Dodgers
+04/09/19|Angels|Brewers
+04/09/19|Diamondbacks|Rangers
+04/09/19|Orioles|Athletics
+04/09/19|Red Sox|Blue Jays
+04/09/19|White Sox|Rays
+04/09/19|Reds|Marlins
+04/09/19|Rockies|Braves
+04/09/19|Tigers|Indians
+04/09/19|Astros|Yankees
+04/09/19|Royals|Mariners
+04/09/19|Mets|Twins
+04/09/19|Phillies|Nationals
+04/09/19|Giants|Padres
+04/09/19|Cardinals|Dodgers
+04/10/19|Angels|Brewers
+04/10/19|Diamondbacks|Rangers
+04/10/19|Orioles|Athletics
+04/10/19|White Sox|Rays
+04/10/19|Cubs|Pirates
+04/10/19|Reds|Marlins
+04/10/19|Tigers|Indians
+04/10/19|Astros|Yankees
+04/10/19|Royals|Mariners
+04/10/19|Mets|Twins
+04/10/19|Phillies|Nationals
+04/10/19|Giants|Padres
+04/10/19|Cardinals|Dodgers
+04/11/19|Diamondbacks|Padres
+04/11/19|Braves|Mets
+04/11/19|Orioles|Athletics
+04/11/19|Red Sox|Blue Jays
+04/11/19|Cubs|Pirates
+04/11/19|Reds|Marlins
+04/11/19|Tigers|Indians
+04/11/19|Royals|Mariners
+04/11/19|Giants|Rockies
+04/11/19|Cardinals|Dodgers
+04/12/19|Diamondbacks|Padres
+04/12/19|Braves|Mets
+04/12/19|Red Sox|Orioles
+04/12/19|Cubs|Angels
+04/12/19|Royals|Indians
+04/12/19|Dodgers|Brewers
+04/12/19|Marlins|Phillies
+04/12/19|Yankees|White Sox
+04/12/19|Mariners|Astros
+04/12/19|Giants|Rockies
+04/12/19|Rangers|Athletics
+04/12/19|Blue Jays|Rays
+04/12/19|Nationals|Pirates
+04/13/19|Diamondbacks|Padres
+04/13/19|Braves|Mets
+04/13/19|Red Sox|Orioles
+04/13/19|Cubs|Angels
+04/13/19|Reds|Cardinals
+04/13/19|Royals|Indians
+04/13/19|Dodgers|Brewers
+04/13/19|Marlins|Phillies
+04/13/19|Twins|Tigers
+04/13/19|Yankees|White Sox
+04/13/19|Mariners|Astros
+04/13/19|Giants|Rockies
+04/13/19|Blue Jays|Rays
+04/13/19|Nationals|Pirates
+04/14/19|Diamondbacks|Padres
+04/14/19|Braves|Mets
+04/14/19|Red Sox|Orioles
+04/14/19|Reds|Cardinals
+04/14/19|Royals|Indians
+04/14/19|Dodgers|Brewers
+04/14/19|Marlins|Phillies
+04/14/19|Twins|Tigers
+04/14/19|Yankees|White Sox
+04/14/19|Mariners|Astros
+04/14/19|Giants|Rockies
+04/14/19|Rangers|Athletics
+04/14/19|Blue Jays|Rays
+04/14/19|Nationals|Pirates
+04/15/19|Red Sox|Orioles
+04/15/19|White Sox|Royals
+04/15/19|Dodgers|Reds
+04/15/19|Marlins|Cubs
+04/15/19|Brewers|Cardinals
+04/15/19|Twins|Blue Jays
+04/15/19|Phillies|Mets
+04/15/19|Padres|Rockies
+04/15/19|Mariners|Indians
+04/15/19|Rangers|Angels
+04/16/19|Braves|Diamondbacks
+04/16/19|White Sox|Royals
+04/16/19|Tigers|Pirates
+04/16/19|Dodgers|Reds
+04/16/19|Marlins|Cubs
+04/16/19|Brewers|Cardinals
+04/16/19|Twins|Blue Jays
+04/16/19|Yankees|Red Sox
+04/16/19|Athletics|Astros
+04/16/19|Phillies|Mets
+04/16/19|Padres|Rockies
+04/16/19|Mariners|Indians
+04/16/19|Rays|Orioles
+04/16/19|Rangers|Angels
+04/16/19|Nationals|Giants
+04/17/19|Braves|Diamondbacks
+04/17/19|White Sox|Royals
+04/17/19|Tigers|Pirates
+04/17/19|Dodgers|Reds
+04/17/19|Marlins|Cubs
+04/17/19|Brewers|Cardinals
+04/17/19|Twins|Blue Jays
+04/17/19|Yankees|Red Sox
+04/17/19|Athletics|Astros
+04/17/19|Phillies|Mets
+04/17/19|Mariners|Indians
+04/17/19|Rays|Orioles
+04/17/19|Rangers|Angels
+04/17/19|Nationals|Giants
+04/18/19|Angels|Mariners
+04/18/19|Braves|Diamondbacks
+04/18/19|Rockies|Phillies
+04/18/19|Tigers|White Sox
+04/18/19|Brewers|Dodgers
+04/18/19|Twins|Blue Jays
+04/18/19|Yankees|Royals
+04/18/19|Padres|Reds
+04/18/19|Rays|Orioles
+04/18/19|Nationals|Giants
+04/19/19|Angels|Mariners
+04/19/19|Cubs|Diamondbacks
+04/19/19|Rockies|Phillies
+04/19/19|Tigers|White Sox
+04/19/19|Marlins|Nationals
+04/19/19|Brewers|Dodgers
+04/19/19|Yankees|Royals
+04/19/19|Athletics|Blue Jays
+04/19/19|Pirates|Giants
+04/19/19|Padres|Reds
+04/19/19|Cardinals|Mets
+04/19/19|Rays|Red Sox
+04/19/19|Rangers|Astros
+04/20/19|Angels|Mariners
+04/20/19|Orioles|Twins
+04/20/19|Orioles|Twins
+04/20/19|Cubs|Diamondbacks
+04/20/19|Indians|Braves
+04/20/19|Indians|Braves
+04/20/19|Rockies|Phillies
+04/20/19|Marlins|Nationals
+04/20/19|Brewers|Dodgers
+04/20/19|Yankees|Royals
+04/20/19|Athletics|Blue Jays
+04/20/19|Pirates|Giants
+04/20/19|Padres|Reds
+04/20/19|Cardinals|Mets
+04/20/19|Rays|Red Sox
+04/20/19|Rangers|Astros
+04/21/19|Angels|Mariners
+04/21/19|Orioles|Twins
+04/21/19|Cubs|Diamondbacks
+04/21/19|Indians|Braves
+04/21/19|Rockies|Phillies
+04/21/19|Tigers|White Sox
+04/21/19|Marlins|Nationals
+04/21/19|Brewers|Dodgers
+04/21/19|Yankees|Royals
+04/21/19|Athletics|Blue Jays
+04/21/19|Pirates|Giants
+04/21/19|Padres|Reds
+04/21/19|Cardinals|Mets
+04/21/19|Rays|Red Sox
+04/21/19|Rangers|Astros
+04/22/19|Angels|Yankees
+04/22/19|Orioles|White Sox
+04/22/19|Rockies|Nationals
+04/22/19|Astros|Twins
+04/22/19|Mets|Phillies
+04/22/19|Athletics|Rangers
+04/22/19|Pirates|Diamondbacks
+04/22/19|Cardinals|Brewers
+04/22/19|Rays|Royals
+04/23/19|Angels|Yankees
+04/23/19|Orioles|White Sox
+04/23/19|Red Sox|Tigers
+04/23/19|Red Sox|Tigers
+04/23/19|Cubs|Dodgers
+04/23/19|Reds|Braves
+04/23/19|Indians|Marlins
+04/23/19|Rockies|Nationals
+04/23/19|Astros|Twins
+04/23/19|Mets|Phillies
+04/23/19|Athletics|Rangers
+04/23/19|Pirates|Diamondbacks
+04/23/19|Padres|Mariners
+04/23/19|Cardinals|Brewers
+04/23/19|Rays|Royals
+04/23/19|Blue Jays|Giants
+04/24/19|Angels|Yankees
+04/24/19|Orioles|White Sox
+04/24/19|Red Sox|Tigers
+04/24/19|Cubs|Dodgers
+04/24/19|Reds|Braves
+04/24/19|Indians|Marlins
+04/24/19|Rockies|Nationals
+04/24/19|Astros|Twins
+04/24/19|Mets|Phillies
+04/24/19|Athletics|Rangers
+04/24/19|Pirates|Diamondbacks
+04/24/19|Padres|Mariners
+04/24/19|Cardinals|Brewers
+04/24/19|Rays|Royals
+04/24/19|Blue Jays|Giants
+04/25/19|Angels|Yankees
+04/25/19|Red Sox|Tigers
+04/25/19|Cubs|Dodgers
+04/25/19|Reds|Braves
+04/25/19|Astros|Indians
+04/25/19|Phillies|Marlins
+04/25/19|Pirates|Diamondbacks
+04/25/19|Mariners|Rangers
+04/26/19|Diamondbacks|Cubs
+04/26/19|Braves|Rockies
+04/26/19|White Sox|Tigers
+04/26/19|Astros|Indians
+04/26/19|Royals|Angels
+04/26/19|Dodgers|Pirates
+04/26/19|Twins|Orioles
+04/26/19|Mets|Brewers
+04/26/19|Phillies|Marlins
+04/26/19|Mariners|Rangers
+04/26/19|Giants|Yankees
+04/26/19|Cardinals|Reds
+04/26/19|Blue Jays|Athletics
+04/26/19|Nationals|Padres
+04/27/19|Diamondbacks|Cubs
+04/27/19|Braves|Rockies
+04/27/19|Red Sox|Rays
+04/27/19|Astros|Indians
+04/27/19|Royals|Angels
+04/27/19|Dodgers|Pirates
+04/27/19|Twins|Orioles
+04/27/19|Mets|Brewers
+04/27/19|Phillies|Marlins
+04/27/19|Mariners|Rangers
+04/27/19|Giants|Yankees
+04/27/19|Cardinals|Reds
+04/27/19|Blue Jays|Athletics
+04/27/19|Nationals|Padres
+04/28/19|Diamondbacks|Cubs
+04/28/19|Braves|Rockies
+04/28/19|Red Sox|Rays
+04/28/19|White Sox|Tigers
+04/28/19|Astros|Indians
+04/28/19|Royals|Angels
+04/28/19|Dodgers|Pirates
+04/28/19|Twins|Orioles
+04/28/19|Mets|Brewers
+04/28/19|Phillies|Marlins
+04/28/19|Mariners|Rangers
+04/28/19|Giants|Yankees
+04/28/19|Cardinals|Reds
+04/28/19|Blue Jays|Athletics
+04/28/19|Nationals|Padres
+04/29/19|Braves|Padres
+04/29/19|Red Sox|Athletics
+04/29/19|White Sox|Orioles
+04/29/19|Royals|Rays
+04/29/19|Brewers|Rockies
+04/29/19|Twins|Astros
+04/29/19|Mets|Reds
+04/29/19|Giants|Dodgers
+04/29/19|Nationals|Cardinals
+04/30/19|Angels|Blue Jays
+04/30/19|Diamondbacks|Yankees
+04/30/19|Braves|Padres
+04/30/19|Red Sox|Athletics
+04/30/19|Marlins|Indians
+04/30/19|Brewers|Rockies
+04/30/19|Twins|Astros
+04/30/19|Mets|Reds
+04/30/19|Phillies|Tigers
+04/30/19|Mariners|Cubs
+04/30/19|Giants|Dodgers
+04/30/19|Rangers|Pirates
+04/30/19|Nationals|Cardinals
+05/01/19|Angels|Blue Jays
+05/01/19|Diamondbacks|Yankees
+05/01/19|Braves|Padres
+05/01/19|Red Sox|Athletics
+05/01/19|White Sox|Orioles
+05/01/19|White Sox|Orioles
+05/01/19|Royals|Rays
+05/01/19|Royals|Rays
+05/01/19|Marlins|Indians
+05/01/19|Brewers|Rockies
+05/01/19|Twins|Astros
+05/01/19|Mets|Reds
+05/01/19|Phillies|Tigers
+05/01/19|Mariners|Cubs
+05/01/19|Giants|Dodgers
+05/01/19|Rangers|Pirates
+05/01/19|Nationals|Cardinals
+05/02/19|Angels|Blue Jays
+05/02/19|Braves|Padres
+05/02/19|White Sox|Red Sox
+05/02/19|Royals|Rays
+05/02/19|Brewers|Rockies
+05/02/19|Twins|Astros
+05/02/19|Mets|Reds
+05/02/19|Nationals|Cardinals
+05/03/19|Orioles|Rays
+05/03/19|White Sox|Red Sox
+05/03/19|Cubs|Cardinals
+05/03/19|Reds|Giants
+05/03/19|Indians|Mariners
+05/03/19|Rockies|Diamondbacks
+05/03/19|Tigers|Royals
+05/03/19|Marlins|Braves
+05/03/19|Brewers|Mets
+05/03/19|Yankees|Twins
+05/03/19|Phillies|Nationals
+05/03/19|Pirates|Athletics
+05/03/19|Padres|Dodgers
+05/03/19|Rangers|Blue Jays
+05/04/19|Angels|Astros
+05/04/19|Orioles|Rays
+05/04/19|White Sox|Red Sox
+05/04/19|Cubs|Cardinals
+05/04/19|Reds|Giants
+05/04/19|Indians|Mariners
+05/04/19|Rockies|Diamondbacks
+05/04/19|Tigers|Royals
+05/04/19|Marlins|Braves
+05/04/19|Brewers|Mets
+05/04/19|Yankees|Twins
+05/04/19|Phillies|Nationals
+05/04/19|Pirates|Athletics
+05/04/19|Padres|Dodgers
+05/04/19|Rangers|Blue Jays
+05/05/19|Angels|Astros
+05/05/19|White Sox|Red Sox
+05/05/19|Cubs|Cardinals
+05/05/19|Reds|Giants
+05/05/19|Indians|Mariners
+05/05/19|Rockies|Diamondbacks
+05/05/19|Tigers|Royals
+05/05/19|Marlins|Braves
+05/05/19|Brewers|Mets
+05/05/19|Yankees|Twins
+05/05/19|Phillies|Nationals
+05/05/19|Pirates|Athletics
+05/05/19|Padres|Dodgers
+05/05/19|Rangers|Blue Jays
+05/06/19|Orioles|Red Sox
+05/06/19|Cubs|Marlins
+05/06/19|Reds|Giants
+05/06/19|Indians|White Sox
+05/06/19|Astros|Royals
+05/06/19|Dodgers|Braves
+05/06/19|Brewers|Nationals
+05/06/19|Yankees|Mariners
+05/06/19|Padres|Mets
+05/06/19|Cardinals|Phillies
+05/06/19|Rays|Diamondbacks
+05/06/19|Blue Jays|Twins
+05/07/19|Orioles|Red Sox
+05/07/19|Cubs|Marlins
+05/07/19|Indians|White Sox
+05/07/19|Rockies|Giants
+05/07/19|Tigers|Angels
+05/07/19|Astros|Royals
+05/07/19|Dodgers|Braves
+05/07/19|Brewers|Nationals
+05/07/19|Yankees|Mariners
+05/07/19|Athletics|Reds
+05/07/19|Pirates|Rangers
+05/07/19|Padres|Mets
+05/07/19|Cardinals|Phillies
+05/07/19|Rays|Diamondbacks
+05/07/19|Blue Jays|Twins
+05/08/19|Orioles|Red Sox
+05/08/19|Cubs|Marlins
+05/08/19|Indians|White Sox
+05/08/19|Tigers|Angels
+05/08/19|Astros|Royals
+05/08/19|Dodgers|Braves
+05/08/19|Brewers|Nationals
+05/08/19|Yankees|Mariners
+05/08/19|Athletics|Reds
+05/08/19|Pirates|Rangers
+05/08/19|Padres|Mets
+05/08/19|Cardinals|Phillies
+05/08/19|Rays|Diamondbacks
+05/08/19|Blue Jays|Twins
+05/09/19|Diamondbacks|Braves
+05/09/19|Cubs|Marlins
+05/09/19|Indians|White Sox
+05/09/19|Rockies|Giants
+05/09/19|Tigers|Angels
+05/09/19|Astros|Rangers
+05/09/19|Dodgers|Nationals
+05/09/19|Yankees|Mariners
+05/09/19|Athletics|Reds
+05/09/19|Cardinals|Pirates
+05/10/19|Diamondbacks|Braves
+05/10/19|Orioles|Angels
+05/10/19|Red Sox|Mariners
+05/10/19|Cubs|Brewers
+05/10/19|Rockies|Padres
+05/10/19|Astros|Rangers
+05/10/19|Royals|Phillies
+05/10/19|Dodgers|Nationals
+05/10/19|Twins|Tigers
+05/10/19|Mets|Marlins
+05/10/19|Athletics|Indians
+05/10/19|Giants|Reds
+05/10/19|Cardinals|Pirates
+05/10/19|Rays|Yankees
+05/10/19|Blue Jays|White Sox
+05/11/19|Diamondbacks|Braves
+05/11/19|Orioles|Angels
+05/11/19|Red Sox|Mariners
+05/11/19|Cubs|Brewers
+05/11/19|Rockies|Padres
+05/11/19|Astros|Rangers
+05/11/19|Royals|Phillies
+05/11/19|Dodgers|Nationals
+05/11/19|Twins|Tigers
+05/11/19|Twins|Tigers
+05/11/19|Mets|Marlins
+05/11/19|Athletics|Indians
+05/11/19|Giants|Reds
+05/11/19|Cardinals|Pirates
+05/11/19|Rays|Yankees
+05/11/19|Blue Jays|White Sox
+05/12/19|Diamondbacks|Braves
+05/12/19|Orioles|Angels
+05/12/19|Red Sox|Mariners
+05/12/19|Cubs|Brewers
+05/12/19|Rockies|Padres
+05/12/19|Astros|Rangers
+05/12/19|Royals|Phillies
+05/12/19|Dodgers|Nationals
+05/12/19|Twins|Tigers
+05/12/19|Athletics|Indians
+05/12/19|Giants|Reds
+05/12/19|Cardinals|Pirates
+05/12/19|Rays|Yankees
+05/12/19|Blue Jays|White Sox
+05/13/19|Diamondbacks|Pirates
+05/13/19|White Sox|Indians
+05/13/19|Tigers|Astros
+05/13/19|Twins|Angels
+05/13/19|Phillies|Brewers
+05/13/19|Mariners|Athletics
+05/14/19|Diamondbacks|Pirates
+05/14/19|Braves|Cardinals
+05/14/19|Red Sox|Rockies
+05/14/19|White Sox|Indians
+05/14/19|Reds|Cubs
+05/14/19|Tigers|Astros
+05/14/19|Royals|Rangers
+05/14/19|Dodgers|Padres
+05/14/19|Marlins|Rays
+05/14/19|Twins|Angels
+05/14/19|Phillies|Brewers
+05/14/19|Mariners|Athletics
+05/14/19|Giants|Blue Jays
+05/14/19|Nationals|Mets
+05/15/19|Diamondbacks|Pirates
+05/15/19|Braves|Cardinals
+05/15/19|Red Sox|Rockies
+05/15/19|Reds|Cubs
+05/15/19|Tigers|Astros
+05/15/19|Royals|Rangers
+05/15/19|Dodgers|Padres
+05/15/19|Marlins|Rays
+05/15/19|Twins|Angels
+05/15/19|Yankees|Orioles
+05/15/19|Yankees|Orioles
+05/15/19|Phillies|Brewers
+05/15/19|Giants|Blue Jays
+05/15/19|Nationals|Mets
+05/16/19|Braves|Cardinals
+05/16/19|White Sox|Blue Jays
+05/16/19|Reds|Cubs
+05/16/19|Indians|Orioles
+05/16/19|Tigers|Athletics
+05/16/19|Royals|Rangers
+05/16/19|Phillies|Brewers
+05/16/19|Padres|Pirates
+05/16/19|Mariners|Twins
+05/16/19|Nationals|Mets
+05/17/19|Angels|Royals
+05/17/19|Diamondbacks|Giants
+05/17/19|Braves|Brewers
+05/17/19|Red Sox|Astros
+05/17/19|White Sox|Blue Jays
+05/17/19|Reds|Dodgers
+05/17/19|Indians|Orioles
+05/17/19|Tigers|Athletics
+05/17/19|Marlins|Mets
+05/17/19|Yankees|Rays
+05/17/19|Phillies|Rockies
+05/17/19|Padres|Pirates
+05/17/19|Mariners|Twins
+05/17/19|Rangers|Cardinals
+05/17/19|Nationals|Cubs
+05/18/19|Angels|Royals
+05/18/19|Diamondbacks|Giants
+05/18/19|Braves|Brewers
+05/18/19|Red Sox|Astros
+05/18/19|White Sox|Blue Jays
+05/18/19|Reds|Dodgers
+05/18/19|Indians|Orioles
+05/18/19|Tigers|Athletics
+05/18/19|Marlins|Mets
+05/18/19|Yankees|Rays
+05/18/19|Phillies|Rockies
+05/18/19|Padres|Pirates
+05/18/19|Mariners|Twins
+05/18/19|Rangers|Cardinals
+05/18/19|Nationals|Cubs
+05/19/19|Angels|Royals
+05/19/19|Diamondbacks|Giants
+05/19/19|Braves|Brewers
+05/19/19|Red Sox|Astros
+05/19/19|White Sox|Blue Jays
+05/19/19|Reds|Dodgers
+05/19/19|Indians|Orioles
+05/19/19|Tigers|Athletics
+05/19/19|Marlins|Mets
+05/19/19|Yankees|Rays
+05/19/19|Phillies|Rockies
+05/19/19|Padres|Pirates
+05/19/19|Mariners|Twins
+05/19/19|Rangers|Cardinals
+05/19/19|Nationals|Cubs
+05/20/19|Angels|Twins
+05/20/19|Orioles|Yankees
+05/20/19|Cubs|Phillies
+05/20/19|Indians|Athletics
+05/20/19|Astros|White Sox
+05/20/19|Mets|Nationals
+05/20/19|Padres|Diamondbacks
+05/20/19|Giants|Braves
+05/20/19|Rangers|Mariners
+05/20/19|Blue Jays|Red Sox
+05/21/19|Angels|Twins
+05/21/19|Orioles|Yankees
+05/21/19|Cubs|Phillies
+05/21/19|Indians|Athletics
+05/21/19|Tigers|Marlins
+05/21/19|Astros|White Sox
+05/21/19|Brewers|Reds
+05/21/19|Mets|Nationals
+05/21/19|Pirates|Rockies
+05/21/19|Padres|Diamondbacks
+05/21/19|Giants|Braves
+05/21/19|Rays|Dodgers
+05/21/19|Rangers|Mariners
+05/21/19|Blue Jays|Red Sox
+05/22/19|Orioles|Yankees
+05/22/19|Cubs|Phillies
+05/22/19|Indians|Athletics
+05/22/19|Tigers|Marlins
+05/22/19|Astros|White Sox
+05/22/19|Brewers|Reds
+05/22/19|Mets|Nationals
+05/22/19|Pirates|Rockies
+05/22/19|Padres|Diamondbacks
+05/22/19|Giants|Braves
+05/22/19|Cardinals|Royals
+05/22/19|Cardinals|Royals
+05/22/19|Rays|Dodgers
+05/22/19|Rangers|Mariners
+05/22/19|Blue Jays|Red Sox
+05/23/19|Angels|Twins
+05/23/19|Orioles|Yankees
+05/23/19|Cubs|Phillies
+05/23/19|Indians|Rays
+05/23/19|Tigers|Marlins
+05/23/19|Astros|White Sox
+05/23/19|Mets|Nationals
+05/23/19|Pirates|Rockies
+05/23/19|Giants|Braves
+05/23/19|Blue Jays|Red Sox
+05/24/19|Angels|Rangers
+05/24/19|Cubs|Reds
+05/24/19|Indians|Rays
+05/24/19|Rockies|Orioles
+05/24/19|Astros|Red Sox
+05/24/19|Brewers|Phillies
+05/24/19|Twins|White Sox
+05/24/19|Mets|Tigers
+05/24/19|Athletics|Mariners
+05/24/19|Pirates|Dodgers
+05/24/19|Giants|Diamondbacks
+05/24/19|Cardinals|Braves
+05/24/19|Blue Jays|Padres
+05/24/19|Nationals|Marlins
+05/25/19|Angels|Rangers
+05/25/19|Cubs|Reds
+05/25/19|Indians|Rays
+05/25/19|Rockies|Orioles
+05/25/19|Astros|Red Sox
+05/25/19|Royals|Yankees
+05/25/19|Royals|Yankees
+05/25/19|Brewers|Phillies
+05/25/19|Twins|White Sox
+05/25/19|Mets|Tigers
+05/25/19|Athletics|Mariners
+05/25/19|Pirates|Dodgers
+05/25/19|Giants|Diamondbacks
+05/25/19|Cardinals|Braves
+05/25/19|Blue Jays|Padres
+05/25/19|Nationals|Marlins
+05/26/19|Angels|Rangers
+05/26/19|Cubs|Reds
+05/26/19|Indians|Rays
+05/26/19|Rockies|Orioles
+05/26/19|Astros|Red Sox
+05/26/19|Royals|Yankees
+05/26/19|Brewers|Phillies
+05/26/19|Twins|White Sox
+05/26/19|Mets|Tigers
+05/26/19|Athletics|Mariners
+05/26/19|Pirates|Dodgers
+05/26/19|Giants|Diamondbacks
+05/26/19|Cardinals|Braves
+05/26/19|Blue Jays|Padres
+05/26/19|Nationals|Marlins
+05/27/19|Orioles|Tigers
+05/27/19|Red Sox|Indians
+05/27/19|White Sox|Royals
+05/27/19|Reds|Pirates
+05/27/19|Reds|Pirates
+05/27/19|Rockies|Diamondbacks
+05/27/19|Astros|Cubs
+05/27/19|Dodgers|Mets
+05/27/19|Twins|Brewers
+05/27/19|Yankees|Padres
+05/27/19|Athletics|Angels
+05/27/19|Mariners|Rangers
+05/27/19|Rays|Blue Jays
+05/27/19|Nationals|Marlins
+05/28/19|Braves|Nationals
+05/28/19|Orioles|Tigers
+05/28/19|Red Sox|Indians
+05/28/19|White Sox|Royals
+05/28/19|Reds|Pirates
+05/28/19|Rockies|Diamondbacks
+05/28/19|Astros|Cubs
+05/28/19|Dodgers|Mets
+05/28/19|Marlins|Giants
+05/28/19|Twins|Brewers
+05/28/19|Yankees|Padres
+05/28/19|Athletics|Angels
+05/28/19|Phillies|Cardinals
+05/28/19|Mariners|Rangers
+05/28/19|Rays|Blue Jays
+05/29/19|Braves|Nationals
+05/29/19|Orioles|Tigers
+05/29/19|Red Sox|Indians
+05/29/19|White Sox|Royals
+05/29/19|Reds|Pirates
+05/29/19|Rockies|Diamondbacks
+05/29/19|Astros|Cubs
+05/29/19|Dodgers|Mets
+05/29/19|Marlins|Giants
+05/29/19|Yankees|Padres
+05/29/19|Athletics|Angels
+05/29/19|Phillies|Cardinals
+05/29/19|Mariners|Rangers
+05/29/19|Rays|Blue Jays
+05/30/19|White Sox|Indians
+05/30/19|Rockies|Diamondbacks
+05/30/19|Dodgers|Mets
+05/30/19|Marlins|Giants
+05/30/19|Phillies|Cardinals
+05/30/19|Pirates|Brewers
+05/30/19|Mariners|Angels
+05/30/19|Rays|Twins
+05/30/19|Rangers|Royals
+05/31/19|Diamondbacks|Mets
+05/31/19|Braves|Tigers
+05/31/19|Orioles|Giants
+05/31/19|White Sox|Indians
+05/31/19|Reds|Nationals
+05/31/19|Rockies|Blue Jays
+05/31/19|Dodgers|Phillies
+05/31/19|Yankees|Red Sox
+05/31/19|Athletics|Astros
+05/31/19|Pirates|Brewers
+05/31/19|Padres|Marlins
+05/31/19|Mariners|Angels
+05/31/19|Cardinals|Cubs
+05/31/19|Rays|Twins
+05/31/19|Rangers|Royals
+06/01/19|Diamondbacks|Mets
+06/01/19|Braves|Tigers
+06/01/19|Orioles|Giants
+06/01/19|White Sox|Indians
+06/01/19|Reds|Nationals
+06/01/19|Rockies|Blue Jays
+06/01/19|Dodgers|Phillies
+06/01/19|Yankees|Red Sox
+06/01/19|Athletics|Astros
+06/01/19|Pirates|Brewers
+06/01/19|Padres|Marlins
+06/01/19|Mariners|Angels
+06/01/19|Cardinals|Cubs
+06/01/19|Rays|Twins
+06/01/19|Rangers|Royals
+06/02/19|Diamondbacks|Mets
+06/02/19|Braves|Tigers
+06/02/19|Orioles|Giants
+06/02/19|White Sox|Indians
+06/02/19|Reds|Nationals
+06/02/19|Rockies|Blue Jays
+06/02/19|Dodgers|Phillies
+06/02/19|Yankees|Red Sox
+06/02/19|Athletics|Astros
+06/02/19|Pirates|Brewers
+06/02/19|Padres|Marlins
+06/02/19|Mariners|Angels
+06/02/19|Cardinals|Cubs
+06/02/19|Rays|Twins
+06/02/19|Rangers|Royals
+06/03/19|Diamondbacks|Dodgers
+06/03/19|Cubs|Angels
+06/03/19|Padres|Phillies
+06/03/19|Mariners|Astros
+06/04/19|Angels|Athletics
+06/04/19|Diamondbacks|Dodgers
+06/04/19|Cubs|Rockies
+06/04/19|Indians|Twins
+06/04/19|Tigers|Rays
+06/04/19|Royals|Red Sox
+06/04/19|Brewers|Marlins
+06/04/19|Mets|Giants
+06/04/19|Pirates|Braves
+06/04/19|Padres|Phillies
+06/04/19|Mariners|Astros
+06/04/19|Cardinals|Reds
+06/04/19|Rangers|Orioles
+06/04/19|Blue Jays|Yankees
+06/04/19|Nationals|White Sox
+06/05/19|Angels|Athletics
+06/05/19|Diamondbacks|Dodgers
+06/05/19|Cubs|Rockies
+06/05/19|Indians|Twins
+06/05/19|Tigers|Rays
+06/05/19|Royals|Red Sox
+06/05/19|Brewers|Marlins
+06/05/19|Mets|Giants
+06/05/19|Pirates|Braves
+06/05/19|Padres|Phillies
+06/05/19|Mariners|Astros
+06/05/19|Rangers|Orioles
+06/05/19|Blue Jays|Yankees
+06/05/19|Nationals|White Sox
+06/06/19|Angels|Athletics
+06/06/19|Cubs|Rockies
+06/06/19|Indians|Twins
+06/06/19|Tigers|Rays
+06/06/19|Royals|Red Sox
+06/06/19|Brewers|Marlins
+06/06/19|Mets|Giants
+06/06/19|Pirates|Braves
+06/06/19|Padres|Nationals
+06/06/19|Mariners|Astros
+06/06/19|Cardinals|Reds
+06/06/19|Rangers|Orioles
+06/06/19|Blue Jays|Yankees
+06/07/19|Angels|Mariners
+06/07/19|Red Sox|Rays
+06/07/19|Cubs|Cardinals
+06/07/19|Indians|Yankees
+06/07/19|Tigers|Twins
+06/07/19|Astros|Orioles
+06/07/19|Royals|White Sox
+06/07/19|Marlins|Braves
+06/07/19|Brewers|Pirates
+06/07/19|Mets|Rockies
+06/07/19|Phillies|Reds
+06/07/19|Padres|Nationals
+06/07/19|Giants|Dodgers
+06/07/19|Rangers|Athletics
+06/07/19|Blue Jays|Diamondbacks
+06/08/19|Angels|Mariners
+06/08/19|Red Sox|Rays
+06/08/19|Red Sox|Rays
+06/08/19|Cubs|Cardinals
+06/08/19|Indians|Yankees
+06/08/19|Tigers|Twins
+06/08/19|Astros|Orioles
+06/08/19|Royals|White Sox
+06/08/19|Marlins|Braves
+06/08/19|Brewers|Pirates
+06/08/19|Mets|Rockies
+06/08/19|Phillies|Reds
+06/08/19|Padres|Nationals
+06/08/19|Giants|Dodgers
+06/08/19|Rangers|Athletics
+06/08/19|Rangers|Athletics
+06/08/19|Blue Jays|Diamondbacks
+06/09/19|Angels|Mariners
+06/09/19|Red Sox|Rays
+06/09/19|Cubs|Cardinals
+06/09/19|Indians|Yankees
+06/09/19|Tigers|Twins
+06/09/19|Astros|Orioles
+06/09/19|Royals|White Sox
+06/09/19|Marlins|Braves
+06/09/19|Brewers|Pirates
+06/09/19|Mets|Rockies
+06/09/19|Phillies|Reds
+06/09/19|Padres|Nationals
+06/09/19|Giants|Dodgers
+06/09/19|Rangers|Athletics
+06/09/19|Blue Jays|Diamondbacks
+06/10/19|Angels|Dodgers
+06/10/19|Braves|Pirates
+06/10/19|Red Sox|Rangers
+06/10/19|White Sox|Nationals
+06/10/19|Rockies|Cubs
+06/10/19|Marlins|Cardinals
+06/10/19|Phillies|Diamondbacks
+06/10/19|Rays|Athletics
+06/11/19|Angels|Dodgers
+06/11/19|Braves|Pirates
+06/11/19|Orioles|Blue Jays
+06/11/19|Red Sox|Rangers
+06/11/19|White Sox|Nationals
+06/11/19|Indians|Reds
+06/11/19|Rockies|Cubs
+06/11/19|Astros|Brewers
+06/11/19|Royals|Tigers
+06/11/19|Marlins|Cardinals
+06/11/19|Twins|Mariners
+06/11/19|Yankees|Mets
+06/11/19|Yankees|Mets
+06/11/19|Phillies|Diamondbacks
+06/11/19|Giants|Padres
+06/11/19|Rays|Athletics
+06/12/19|Braves|Pirates
+06/12/19|Orioles|Blue Jays
+06/12/19|Red Sox|Rangers
+06/12/19|Indians|Reds
+06/12/19|Rockies|Cubs
+06/12/19|Astros|Brewers
+06/12/19|Royals|Tigers
+06/12/19|Marlins|Cardinals
+06/12/19|Twins|Mariners
+06/12/19|Phillies|Diamondbacks
+06/12/19|Giants|Padres
+06/12/19|Rays|Athletics
+06/13/19|Braves|Pirates
+06/13/19|Orioles|Blue Jays
+06/13/19|Red Sox|Rangers
+06/13/19|White Sox|Yankees
+06/13/19|Rockies|Padres
+06/13/19|Royals|Tigers
+06/13/19|Dodgers|Cubs
+06/13/19|Twins|Mariners
+06/13/19|Mets|Cardinals
+06/13/19|Rays|Angels
+06/13/19|Nationals|Diamondbacks
+06/14/19|Braves|Phillies
+06/14/19|Orioles|Red Sox
+06/14/19|White Sox|Yankees
+06/14/19|Reds|Rangers
+06/14/19|Rockies|Padres
+06/14/19|Tigers|Indians
+06/14/19|Astros|Blue Jays
+06/14/19|Dodgers|Cubs
+06/14/19|Marlins|Pirates
+06/14/19|Twins|Royals
+06/14/19|Mets|Cardinals
+06/14/19|Athletics|Mariners
+06/14/19|Giants|Brewers
+06/14/19|Rays|Angels
+06/14/19|Nationals|Diamondbacks
+06/15/19|Braves|Phillies
+06/15/19|Orioles|Red Sox
+06/15/19|White Sox|Yankees
+06/15/19|Reds|Rangers
+06/15/19|Rockies|Padres
+06/15/19|Tigers|Indians
+06/15/19|Astros|Blue Jays
+06/15/19|Dodgers|Cubs
+06/15/19|Marlins|Pirates
+06/15/19|Twins|Royals
+06/15/19|Mets|Cardinals
+06/15/19|Athletics|Mariners
+06/15/19|Giants|Brewers
+06/15/19|Rays|Angels
+06/15/19|Nationals|Diamondbacks
+06/16/19|Braves|Phillies
+06/16/19|Orioles|Red Sox
+06/16/19|White Sox|Yankees
+06/16/19|Reds|Rangers
+06/16/19|Rockies|Padres
+06/16/19|Tigers|Indians
+06/16/19|Astros|Blue Jays
+06/16/19|Dodgers|Cubs
+06/16/19|Marlins|Pirates
+06/16/19|Twins|Royals
+06/16/19|Mets|Cardinals
+06/16/19|Athletics|Mariners
+06/16/19|Giants|Brewers
+06/16/19|Rays|Angels
+06/16/19|Nationals|Diamondbacks
+06/17/19|Braves|Mets
+06/17/19|Reds|Astros
+06/17/19|Dodgers|Giants
+06/17/19|Twins|Red Sox
+06/17/19|Yankees|Rays
+06/17/19|Athletics|Orioles
+06/17/19|Padres|Brewers
+06/17/19|Mariners|Royals
+06/17/19|Cardinals|Marlins
+06/17/19|Rangers|Indians
+06/17/19|Blue Jays|Angels
+06/18/19|Diamondbacks|Rockies
+06/18/19|Braves|Mets
+06/18/19|Cubs|White Sox
+06/18/19|Reds|Astros
+06/18/19|Dodgers|Giants
+06/18/19|Twins|Red Sox
+06/18/19|Yankees|Rays
+06/18/19|Athletics|Orioles
+06/18/19|Pirates|Tigers
+06/18/19|Padres|Brewers
+06/18/19|Mariners|Royals
+06/18/19|Cardinals|Marlins
+06/18/19|Rangers|Indians
+06/18/19|Blue Jays|Angels
+06/19/19|Diamondbacks|Rockies
+06/19/19|Braves|Mets
+06/19/19|Cubs|White Sox
+06/19/19|Reds|Astros
+06/19/19|Dodgers|Giants
+06/19/19|Twins|Red Sox
+06/19/19|Yankees|Rays
+06/19/19|Athletics|Orioles
+06/19/19|Pirates|Tigers
+06/19/19|Padres|Brewers
+06/19/19|Mariners|Royals
+06/19/19|Cardinals|Marlins
+06/19/19|Rangers|Indians
+06/19/19|Blue Jays|Angels
+06/19/19|Nationals|Phillies
+06/19/19|Nationals|Phillies
+06/20/19|Diamondbacks|Rockies
+06/20/19|Cubs|Mets
+06/20/19|Royals|Twins
+06/20/19|Dodgers|Giants
+06/20/19|Brewers|Reds
+06/20/19|Yankees|Astros
+06/20/19|Athletics|Rays
+06/20/19|Mariners|Orioles
+06/20/19|Cardinals|Marlins
+06/20/19|Rangers|Indians
+06/20/19|Blue Jays|Angels
+06/20/19|Nationals|Phillies
+06/21/19|Diamondbacks|Giants
+06/21/19|Red Sox|Blue Jays
+06/21/19|Cubs|Mets
+06/21/19|Indians|Tigers
+06/21/19|Royals|Twins
+06/21/19|Dodgers|Rockies
+06/21/19|Brewers|Reds
+06/21/19|Yankees|Astros
+06/21/19|Athletics|Rays
+06/21/19|Phillies|Marlins
+06/21/19|Pirates|Padres
+06/21/19|Mariners|Orioles
+06/21/19|Cardinals|Angels
+06/21/19|Rangers|White Sox
+06/21/19|Nationals|Braves
+06/22/19|Diamondbacks|Giants
+06/22/19|Red Sox|Blue Jays
+06/22/19|Cubs|Mets
+06/22/19|Indians|Tigers
+06/22/19|Royals|Twins
+06/22/19|Dodgers|Rockies
+06/22/19|Brewers|Reds
+06/22/19|Yankees|Astros
+06/22/19|Athletics|Rays
+06/22/19|Phillies|Marlins
+06/22/19|Pirates|Padres
+06/22/19|Mariners|Orioles
+06/22/19|Cardinals|Angels
+06/22/19|Rangers|White Sox
+06/22/19|Nationals|Braves
+06/23/19|Diamondbacks|Giants
+06/23/19|Red Sox|Blue Jays
+06/23/19|Cubs|Mets
+06/23/19|Indians|Tigers
+06/23/19|Royals|Twins
+06/23/19|Dodgers|Rockies
+06/23/19|Brewers|Reds
+06/23/19|Yankees|Astros
+06/23/19|Athletics|Rays
+06/23/19|Phillies|Marlins
+06/23/19|Pirates|Padres
+06/23/19|Mariners|Orioles
+06/23/19|Cardinals|Angels
+06/23/19|Rangers|White Sox
+06/23/19|Nationals|Braves
+06/24/19|Diamondbacks|Dodgers
+06/24/19|Red Sox|White Sox
+06/24/19|Cubs|Braves
+06/24/19|Indians|Royals
+06/24/19|Yankees|Blue Jays
+06/24/19|Phillies|Mets
+06/24/19|Giants|Rockies
+06/25/19|Angels|Reds
+06/25/19|Diamondbacks|Dodgers
+06/25/19|Orioles|Padres
+06/25/19|Red Sox|White Sox
+06/25/19|Cubs|Braves
+06/25/19|Indians|Royals
+06/25/19|Tigers|Rangers
+06/25/19|Astros|Pirates
+06/25/19|Marlins|Nationals
+06/25/19|Brewers|Mariners
+06/25/19|Twins|Rays
+06/25/19|Yankees|Blue Jays
+06/25/19|Phillies|Mets
+06/25/19|Giants|Rockies
+06/25/19|Cardinals|Athletics
+06/26/19|Angels|Reds
+06/26/19|Diamondbacks|Dodgers
+06/26/19|Orioles|Padres
+06/26/19|Red Sox|White Sox
+06/26/19|Cubs|Braves
+06/26/19|Indians|Royals
+06/26/19|Tigers|Rangers
+06/26/19|Astros|Pirates
+06/26/19|Marlins|Nationals
+06/26/19|Brewers|Mariners
+06/26/19|Twins|Rays
+06/26/19|Yankees|Blue Jays
+06/26/19|Phillies|Mets
+06/26/19|Giants|Rockies
+06/26/19|Cardinals|Athletics
+06/27/19|Angels|Athletics
+06/27/19|Cubs|Braves
+06/27/19|Rockies|Dodgers
+06/27/19|Tigers|Rangers
+06/27/19|Astros|Pirates
+06/27/19|Marlins|Nationals
+06/27/19|Brewers|Mariners
+06/27/19|Twins|Rays
+06/27/19|Phillies|Mets
+06/27/19|Giants|Diamondbacks
+06/28/19|Angels|Athletics
+06/28/19|Orioles|Indians
+06/28/19|White Sox|Twins
+06/28/19|Reds|Cubs
+06/28/19|Rockies|Dodgers
+06/28/19|Tigers|Nationals
+06/28/19|Astros|Mariners
+06/28/19|Marlins|Phillies
+06/28/19|Brewers|Pirates
+06/28/19|Mets|Braves
+06/28/19|Padres|Cardinals
+06/28/19|Giants|Diamondbacks
+06/28/19|Rays|Rangers
+06/28/19|Blue Jays|Royals
+06/29/19|Angels|Athletics
+06/29/19|Orioles|Indians
+06/29/19|Red Sox|Yankees
+06/29/19|White Sox|Twins
+06/29/19|Reds|Cubs
+06/29/19|Rockies|Dodgers
+06/29/19|Tigers|Nationals
+06/29/19|Astros|Mariners
+06/29/19|Marlins|Phillies
+06/29/19|Brewers|Pirates
+06/29/19|Mets|Braves
+06/29/19|Padres|Cardinals
+06/29/19|Giants|Diamondbacks
+06/29/19|Rays|Rangers
+06/29/19|Blue Jays|Royals
+06/30/19|Angels|Athletics
+06/30/19|Orioles|Indians
+06/30/19|Red Sox|Yankees
+06/30/19|White Sox|Twins
+06/30/19|Reds|Cubs
+06/30/19|Rockies|Dodgers
+06/30/19|Tigers|Nationals
+06/30/19|Astros|Mariners
+06/30/19|Marlins|Phillies
+06/30/19|Brewers|Pirates
+06/30/19|Mets|Braves
+06/30/19|Padres|Cardinals
+06/30/19|Giants|Diamondbacks
+06/30/19|Rays|Rangers
+06/30/19|Blue Jays|Royals
+07/01/19|Reds|Brewers
+07/01/19|Pirates|Cubs
+07/01/19|Padres|Giants
+07/01/19|Rays|Orioles
+07/01/19|Blue Jays|Royals
+07/02/19|Braves|Phillies
+07/02/19|Reds|Brewers
+07/02/19|Rockies|Astros
+07/02/19|Royals|Indians
+07/02/19|Dodgers|Diamondbacks
+07/02/19|Mets|Yankees
+07/02/19|Athletics|Twins
+07/02/19|Pirates|Cubs
+07/02/19|Padres|Giants
+07/02/19|Mariners|Cardinals
+07/02/19|Rays|Orioles
+07/02/19|Rangers|Angels
+07/02/19|Blue Jays|Red Sox
+07/02/19|Nationals|Marlins
+07/03/19|Braves|Phillies
+07/03/19|White Sox|Tigers
+07/03/19|White Sox|Tigers
+07/03/19|Reds|Brewers
+07/03/19|Rockies|Astros
+07/03/19|Royals|Indians
+07/03/19|Dodgers|Diamondbacks
+07/03/19|Mets|Yankees
+07/03/19|Athletics|Twins
+07/03/19|Pirates|Cubs
+07/03/19|Padres|Giants
+07/03/19|Mariners|Cardinals
+07/03/19|Rays|Orioles
+07/03/19|Rangers|Angels
+07/03/19|Blue Jays|Red Sox
+07/03/19|Nationals|Marlins
+07/04/19|Braves|Phillies
+07/04/19|White Sox|Tigers
+07/04/19|Reds|Brewers
+07/04/19|Royals|Indians
+07/04/19|Dodgers|Padres
+07/04/19|Athletics|Twins
+07/04/19|Pirates|Cubs
+07/04/19|Mariners|Cardinals
+07/04/19|Rays|Yankees
+07/04/19|Rangers|Angels
+07/04/19|Blue Jays|Red Sox
+07/04/19|Nationals|Marlins
+07/05/19|Diamondbacks|Rockies
+07/05/19|Braves|Marlins
+07/05/19|Tigers|Red Sox
+07/05/19|Astros|Angels
+07/05/19|Dodgers|Padres
+07/05/19|Twins|Rangers
+07/05/19|Mets|Phillies
+07/05/19|Pirates|Brewers
+07/05/19|Mariners|Athletics
+07/05/19|Giants|Cardinals
+07/05/19|Rays|Yankees
+07/05/19|Blue Jays|Orioles
+07/05/19|Nationals|Royals
+07/06/19|Diamondbacks|Rockies
+07/06/19|Braves|Marlins
+07/06/19|White Sox|Cubs
+07/06/19|Reds|Indians
+07/06/19|Tigers|Red Sox
+07/06/19|Astros|Angels
+07/06/19|Dodgers|Padres
+07/06/19|Twins|Rangers
+07/06/19|Mets|Phillies
+07/06/19|Pirates|Brewers
+07/06/19|Mariners|Athletics
+07/06/19|Giants|Cardinals
+07/06/19|Rays|Yankees
+07/06/19|Blue Jays|Orioles
+07/06/19|Nationals|Royals
+07/07/19|Diamondbacks|Rockies
+07/07/19|Braves|Marlins
+07/07/19|White Sox|Cubs
+07/07/19|Reds|Indians
+07/07/19|Tigers|Red Sox
+07/07/19|Astros|Angels
+07/07/19|Dodgers|Padres
+07/07/19|Twins|Rangers
+07/07/19|Mets|Phillies
+07/07/19|Pirates|Brewers
+07/07/19|Mariners|Athletics
+07/07/19|Giants|Cardinals
+07/07/19|Rays|Yankees
+07/07/19|Blue Jays|Orioles
+07/07/19|Nationals|Royals
+07/11/19|Rangers|Astros
+07/12/19|Angels|Mariners
+07/12/19|Orioles|Rays
+07/12/19|Red Sox|Dodgers
+07/12/19|Cubs|Pirates
+07/12/19|Indians|Twins
+07/12/19|Rockies|Reds
+07/12/19|Royals|Tigers
+07/12/19|Marlins|Mets
+07/12/19|Brewers|Giants
+07/12/19|Yankees|Blue Jays
+07/12/19|Athletics|White Sox
+07/12/19|Phillies|Nationals
+07/12/19|Padres|Braves
+07/12/19|Cardinals|Diamondbacks
+07/12/19|Rangers|Astros
+07/13/19|Angels|Mariners
+07/13/19|Orioles|Rays
+07/13/19|Orioles|Rays
+07/13/19|Red Sox|Dodgers
+07/13/19|Cubs|Pirates
+07/13/19|Indians|Twins
+07/13/19|Rockies|Reds
+07/13/19|Royals|Tigers
+07/13/19|Marlins|Mets
+07/13/19|Brewers|Giants
+07/13/19|Yankees|Blue Jays
+07/13/19|Athletics|White Sox
+07/13/19|Phillies|Nationals
+07/13/19|Padres|Braves
+07/13/19|Cardinals|Diamondbacks
+07/13/19|Rangers|Astros
+07/14/19|Angels|Mariners
+07/14/19|Orioles|Rays
+07/14/19|Red Sox|Dodgers
+07/14/19|Cubs|Pirates
+07/14/19|Indians|Twins
+07/14/19|Rockies|Reds
+07/14/19|Royals|Tigers
+07/14/19|Marlins|Mets
+07/14/19|Brewers|Giants
+07/14/19|Yankees|Blue Jays
+07/14/19|Athletics|White Sox
+07/14/19|Phillies|Nationals
+07/14/19|Padres|Braves
+07/14/19|Cardinals|Diamondbacks
+07/14/19|Rangers|Astros
+07/15/19|Angels|Astros
+07/15/19|Red Sox|Blue Jays
+07/15/19|Cubs|Reds
+07/15/19|Indians|Tigers
+07/15/19|Rockies|Giants
+07/15/19|Rockies|Giants
+07/15/19|Royals|White Sox
+07/15/19|Brewers|Braves
+07/15/19|Yankees|Rays
+07/15/19|Phillies|Dodgers
+07/15/19|Cardinals|Pirates
+07/16/19|Angels|Astros
+07/16/19|Orioles|Nationals
+07/16/19|Red Sox|Blue Jays
+07/16/19|Cubs|Reds
+07/16/19|Indians|Tigers
+07/16/19|Rockies|Giants
+07/16/19|Royals|White Sox
+07/16/19|Marlins|Padres
+07/16/19|Brewers|Braves
+07/16/19|Twins|Mets
+07/16/19|Yankees|Rays
+07/16/19|Athletics|Mariners
+07/16/19|Phillies|Dodgers
+07/16/19|Cardinals|Pirates
+07/16/19|Rangers|Diamondbacks
+07/17/19|Angels|Astros
+07/17/19|Orioles|Nationals
+07/17/19|Red Sox|Blue Jays
+07/17/19|Cubs|Reds
+07/17/19|Indians|Tigers
+07/17/19|Rockies|Giants
+07/17/19|Royals|White Sox
+07/17/19|Marlins|Padres
+07/17/19|Brewers|Braves
+07/17/19|Twins|Mets
+07/17/19|Athletics|Mariners
+07/17/19|Phillies|Dodgers
+07/17/19|Cardinals|Pirates
+07/17/19|Rangers|Diamondbacks
+07/18/19|Angels|Astros
+07/18/19|Diamondbacks|Brewers
+07/18/19|Braves|Nationals
+07/18/19|Red Sox|Blue Jays
+07/18/19|Reds|Cardinals
+07/18/19|Indians|Tigers
+07/18/19|Royals|White Sox
+07/18/19|Marlins|Padres
+07/18/19|Twins|Athletics
+07/18/19|Yankees|Rays
+07/18/19|Yankees|Rays
+07/18/19|Phillies|Dodgers
+07/18/19|Giants|Mets
+07/19/19|Diamondbacks|Brewers
+07/19/19|Braves|Nationals
+07/19/19|Orioles|Red Sox
+07/19/19|Cubs|Padres
+07/19/19|Reds|Cardinals
+07/19/19|Indians|Royals
+07/19/19|Tigers|Blue Jays
+07/19/19|Astros|Rangers
+07/19/19|Dodgers|Marlins
+07/19/19|Twins|Athletics
+07/19/19|Yankees|Rockies
+07/19/19|Pirates|Phillies
+07/19/19|Mariners|Angels
+07/19/19|Giants|Mets
+07/19/19|Rays|White Sox
+07/20/19|Diamondbacks|Brewers
+07/20/19|Braves|Nationals
+07/20/19|Orioles|Red Sox
+07/20/19|Cubs|Padres
+07/20/19|Reds|Cardinals
+07/20/19|Indians|Royals
+07/20/19|Tigers|Blue Jays
+07/20/19|Astros|Rangers
+07/20/19|Dodgers|Marlins
+07/20/19|Twins|Athletics
+07/20/19|Yankees|Rockies
+07/20/19|Pirates|Phillies
+07/20/19|Mariners|Angels
+07/20/19|Giants|Mets
+07/20/19|Rays|White Sox
+07/21/19|Diamondbacks|Brewers
+07/21/19|Braves|Nationals
+07/21/19|Orioles|Red Sox
+07/21/19|Cubs|Padres
+07/21/19|Reds|Cardinals
+07/21/19|Indians|Royals
+07/21/19|Tigers|Blue Jays
+07/21/19|Astros|Rangers
+07/21/19|Dodgers|Marlins
+07/21/19|Twins|Athletics
+07/21/19|Yankees|Rockies
+07/21/19|Pirates|Phillies
+07/21/19|Mariners|Angels
+07/21/19|Giants|Mets
+07/21/19|Rays|White Sox
+07/22/19|Diamondbacks|Orioles
+07/22/19|White Sox|Marlins
+07/22/19|Astros|Athletics
+07/22/19|Brewers|Reds
+07/22/19|Twins|Yankees
+07/22/19|Pirates|Cardinals
+07/22/19|Mariners|Rangers
+07/22/19|Giants|Cubs
+07/22/19|Rays|Red Sox
+07/22/19|Blue Jays|Indians
+07/23/19|Diamondbacks|Orioles
+07/23/19|Braves|Royals
+07/23/19|White Sox|Marlins
+07/23/19|Tigers|Phillies
+07/23/19|Astros|Athletics
+07/23/19|Dodgers|Angels
+07/23/19|Brewers|Reds
+07/23/19|Twins|Yankees
+07/23/19|Mets|Padres
+07/23/19|Pirates|Cardinals
+07/23/19|Mariners|Rangers
+07/23/19|Giants|Cubs
+07/23/19|Rays|Red Sox
+07/23/19|Blue Jays|Indians
+07/23/19|Nationals|Rockies
+07/24/19|Diamondbacks|Orioles
+07/24/19|Braves|Royals
+07/24/19|White Sox|Marlins
+07/24/19|Tigers|Phillies
+07/24/19|Astros|Athletics
+07/24/19|Dodgers|Angels
+07/24/19|Brewers|Reds
+07/24/19|Twins|Yankees
+07/24/19|Mets|Padres
+07/24/19|Pirates|Cardinals
+07/24/19|Mariners|Rangers
+07/24/19|Giants|Cubs
+07/24/19|Rays|Red Sox
+07/24/19|Blue Jays|Indians
+07/24/19|Nationals|Rockies
+07/24/19|Nationals|Rockies
+07/25/19|Angels|Orioles
+07/25/19|Red Sox|Yankees
+07/25/19|White Sox|Twins
+07/25/19|Royals|Indians
+07/25/19|Mets|Padres
+07/25/19|Athletics|Rangers
+07/25/19|Pirates|Cardinals
+07/25/19|Mariners|Tigers
+07/25/19|Nationals|Rockies
+07/26/19|Angels|Orioles
+07/26/19|Red Sox|Yankees
+07/26/19|White Sox|Twins
+07/26/19|Reds|Rockies
+07/26/19|Royals|Indians
+07/26/19|Marlins|Diamondbacks
+07/26/19|Brewers|Cubs
+07/26/19|Mets|Pirates
+07/26/19|Athletics|Rangers
+07/26/19|Phillies|Braves
+07/26/19|Padres|Giants
+07/26/19|Mariners|Tigers
+07/26/19|Cardinals|Astros
+07/26/19|Blue Jays|Rays
+07/26/19|Nationals|Dodgers
+07/27/19|Angels|Orioles
+07/27/19|Red Sox|Yankees
+07/27/19|White Sox|Twins
+07/27/19|Reds|Rockies
+07/27/19|Royals|Indians
+07/27/19|Marlins|Diamondbacks
+07/27/19|Brewers|Cubs
+07/27/19|Mets|Pirates
+07/27/19|Athletics|Rangers
+07/27/19|Phillies|Braves
+07/27/19|Padres|Giants
+07/27/19|Mariners|Tigers
+07/27/19|Cardinals|Astros
+07/27/19|Blue Jays|Rays
+07/27/19|Nationals|Dodgers
+07/28/19|Angels|Orioles
+07/28/19|Red Sox|Yankees
+07/28/19|White Sox|Twins
+07/28/19|Reds|Rockies
+07/28/19|Royals|Indians
+07/28/19|Marlins|Diamondbacks
+07/28/19|Brewers|Cubs
+07/28/19|Mets|Pirates
+07/28/19|Athletics|Rangers
+07/28/19|Phillies|Braves
+07/28/19|Padres|Giants
+07/28/19|Mariners|Tigers
+07/28/19|Cardinals|Astros
+07/28/19|Blue Jays|Rays
+07/28/19|Nationals|Dodgers
+07/29/19|Angels|Tigers
+07/29/19|Reds|Pirates
+07/29/19|Rockies|Dodgers
+07/29/19|Royals|Blue Jays
+07/29/19|Marlins|Diamondbacks
+07/29/19|Padres|Orioles
+07/29/19|Nationals|Braves
+07/30/19|Angels|Tigers
+07/30/19|Red Sox|Rays
+07/30/19|White Sox|Mets
+07/30/19|Reds|Pirates
+07/30/19|Indians|Astros
+07/30/19|Rockies|Dodgers
+07/30/19|Royals|Blue Jays
+07/30/19|Marlins|Twins
+07/30/19|Yankees|Diamondbacks
+07/30/19|Athletics|Brewers
+07/30/19|Phillies|Giants
+07/30/19|Padres|Orioles
+07/30/19|Cardinals|Cubs
+07/30/19|Rangers|Mariners
+07/30/19|Nationals|Braves
+07/31/19|Angels|Tigers
+07/31/19|Red Sox|Rays
+07/31/19|White Sox|Mets
+07/31/19|Reds|Pirates
+07/31/19|Indians|Astros
+07/31/19|Rockies|Dodgers
+07/31/19|Royals|Blue Jays
+07/31/19|Marlins|Twins
+07/31/19|Yankees|Diamondbacks
+07/31/19|Athletics|Brewers
+07/31/19|Phillies|Giants
+07/31/19|Cardinals|Cubs
+07/31/19|Rangers|Mariners
+07/31/19|Nationals|Braves
+08/01/19|Braves|Reds
+08/01/19|Orioles|Blue Jays
+08/01/19|Red Sox|Rays
+08/01/19|White Sox|Mets
+08/01/19|Indians|Astros
+08/01/19|Dodgers|Padres
+08/01/19|Marlins|Twins
+08/01/19|Athletics|Brewers
+08/01/19|Phillies|Giants
+08/01/19|Cardinals|Cubs
+08/02/19|Diamondbacks|Nationals
+08/02/19|Braves|Reds
+08/02/19|Orioles|Blue Jays
+08/02/19|Cubs|Brewers
+08/02/19|Indians|Angels
+08/02/19|Rockies|Giants
+08/02/19|Astros|Mariners
+08/02/19|Dodgers|Padres
+08/02/19|Twins|Royals
+08/02/19|Yankees|Red Sox
+08/02/19|Phillies|White Sox
+08/02/19|Pirates|Mets
+08/02/19|Rangers|Tigers
+08/03/19|Diamondbacks|Nationals
+08/03/19|Braves|Reds
+08/03/19|Orioles|Blue Jays
+08/03/19|Cubs|Brewers
+08/03/19|Indians|Angels
+08/03/19|Rockies|Giants
+08/03/19|Astros|Mariners
+08/03/19|Dodgers|Padres
+08/03/19|Twins|Royals
+08/03/19|Yankees|Red Sox
+08/03/19|Yankees|Red Sox
+08/03/19|Athletics|Cardinals
+08/03/19|Phillies|White Sox
+08/03/19|Pirates|Mets
+08/03/19|Rays|Marlins
+08/03/19|Rangers|Tigers
+08/04/19|Diamondbacks|Nationals
+08/04/19|Braves|Reds
+08/04/19|Orioles|Blue Jays
+08/04/19|Cubs|Brewers
+08/04/19|Indians|Angels
+08/04/19|Rockies|Giants
+08/04/19|Astros|Mariners
+08/04/19|Dodgers|Padres
+08/04/19|Twins|Royals
+08/04/19|Yankees|Red Sox
+08/04/19|Athletics|Cardinals
+08/04/19|Phillies|White Sox
+08/04/19|Pirates|Mets
+08/04/19|Rays|Marlins
+08/04/19|Rangers|Tigers
+08/05/19|Diamondbacks|Phillies
+08/05/19|Orioles|Yankees
+08/05/19|Red Sox|Royals
+08/05/19|Cubs|Athletics
+08/05/19|Reds|Angels
+08/05/19|Indians|Rangers
+08/05/19|Tigers|White Sox
+08/05/19|Dodgers|Cardinals
+08/05/19|Twins|Braves
+08/05/19|Mets|Marlins
+08/05/19|Mets|Marlins
+08/05/19|Pirates|Brewers
+08/05/19|Giants|Nationals
+08/05/19|Rays|Blue Jays
+08/06/19|Diamondbacks|Phillies
+08/06/19|Orioles|Yankees
+08/06/19|Red Sox|Royals
+08/06/19|Cubs|Athletics
+08/06/19|Reds|Angels
+08/06/19|Tigers|White Sox
+08/06/19|Tigers|White Sox
+08/06/19|Astros|Rockies
+08/06/19|Dodgers|Cardinals
+08/06/19|Twins|Braves
+08/06/19|Mets|Marlins
+08/06/19|Pirates|Brewers
+08/06/19|Mariners|Padres
+08/06/19|Giants|Nationals
+08/06/19|Rays|Blue Jays
+08/07/19|Diamondbacks|Phillies
+08/07/19|Orioles|Yankees
+08/07/19|Red Sox|Royals
+08/07/19|Cubs|Athletics
+08/07/19|Indians|Rangers
+08/07/19|Indians|Rangers
+08/07/19|Tigers|White Sox
+08/07/19|Astros|Rockies
+08/07/19|Dodgers|Cardinals
+08/07/19|Twins|Braves
+08/07/19|Mets|Marlins
+08/07/19|Pirates|Brewers
+08/07/19|Mariners|Padres
+08/07/19|Giants|Nationals
+08/07/19|Rays|Blue Jays
+08/08/19|Red Sox|Angels
+08/08/19|Reds|Cubs
+08/08/19|Tigers|Royals
+08/08/19|Marlins|Braves
+08/08/19|Twins|Indians
+08/08/19|Padres|Rockies
+08/08/19|Giants|Phillies
+08/08/19|Blue Jays|Yankees
+08/09/19|Orioles|Astros
+08/09/19|Red Sox|Angels
+08/09/19|White Sox|Athletics
+08/09/19|Reds|Cubs
+08/09/19|Tigers|Royals
+08/09/19|Dodgers|Diamondbacks
+08/09/19|Marlins|Braves
+08/09/19|Brewers|Rangers
+08/09/19|Twins|Indians
+08/09/19|Mets|Nationals
+08/09/19|Padres|Rockies
+08/09/19|Mariners|Rays
+08/09/19|Giants|Phillies
+08/09/19|Cardinals|Pirates
+08/09/19|Blue Jays|Yankees
+08/10/19|Orioles|Astros
+08/10/19|Red Sox|Angels
+08/10/19|White Sox|Athletics
+08/10/19|Reds|Cubs
+08/10/19|Tigers|Royals
+08/10/19|Dodgers|Diamondbacks
+08/10/19|Marlins|Braves
+08/10/19|Brewers|Rangers
+08/10/19|Twins|Indians
+08/10/19|Mets|Nationals
+08/10/19|Padres|Rockies
+08/10/19|Mariners|Rays
+08/10/19|Giants|Phillies
+08/10/19|Cardinals|Pirates
+08/10/19|Blue Jays|Yankees
+08/11/19|Orioles|Astros
+08/11/19|Red Sox|Angels
+08/11/19|White Sox|Athletics
+08/11/19|Reds|Cubs
+08/11/19|Tigers|Royals
+08/11/19|Dodgers|Diamondbacks
+08/11/19|Marlins|Braves
+08/11/19|Brewers|Rangers
+08/11/19|Twins|Indians
+08/11/19|Mets|Nationals
+08/11/19|Padres|Rockies
+08/11/19|Mariners|Rays
+08/11/19|Giants|Phillies
+08/11/19|Cardinals|Pirates
+08/11/19|Blue Jays|Yankees
+08/12/19|Angels|Pirates
+08/12/19|Indians|Red Sox
+08/12/19|Rockies|Diamondbacks
+08/12/19|Yankees|Orioles
+08/12/19|Yankees|Orioles
+08/12/19|Padres|Rays
+08/12/19|Blue Jays|Rangers
+08/12/19|Nationals|Reds
+08/13/19|Angels|Pirates
+08/13/19|Braves|Mets
+08/13/19|White Sox|Astros
+08/13/19|White Sox|Astros
+08/13/19|Indians|Red Sox
+08/13/19|Rockies|Diamondbacks
+08/13/19|Tigers|Mariners
+08/13/19|Royals|Cardinals
+08/13/19|Marlins|Dodgers
+08/13/19|Brewers|Twins
+08/13/19|Yankees|Orioles
+08/13/19|Phillies|Cubs
+08/13/19|Padres|Rays
+08/13/19|Giants|Athletics
+08/13/19|Blue Jays|Rangers
+08/13/19|Nationals|Reds
+08/14/19|Angels|Pirates
+08/14/19|Braves|Mets
+08/14/19|White Sox|Astros
+08/14/19|Indians|Red Sox
+08/14/19|Rockies|Diamondbacks
+08/14/19|Tigers|Mariners
+08/14/19|Royals|Cardinals
+08/14/19|Marlins|Dodgers
+08/14/19|Brewers|Twins
+08/14/19|Yankees|Orioles
+08/14/19|Phillies|Cubs
+08/14/19|Padres|Rays
+08/14/19|Giants|Athletics
+08/14/19|Blue Jays|Rangers
+08/14/19|Nationals|Reds
+08/15/19|Angels|White Sox
+08/15/19|Diamondbacks|Giants
+08/15/19|Braves|Mets
+08/15/19|Reds|Cardinals
+08/15/19|Tigers|Mariners
+08/15/19|Marlins|Dodgers
+08/15/19|Yankees|Indians
+08/15/19|Athletics|Astros
+08/15/19|Phillies|Cubs
+08/15/19|Rangers|Twins
+08/16/19|Angels|White Sox
+08/16/19|Diamondbacks|Giants
+08/16/19|Braves|Dodgers
+08/16/19|Red Sox|Orioles
+08/16/19|Reds|Cardinals
+08/16/19|Rockies|Marlins
+08/16/19|Royals|Mets
+08/16/19|Yankees|Indians
+08/16/19|Athletics|Astros
+08/16/19|Phillies|Padres
+08/16/19|Pirates|Cubs
+08/16/19|Rays|Tigers
+08/16/19|Rangers|Twins
+08/16/19|Blue Jays|Mariners
+08/16/19|Nationals|Brewers
+08/17/19|Angels|White Sox
+08/17/19|Diamondbacks|Giants
+08/17/19|Braves|Dodgers
+08/17/19|Red Sox|Orioles
+08/17/19|Reds|Cardinals
+08/17/19|Rockies|Marlins
+08/17/19|Royals|Mets
+08/17/19|Yankees|Indians
+08/17/19|Athletics|Astros
+08/17/19|Phillies|Padres
+08/17/19|Pirates|Cubs
+08/17/19|Rays|Tigers
+08/17/19|Rangers|Twins
+08/17/19|Blue Jays|Mariners
+08/17/19|Nationals|Brewers
+08/18/19|Angels|White Sox
+08/18/19|Diamondbacks|Giants
+08/18/19|Braves|Dodgers
+08/18/19|Red Sox|Orioles
+08/18/19|Reds|Cardinals
+08/18/19|Rockies|Marlins
+08/18/19|Royals|Mets
+08/18/19|Yankees|Indians
+08/18/19|Athletics|Astros
+08/18/19|Phillies|Padres
+08/18/19|Pirates|Cubs
+08/18/19|Rays|Tigers
+08/18/19|Rangers|Twins
+08/18/19|Blue Jays|Mariners
+08/18/19|Nationals|Brewers
+08/19/19|Diamondbacks|Rockies
+08/19/19|Orioles|Royals
+08/19/19|Reds|Padres
+08/19/19|Astros|Tigers
+08/19/19|Twins|White Sox
+08/19/19|Pirates|Nationals
+08/19/19|Cardinals|Brewers
+08/19/19|Rays|Mariners
+08/19/19|Rangers|Angels
+08/20/19|Diamondbacks|Rockies
+08/20/19|Braves|Marlins
+08/20/19|Orioles|Royals
+08/20/19|Red Sox|Phillies
+08/20/19|Cubs|Giants
+08/20/19|Reds|Padres
+08/20/19|Astros|Tigers
+08/20/19|Dodgers|Blue Jays
+08/20/19|Twins|White Sox
+08/20/19|Mets|Indians
+08/20/19|Athletics|Yankees
+08/20/19|Pirates|Nationals
+08/20/19|Cardinals|Brewers
+08/20/19|Rays|Mariners
+08/20/19|Rangers|Angels
+08/20/19|Rangers|Angels
+08/21/19|Diamondbacks|Rockies
+08/21/19|Braves|Marlins
+08/21/19|Orioles|Royals
+08/21/19|Red Sox|Phillies
+08/21/19|Cubs|Giants
+08/21/19|Reds|Padres
+08/21/19|Astros|Tigers
+08/21/19|Dodgers|Blue Jays
+08/21/19|Twins|White Sox
+08/21/19|Mets|Indians
+08/21/19|Athletics|Yankees
+08/21/19|Pirates|Nationals
+08/21/19|Cardinals|Brewers
+08/21/19|Rays|Mariners
+08/21/19|Rangers|Angels
+08/22/19|Braves|Marlins
+08/22/19|Orioles|Rays
+08/22/19|White Sox|Rangers
+08/22/19|Cubs|Giants
+08/22/19|Astros|Tigers
+08/22/19|Dodgers|Blue Jays
+08/22/19|Mets|Indians
+08/22/19|Athletics|Yankees
+08/22/19|Pirates|Nationals
+08/22/19|Cardinals|Rockies
+08/23/19|Orioles|Rays
+08/23/19|White Sox|Rangers
+08/23/19|Cubs|Nationals
+08/23/19|Indians|Royals
+08/23/19|Astros|Angels
+08/23/19|Dodgers|Yankees
+08/23/19|Marlins|Phillies
+08/23/19|Brewers|Diamondbacks
+08/23/19|Twins|Tigers
+08/23/19|Mets|Braves
+08/23/19|Pirates|Reds
+08/23/19|Padres|Red Sox
+08/23/19|Mariners|Blue Jays
+08/23/19|Cardinals|Rockies
+08/24/19|Orioles|Rays
+08/24/19|White Sox|Rangers
+08/24/19|Cubs|Nationals
+08/24/19|Indians|Royals
+08/24/19|Astros|Angels
+08/24/19|Dodgers|Yankees
+08/24/19|Marlins|Phillies
+08/24/19|Brewers|Diamondbacks
+08/24/19|Twins|Tigers
+08/24/19|Mets|Braves
+08/24/19|Athletics|Giants
+08/24/19|Pirates|Reds
+08/24/19|Padres|Red Sox
+08/24/19|Mariners|Blue Jays
+08/24/19|Cardinals|Rockies
+08/25/19|Orioles|Rays
+08/25/19|White Sox|Rangers
+08/25/19|Cubs|Nationals
+08/25/19|Indians|Royals
+08/25/19|Astros|Angels
+08/25/19|Dodgers|Yankees
+08/25/19|Marlins|Phillies
+08/25/19|Brewers|Diamondbacks
+08/25/19|Twins|Tigers
+08/25/19|Mets|Braves
+08/25/19|Athletics|Giants
+08/25/19|Pirates|Reds
+08/25/19|Padres|Red Sox
+08/25/19|Mariners|Blue Jays
+08/25/19|Cardinals|Rockies
+08/26/19|Rockies|Braves
+08/26/19|Royals|Athletics
+08/26/19|Marlins|Reds
+08/26/19|Brewers|Cardinals
+08/26/19|Phillies|Pirates
+08/26/19|Padres|Dodgers
+08/26/19|Mariners|Yankees
+08/26/19|Giants|Diamondbacks
+08/27/19|Angels|Rangers
+08/27/19|White Sox|Twins
+08/27/19|Rockies|Red Sox
+08/27/19|Tigers|Indians
+08/27/19|Astros|Rays
+08/27/19|Royals|Athletics
+08/27/19|Marlins|Reds
+08/27/19|Brewers|Cardinals
+08/27/19|Mets|Cubs
+08/27/19|Phillies|Pirates
+08/27/19|Padres|Dodgers
+08/27/19|Mariners|Yankees
+08/27/19|Giants|Diamondbacks
+08/27/19|Blue Jays|Braves
+08/27/19|Nationals|Orioles
+08/28/19|Angels|Rangers
+08/28/19|White Sox|Twins
+08/28/19|Rockies|Red Sox
+08/28/19|Tigers|Indians
+08/28/19|Astros|Rays
+08/28/19|Royals|Athletics
+08/28/19|Marlins|Reds
+08/28/19|Brewers|Cardinals
+08/28/19|Mets|Cubs
+08/28/19|Phillies|Pirates
+08/28/19|Padres|Dodgers
+08/28/19|Mariners|Yankees
+08/28/19|Blue Jays|Braves
+08/28/19|Nationals|Orioles
+08/29/19|Diamondbacks|Dodgers
+08/29/19|White Sox|Twins
+08/29/19|Rockies|Pirates
+08/29/19|Tigers|Indians
+08/29/19|Astros|Rays
+08/29/19|Royals|Athletics
+08/29/19|Marlins|Reds
+08/29/19|Mets|Cubs
+08/29/19|Giants|Padres
+08/29/19|Rangers|Mariners
+08/30/19|Angels|Red Sox
+08/30/19|Diamondbacks|Dodgers
+08/30/19|Braves|White Sox
+08/30/19|Cubs|Brewers
+08/30/19|Rockies|Pirates
+08/30/19|Tigers|Twins
+08/30/19|Royals|Orioles
+08/30/19|Yankees|Athletics
+08/30/19|Phillies|Mets
+08/30/19|Giants|Padres
+08/30/19|Rays|Indians
+08/30/19|Rangers|Mariners
+08/30/19|Blue Jays|Astros
+08/30/19|Nationals|Marlins
+08/31/19|Angels|Red Sox
+08/31/19|Diamondbacks|Dodgers
+08/31/19|Braves|White Sox
+08/31/19|Cubs|Brewers
+08/31/19|Rockies|Pirates
+08/31/19|Tigers|Twins
+08/31/19|Royals|Orioles
+08/31/19|Yankees|Athletics
+08/31/19|Phillies|Mets
+08/31/19|Giants|Padres
+08/31/19|Cardinals|Reds
+08/31/19|Cardinals|Reds
+08/31/19|Rays|Indians
+08/31/19|Rangers|Mariners
+08/31/19|Blue Jays|Astros
+08/31/19|Nationals|Marlins
+09/01/19|Angels|Red Sox
+09/01/19|Diamondbacks|Dodgers
+09/01/19|Braves|White Sox
+09/01/19|Cubs|Brewers
+09/01/19|Rockies|Pirates
+09/01/19|Tigers|Twins
+09/01/19|Royals|Orioles
+09/01/19|Yankees|Athletics
+09/01/19|Phillies|Mets
+09/01/19|Giants|Padres
+09/01/19|Cardinals|Reds
+09/01/19|Cardinals|Reds
+09/01/19|Rays|Indians
+09/01/19|Rangers|Mariners
+09/01/19|Blue Jays|Astros
+09/01/19|Nationals|Marlins
+09/02/19|Diamondbacks|Padres
+09/02/19|Braves|Blue Jays
+09/02/19|Cubs|Mariners
+09/02/19|Reds|Phillies
+09/02/19|Indians|White Sox
+09/02/19|Tigers|Twins
+09/02/19|Dodgers|Rockies
+09/02/19|Brewers|Astros
+09/02/19|Yankees|Rangers
+09/02/19|Cardinals|Giants
+09/02/19|Rays|Orioles
+09/02/19|Nationals|Mets
+09/03/19|Diamondbacks|Padres
+09/03/19|Braves|Blue Jays
+09/03/19|Red Sox|Twins
+09/03/19|Cubs|Mariners
+09/03/19|Reds|Phillies
+09/03/19|Indians|White Sox
+09/03/19|Royals|Tigers
+09/03/19|Dodgers|Rockies
+09/03/19|Brewers|Astros
+09/03/19|Yankees|Rangers
+09/03/19|Athletics|Angels
+09/03/19|Pirates|Marlins
+09/03/19|Cardinals|Giants
+09/03/19|Rays|Orioles
+09/03/19|Rays|Orioles
+09/03/19|Nationals|Mets
+09/04/19|Diamondbacks|Padres
+09/04/19|Red Sox|Twins
+09/04/19|Reds|Phillies
+09/04/19|Indians|White Sox
+09/04/19|Royals|Tigers
+09/04/19|Dodgers|Rockies
+09/04/19|Yankees|Rangers
+09/04/19|Athletics|Angels
+09/04/19|Pirates|Marlins
+09/04/19|Cardinals|Giants
+09/04/19|Nationals|Mets
+09/05/19|Braves|Nationals
+09/05/19|Orioles|Rangers
+09/05/19|Red Sox|Twins
+09/05/19|Reds|Phillies
+09/05/19|Indians|White Sox
+09/05/19|Astros|Mariners
+09/05/19|Royals|Tigers
+09/05/19|Brewers|Cubs
+09/05/19|Athletics|Angels
+09/05/19|Pirates|Marlins
+09/05/19|Cardinals|Giants
+09/05/19|Rays|Blue Jays
+09/06/19|Braves|Nationals
+09/06/19|Orioles|Rangers
+09/06/19|Red Sox|Yankees
+09/06/19|White Sox|Angels
+09/06/19|Reds|Diamondbacks
+09/06/19|Astros|Mariners
+09/06/19|Dodgers|Giants
+09/06/19|Marlins|Royals
+09/06/19|Brewers|Cubs
+09/06/19|Twins|Indians
+09/06/19|Mets|Phillies
+09/06/19|Athletics|Tigers
+09/06/19|Pirates|Cardinals
+09/06/19|Padres|Rockies
+09/06/19|Rays|Blue Jays
+09/07/19|Braves|Nationals
+09/07/19|Orioles|Rangers
+09/07/19|Red Sox|Yankees
+09/07/19|White Sox|Angels
+09/07/19|Reds|Diamondbacks
+09/07/19|Astros|Mariners
+09/07/19|Dodgers|Giants
+09/07/19|Marlins|Royals
+09/07/19|Brewers|Cubs
+09/07/19|Twins|Indians
+09/07/19|Mets|Phillies
+09/07/19|Athletics|Tigers
+09/07/19|Pirates|Cardinals
+09/07/19|Padres|Rockies
+09/07/19|Rays|Blue Jays
+09/08/19|Braves|Nationals
+09/08/19|Orioles|Rangers
+09/08/19|Red Sox|Yankees
+09/08/19|White Sox|Angels
+09/08/19|Reds|Diamondbacks
+09/08/19|Astros|Mariners
+09/08/19|Dodgers|Giants
+09/08/19|Marlins|Royals
+09/08/19|Brewers|Cubs
+09/08/19|Twins|Indians
+09/08/19|Mets|Phillies
+09/08/19|Athletics|Tigers
+09/08/19|Pirates|Cardinals
+09/08/19|Padres|Rockies
+09/08/19|Rays|Blue Jays
+09/09/19|Angels|Indians
+09/09/19|Red Sox|Yankees
+09/09/19|Astros|Athletics
+09/09/19|Marlins|Brewers
+09/09/19|Mets|Diamondbacks
+09/09/19|Phillies|Braves
+09/09/19|Padres|Cubs
+09/09/19|Giants|Pirates
+09/10/19|Angels|Indians
+09/10/19|Orioles|Dodgers
+09/10/19|White Sox|Royals
+09/10/19|Rockies|Cardinals
+09/10/19|Tigers|Yankees
+09/10/19|Astros|Athletics
+09/10/19|Marlins|Brewers
+09/10/19|Twins|Nationals
+09/10/19|Mets|Diamondbacks
+09/10/19|Phillies|Braves
+09/10/19|Padres|Cubs
+09/10/19|Mariners|Reds
+09/10/19|Giants|Pirates
+09/10/19|Rangers|Rays
+09/10/19|Blue Jays|Red Sox
+09/11/19|Angels|Indians
+09/11/19|Orioles|Dodgers
+09/11/19|White Sox|Royals
+09/11/19|Rockies|Cardinals
+09/11/19|Astros|Athletics
+09/11/19|Marlins|Brewers
+09/11/19|Twins|Nationals
+09/11/19|Mets|Diamondbacks
+09/11/19|Phillies|Braves
+09/11/19|Padres|Cubs
+09/11/19|Mariners|Reds
+09/11/19|Giants|Pirates
+09/11/19|Rangers|Rays
+09/11/19|Blue Jays|Red Sox
+09/12/19|Orioles|Dodgers
+09/12/19|White Sox|Royals
+09/12/19|Rockies|Cardinals
+09/12/19|Tigers|Yankees
+09/12/19|Tigers|Yankees
+09/12/19|Astros|Athletics
+09/12/19|Marlins|Brewers
+09/12/19|Twins|Nationals
+09/12/19|Mets|Diamondbacks
+09/12/19|Phillies|Braves
+09/12/19|Padres|Cubs
+09/12/19|Mariners|Reds
+09/12/19|Giants|Pirates
+09/12/19|Rangers|Rays
+09/12/19|Blue Jays|Red Sox
+09/13/19|Angels|Rays
+09/13/19|Diamondbacks|Reds
+09/13/19|Cubs|Pirates
+09/13/19|Rockies|Padres
+09/13/19|Tigers|Orioles
+09/13/19|Royals|Astros
+09/13/19|Mets|Dodgers
+09/13/19|Mariners|White Sox
+09/13/19|Giants|Marlins
+09/13/19|Cardinals|Brewers
+09/13/19|Rangers|Athletics
+09/13/19|Blue Jays|Yankees
+09/13/19|Nationals|Braves
+09/14/19|Angels|Rays
+09/14/19|Diamondbacks|Reds
+09/14/19|Cubs|Pirates
+09/14/19|Indians|Twins
+09/14/19|Indians|Twins
+09/14/19|Rockies|Padres
+09/14/19|Tigers|Orioles
+09/14/19|Royals|Astros
+09/14/19|Mets|Dodgers
+09/14/19|Phillies|Red Sox
+09/14/19|Mariners|White Sox
+09/14/19|Giants|Marlins
+09/14/19|Cardinals|Brewers
+09/14/19|Rangers|Athletics
+09/14/19|Blue Jays|Yankees
+09/14/19|Nationals|Braves
+09/15/19|Angels|Rays
+09/15/19|Diamondbacks|Reds
+09/15/19|Cubs|Pirates
+09/15/19|Indians|Twins
+09/15/19|Rockies|Padres
+09/15/19|Tigers|Orioles
+09/15/19|Royals|Astros
+09/15/19|Mets|Dodgers
+09/15/19|Phillies|Red Sox
+09/15/19|Mariners|White Sox
+09/15/19|Giants|Marlins
+09/15/19|Cardinals|Brewers
+09/15/19|Rangers|Athletics
+09/15/19|Blue Jays|Yankees
+09/15/19|Nationals|Braves
+09/16/19|Diamondbacks|Marlins
+09/16/19|Cubs|Reds
+09/16/19|Rockies|Mets
+09/16/19|Tigers|Orioles
+09/16/19|Brewers|Padres
+09/16/19|Twins|White Sox
+09/16/19|Athletics|Royals
+09/16/19|Cardinals|Nationals
+09/17/19|Diamondbacks|Marlins
+09/17/19|Braves|Phillies
+09/17/19|Orioles|Blue Jays
+09/17/19|Red Sox|Giants
+09/17/19|Cubs|Reds
+09/17/19|Indians|Tigers
+09/17/19|Rockies|Mets
+09/17/19|Astros|Rangers
+09/17/19|Dodgers|Rays
+09/17/19|Brewers|Padres
+09/17/19|Twins|White Sox
+09/17/19|Yankees|Angels
+09/17/19|Athletics|Royals
+09/17/19|Pirates|Mariners
+09/17/19|Cardinals|Nationals
+09/18/19|Diamondbacks|Marlins
+09/18/19|Braves|Phillies
+09/18/19|Orioles|Blue Jays
+09/18/19|Red Sox|Giants
+09/18/19|Cubs|Reds
+09/18/19|Indians|Tigers
+09/18/19|Rockies|Mets
+09/18/19|Astros|Rangers
+09/18/19|Dodgers|Rays
+09/18/19|Brewers|Padres
+09/18/19|Twins|White Sox
+09/18/19|Yankees|Angels
+09/18/19|Athletics|Royals
+09/18/19|Pirates|Mariners
+09/18/19|Cardinals|Nationals
+09/19/19|Braves|Phillies
+09/19/19|Orioles|Blue Jays
+09/19/19|Red Sox|Giants
+09/19/19|Cubs|Cardinals
+09/19/19|Indians|Tigers
+09/19/19|Brewers|Padres
+09/19/19|Twins|Royals
+09/19/19|Yankees|Angels
+09/19/19|Pirates|Mariners
+09/20/19|Braves|Giants
+09/20/19|Orioles|Mariners
+09/20/19|Cubs|Cardinals
+09/20/19|Reds|Mets
+09/20/19|Indians|Phillies
+09/20/19|Tigers|White Sox
+09/20/19|Astros|Angels
+09/20/19|Dodgers|Rockies
+09/20/19|Marlins|Nationals
+09/20/19|Brewers|Pirates
+09/20/19|Twins|Royals
+09/20/19|Yankees|Blue Jays
+09/20/19|Athletics|Rangers
+09/20/19|Padres|Diamondbacks
+09/20/19|Rays|Red Sox
+09/21/19|Braves|Giants
+09/21/19|Orioles|Mariners
+09/21/19|Cubs|Cardinals
+09/21/19|Reds|Mets
+09/21/19|Indians|Phillies
+09/21/19|Tigers|White Sox
+09/21/19|Astros|Angels
+09/21/19|Dodgers|Rockies
+09/21/19|Marlins|Nationals
+09/21/19|Brewers|Pirates
+09/21/19|Twins|Royals
+09/21/19|Yankees|Blue Jays
+09/21/19|Athletics|Rangers
+09/21/19|Padres|Diamondbacks
+09/21/19|Rays|Red Sox
+09/22/19|Braves|Giants
+09/22/19|Orioles|Mariners
+09/22/19|Cubs|Cardinals
+09/22/19|Reds|Mets
+09/22/19|Indians|Phillies
+09/22/19|Tigers|White Sox
+09/22/19|Astros|Angels
+09/22/19|Dodgers|Rockies
+09/22/19|Marlins|Nationals
+09/22/19|Brewers|Pirates
+09/22/19|Twins|Royals
+09/22/19|Yankees|Blue Jays
+09/22/19|Athletics|Rangers
+09/22/19|Padres|Diamondbacks
+09/22/19|Rays|Red Sox
+09/23/19|Diamondbacks|Cardinals
+09/23/19|Mets|Marlins
+09/23/19|Rays|Red Sox
+09/23/19|Blue Jays|Orioles
+09/23/19|Nationals|Phillies
+09/24/19|Angels|Athletics
+09/24/19|Diamondbacks|Cardinals
+09/24/19|White Sox|Indians
+09/24/19|Reds|Brewers
+09/24/19|Tigers|Twins
+09/24/19|Royals|Braves
+09/24/19|Mets|Marlins
+09/24/19|Pirates|Cubs
+09/24/19|Padres|Dodgers
+09/24/19|Mariners|Astros
+09/24/19|Giants|Rockies
+09/24/19|Rays|Yankees
+09/24/19|Rangers|Red Sox
+09/24/19|Blue Jays|Orioles
+09/24/19|Nationals|Phillies
+09/24/19|Nationals|Phillies
+09/25/19|Angels|Athletics
+09/25/19|Diamondbacks|Cardinals
+09/25/19|White Sox|Indians
+09/25/19|Reds|Brewers
+09/25/19|Tigers|Twins
+09/25/19|Royals|Braves
+09/25/19|Mets|Marlins
+09/25/19|Pirates|Cubs
+09/25/19|Padres|Dodgers
+09/25/19|Mariners|Astros
+09/25/19|Giants|Rockies
+09/25/19|Rays|Yankees
+09/25/19|Rangers|Red Sox
+09/25/19|Blue Jays|Orioles
+09/25/19|Nationals|Phillies
+09/26/19|Angels|Astros
+09/26/19|White Sox|Indians
+09/26/19|Reds|Brewers
+09/26/19|Tigers|Twins
+09/26/19|Mets|Marlins
+09/26/19|Pirates|Cubs
+09/26/19|Padres|Dodgers
+09/26/19|Mariners|Athletics
+09/26/19|Giants|Rockies
+09/26/19|Rangers|Red Sox
+09/26/19|Nationals|Phillies
+09/27/19|Angels|Astros
+09/27/19|Diamondbacks|Padres
+09/27/19|Red Sox|Orioles
+09/27/19|Rockies|Brewers
+09/27/19|Royals|Twins
+09/27/19|Mets|Braves
+09/27/19|Phillies|Marlins
+09/27/19|Pirates|Reds
+09/27/19|Mariners|Athletics
+09/27/19|Giants|Dodgers
+09/27/19|Cardinals|Cubs
+09/27/19|Rangers|Yankees
+09/27/19|Blue Jays|Rays
+09/27/19|Nationals|Indians
+09/28/19|Angels|Astros
+09/28/19|Diamondbacks|Padres
+09/28/19|Red Sox|Orioles
+09/28/19|White Sox|Tigers
+09/28/19|White Sox|Tigers
+09/28/19|Rockies|Brewers
+09/28/19|Royals|Twins
+09/28/19|Mets|Braves
+09/28/19|Phillies|Marlins
+09/28/19|Pirates|Reds
+09/28/19|Mariners|Athletics
+09/28/19|Giants|Dodgers
+09/28/19|Cardinals|Cubs
+09/28/19|Rangers|Yankees
+09/28/19|Blue Jays|Rays
+09/28/19|Nationals|Indians
+09/29/19|Angels|Astros
+09/29/19|Diamondbacks|Padres
+09/29/19|Red Sox|Orioles
+09/29/19|White Sox|Tigers
+09/29/19|Rockies|Brewers
+09/29/19|Royals|Twins
+09/29/19|Mets|Braves
+09/29/19|Phillies|Marlins
+09/29/19|Pirates|Reds
+09/29/19|Mariners|Athletics
+09/29/19|Giants|Dodgers
+09/29/19|Cardinals|Cubs
+09/29/19|Rangers|Yankees
+09/29/19|Blue Jays|Rays
+09/29/19|Nationals|Indians

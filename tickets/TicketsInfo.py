@@ -211,6 +211,7 @@ start with highest tickets
     def GetSeasonStartDate(OwnerID):
         S = DataJobs.GetAllGames(OwnerID) # Ordered by date
         for s in S:
+            print('hi')
             return s.date # Get first one
     
     def SetStartDate(OwnerID, StartDate):
@@ -226,6 +227,7 @@ start with highest tickets
         if O.startdate == None:
             print('date is none')
             d = DataJobs.GetSeasonStartDate(OwnerID)
+            print(str(d))
             DataJobs.SetStartDate(OwnerID, d)
             return datetime.strftime(d, '%m/%d/%y')
         return datetime.strftime(O.startdate, '%m/%d/%y')
