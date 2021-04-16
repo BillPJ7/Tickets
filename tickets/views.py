@@ -217,7 +217,8 @@ def personinfo(request, owner_id):
         #StartDate = StartDate.strftime("%yyyy-%m-%d")
         #s = s.strftime("%yyyy-%m-%d")
         DataJobs.SetStartDate(owner_id, StartDate)
-        if DataJobs.GetTotalTics(owner_id) - DataJobs.GetTicketsAssigned(owner_id) == 0:
+        TicsRemaining = DataJobs.GetTotalTics(owner_id) - DataJobs.GetTicketsAssigned(owner_id)
+        if TicsRemaining == 0:
             print('combos len is ' + str(len(Distribute.Combos)))
             Distribute.Combos = []
             success = Distribute.DoCombos('People')
@@ -233,7 +234,6 @@ def personinfo(request, owner_id):
                     From = 'People'
                     context = {'owner': newOwner, 'noresultmessages': NoResultMessages, 'from': From}
                     return render(request, 'tickets/noresult.html', context)
-        TicsRemaining = DataJobs.GetTotalTics(owner_id) - DataJobs.GetTicketsAssigned(owner_id)
         TicsPer = DataJobs.GetTicsPer(owner_id) # after adding people
         PersonCount = DataJobs.GetPersonCount(owner_id) # after adding people
         peopleTics = DataJobs.GetPeopleTics(owner_id)
