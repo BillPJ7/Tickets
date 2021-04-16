@@ -498,7 +498,7 @@ Needed in GetTenBest, to get column number for html table element names
             if id == ID:
                 return GameCnt + 1
     
-    def DistributionContext(OwnerID, TenBestNbr):
+    def DistributionContext(OwnerID, TenBestNbr, MinutesOriginal, MinutesLeft):
         '''
 This is the context sent to distribution.html, put here because it's 
 repeated several times for all the back buttons that send you there.
@@ -524,7 +524,7 @@ repeated several times for all the back buttons that send you there.
         TenBest10 = DataJobs.GetTenBest(OwnerID, 10)
         dates = DataJobs.GetDates(OwnerID)
         SelectDate = DataJobs.GetStartDateString(OwnerID)
-        return {'owner': newOwner, 'schedule': schedule, 'people': people, 'tries': Tries, 'bestten': BestTen, 'personcnt': PersonCnt, 'gamecnt': GameCnt, 'tenbest1': TenBest1, 'tenbest2': TenBest2, 'tenbest3': TenBest3, 'tenbest4': TenBest4, 'tenbest5': TenBest5, 'tenbest6': TenBest6, 'tenbest7': TenBest7, 'tenbest8': TenBest8, 'tenbest9': TenBest9, 'tenbest10': TenBest10, 'tenbestnbr': TenBestNbr, 'dates': dates, 'selectdate': SelectDate}
+        return {'owner': newOwner, 'schedule': schedule, 'people': people, 'tries': Tries, 'bestten': BestTen, 'personcnt': PersonCnt, 'gamecnt': GameCnt, 'tenbest1': TenBest1, 'tenbest2': TenBest2, 'tenbest3': TenBest3, 'tenbest4': TenBest4, 'tenbest5': TenBest5, 'tenbest6': TenBest6, 'tenbest7': TenBest7, 'tenbest8': TenBest8, 'tenbest9': TenBest9, 'tenbest10': TenBest10, 'tenbestnbr': TenBestNbr, 'dates': dates, 'selectdate': SelectDate, 'minutesoriginal': MinutesOriginal, 'minutesleft': MinutesLeft}
 
     def GetPeopleStatus(OwnerID, TenBestNbr):
         '''

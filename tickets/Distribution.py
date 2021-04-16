@@ -3,6 +3,7 @@ from django.shortcuts import get_object_or_404, render
 from django.conf import settings
 from .TicketsInfo import DataJobs
 from .Test import Dummy
+from background_task import background
 import random
 import time
 import numpy as np
@@ -21,9 +22,18 @@ class Distribute:
     CurrentGame = 0
     Tries1 = 0
     TempResult = []
-    
+    #@background(schedule=1)
     def Run(OwnerID, Minutes):
         '''Must add feature to run with remaining tics during season'''
+        '''
+        i = 0
+        StartTime = time.time()
+        while (time.time() - StartTime) < 60:    
+            i += 1
+        print('loop ' + str(i))
+        return False
+    '''
+        print('oh nos')
         Distribute.OwnerID = OwnerID
         O = DataJobs.GetOwnerByID(OwnerID)
         UserName = O.username
@@ -47,7 +57,7 @@ class Distribute:
         Distribute.Tries1 = 0
         GoodTries = 0
         DataJobs.DeleteNoResultMessages(Distribute.OwnerID)
-        MaxTime = Minutes * 60 # seconds
+        MaxTime = Minutes * 10 # seconds
         StartTime = time.time()
         while (time.time() - StartTime) < MaxTime:
             if Distribute.Attempt():

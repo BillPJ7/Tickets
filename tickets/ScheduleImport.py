@@ -15,9 +15,9 @@ class ImportSchedule:
             content = f.readlines()
         for line in content:
             words = line.split('|')
-            team = Team.objects.filter(league=L, name=words[1], code=words[0])
+            team = Team.objects.filter(league=L, name=words[1])
             if team:
-                post_instance = Team.objects.filter(league=L, name=words[1], code=words[0]).update(rating=words[2])
+                post_instance = Team.objects.filter(league=L, name=words[1]).update(rating=words[2], code=words[0])
             else:
                 post_instance = Team.objects.create(league = L, name = words[1], rating = words[2], code = words[0]) 
     

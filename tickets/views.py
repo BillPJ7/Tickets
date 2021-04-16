@@ -34,7 +34,7 @@ def index(request):
                 # so only check there below
                 if DataJobs.Paid(ownerID):
                     if DataJobs.OnDistribution(ownerID): # Successful results or requirements assigned
-                        context = DataJobs.DistributionContext(ownerID, 1)
+                        context = DataJobs.DistributionContext(ownerID, 1, 0, -1)
                         return render(request, 'tickets/distribution.html', context)
                     if DataJobs.OnRequirements(ownerID):
                         if NoResultMessages.count() > 0:
@@ -119,7 +119,7 @@ def payment(request, owner_id):
                 context = {'owner': newOwner, 'leagues': leagues, 'ticsper': TicsPer, 'fromdist': FromDist}
                 return render(request, 'tickets/ticketInfo.html', context)
             if DataJobs.OnDistribution(owner_id): # Successful results or requirements assigned
-                context = DataJobs.DistributionContext(owner_id, 1)
+                context = DataJobs.DistributionContext(owner_id, 1, 0, -1)
                 return render(request, 'tickets/distribution.html', context)
             if DataJobs.OnRequirements(owner_id):
                 if NoResultMessages.count() > 0:
@@ -173,7 +173,7 @@ def ticketinfo(request, owner_id):
             context = {'owner': newOwner, 'teams': teams, 'leagues': leagues, 'league': league, 'ticsper': TicsPer, 'fromdist': FromDist}
             return render(request, 'tickets/ticketInfo.html', context)
         if 'btnBack' in request.POST:
-            context = DataJobs.DistributionContext(owner_id, 1)
+            context = DataJobs.DistributionContext(owner_id, 1, 0, -1)
             return render(request, 'tickets/distribution.html', context) 
         #btnSubmitAll was clicked
         team = request.POST['HomeTeam']
@@ -194,7 +194,7 @@ def personinfo(request, owner_id):
     if request.method == "POST":
         newOwner = get_object_or_404(Owner, pk=owner_id)
         if 'btnBack' in request.POST:
-            context = DataJobs.DistributionContext(owner_id, 1)
+            context = DataJobs.DistributionContext(owner_id, 1, 0, -1)
             return render(request, 'tickets/distribution.html', context) 
         PersonCount = DataJobs.GetPersonCount(owner_id) # before adding people
         DataJobs.DeletePeopleTics(owner_id)
@@ -254,7 +254,7 @@ def requirements(request, owner_id):
     people = DataJobs.GetPeople(owner_id)
     if request.method == "POST":
         if 'btnBack' in request.POST:
-            context = DataJobs.DistributionContext(owner_id, 1)
+            context = DataJobs.DistributionContext(owner_id, 1, 0, -1)
             return render(request, 'tickets/distribution.html', context)
         DataJobs.DeleteReqs(owner_id)
         games = DataJobs.GetGames(owner_id)
@@ -272,7 +272,7 @@ def requirements(request, owner_id):
                     DataJobs.AddRequirement(p, g, int(s))
         dates = DataJobs.GetDates(owner_id)
         SelectDate = DataJobs.GetStartDateString(owner_id)
-        context = {'owner': newOwner, 'schedule': schedule, 'people': people, 'tries': 0, 'dates': dates, 'selectdate': SelectDate}
+        context = {'owner': newOwner, 'schedule': schedule, 'people': people, 'tries': 0, 'dates': dates, 'selectdate': SelectDate, 'minutesoriginal': 0, 'minutesleft': -1}
         return render(request, 'tickets/distribution.html', context)
     else:
         context = {'owner': newOwner, 'schedule': schedule, 'people': people}
@@ -317,11 +317,13 @@ def distribution(request, owner_id):
             context = {'owner': newOwner, 'ticsperrange': range(1, TicsPer+1), 'schedule': schedule, 'people': people, 'fromdist': FromDist, 'reqstring': ReqString}
             return render(request, 'tickets/requirements.html', context)
         if 'btnRun' in request.POST:
+            
             m = request.POST['Minutes']
-            if Distribute.Run(owner_id, int(m)):
-                context = DataJobs.DistributionContext(owner_id, 1)
+            if Distribute.Run(owner_id, 1):
+                context = DataJobs.DistributionContext(owner_id, 1, int(m), int(m) - 1)
                 return render(request, 'tickets/distribution.html', context)
             NoResultMessages = DataJobs.GetNoResultMessages(owner_id)
+            
             From = 'Run'
             context = {'owner': newOwner, 'noresultmessages': NoResultMessages, 'from': From}
             return render(request, 'tickets/noresult.html', context)
@@ -335,8 +337,16 @@ def distribution(request, owner_id):
             ReportInfo = DataJobs.GetReportInfo(owner_id, TB)
             context = {'owner': newOwner, 'reportinfo': ReportInfo, 'tenbestnbr': TB}
             return render(request, 'tickets/report.html', context)
+        if 'AutoSubmit' in request.POST:
+            print('auto submit works')
+            ML = request.POST['MinutesLeft']
+            MO = request.POST['MinutesOriginal']
+            if Distribute.Run(owner_id, 1):
+                context = DataJobs.DistributionContext(owner_id, 1, int(MO), int(ML) - 1)
+                return render(request, 'tickets/distribution.html', context) 
+        m = request.POST['Minutes']
         TB = int(request.POST['TenBestNumber'])
-        context = DataJobs.DistributionContext(owner_id, TB)
+        context = DataJobs.DistributionContext(owner_id, TB, 0, -1)
         return render(request, 'tickets/distribution.html', context)
     else:
         return render(request, 'tickets/distribution.html', context)
@@ -344,13 +354,13 @@ def distribution(request, owner_id):
 def details(request, owner_id):
     if request.method == "POST":
         TenBestNbr = request.POST['TenBestNbr']
-        context = DataJobs.DistributionContext(owner_id, TenBestNbr)
+        context = DataJobs.DistributionContext(owner_id, TenBestNbr, 0, -1)
         return render(request, 'tickets/distribution.html', context)
     
 def report(request, owner_id):
     if request.method == "POST":
         TenBestNbr = request.POST['TenBestNbr']
-        context = DataJobs.DistributionContext(owner_id, TenBestNbr)
+        context = DataJobs.DistributionContext(owner_id, TenBestNbr, 0, -1)
         return render(request, 'tickets/distribution.html', context)
     
 def noresult(request, owner_id):
@@ -373,5 +383,5 @@ def noresult(request, owner_id):
             schedule = DataJobs.GetSchedule(owner_id)
             context = {'owner': newOwner, 'ticsperrange': range(1, TicsPer+1), 'schedule': schedule, 'people': people, 'fromdist': FromDist, 'reqstring': ReqString}
             return render(request, 'tickets/requirements.html', context)
-        context = DataJobs.DistributionContext(owner_id, 1)
+        context = DataJobs.DistributionContext(owner_id, 1, 0, -1)
         return render(request, 'tickets/distribution.html', context)

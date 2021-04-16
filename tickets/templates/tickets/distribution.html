@@ -12,7 +12,7 @@
 var TenBestNbr = 1;
 var ShrinkGrow = "Shrink";
 var PersonCnt, GameCnt, TB1, TB2, TB3, TB4, TB5, TB6, TB7, TB8, TB9, TB10;
-function LoadJobs(PersonCount, GameCount, BestTen, TenBest1, TenBest2, TenBest3, TenBest4, TenBest5, TenBest6, TenBest7, TenBest8, TenBest9, TenBest10, TenBestNumber) {
+function LoadJobs(PersonCount, GameCount, BestTen, TenBest1, TenBest2, TenBest3, TenBest4, TenBest5, TenBest6, TenBest7, TenBest8, TenBest9, TenBest10, TenBestNumber, MinutesLeft) {
     PersonCnt = PersonCount; GameCnt = GameCount
     TB1 = TenBest1; TB2 = TenBest2; TB3 = TenBest3; TB4 = TenBest4; TB5 = TenBest5; TB6 = TenBest6; TB7 = TenBest7; TB8 = TenBest8; TB9 = TenBest9; TB10 = TenBest10;
     FindBestTen(BestTen);
@@ -20,6 +20,9 @@ function LoadJobs(PersonCount, GameCount, BestTen, TenBest1, TenBest2, TenBest3,
     FindTenBest(TenBestNbr);
     e = document.getElementById("TenBestNumber");
     e.value = TenBestNbr.toString();
+    if(MinutesLeft > 0){
+        document.getElementById("AutoSubmit").click()
+    }
 }
 function Resize(){
     if(ShrinkGrow == "Shrink"){
@@ -138,16 +141,8 @@ function FindTenBest(){
 }
 
 </script>
-  <body onload="LoadJobs({{personcnt}}, {{gamecnt}}, '{{bestten}}', '{{tenbest1}}', '{{tenbest2}}', '{{tenbest3}}', '{{tenbest4}}', '{{tenbest5}}', '{{tenbest6}}', '{{tenbest7}}', '{{tenbest8}}', '{{tenbest9}}', '{{tenbest10}}', {{tenbestnbr}})">
-    <p></p>
-    <label>Start date:</label>
-    <select name="StartDate" id="StartDate" onChange="RevealSubmit()">
-        {% for d in dates %}
-            <option value={{d}} {% if d == selectdate %} selected="selected" {% endif %}>{{d}}</option>
-        {% endfor %}
-    </select>
-    <button type="submit" name="btnStartDate" id="btnStartDate" style="visibility:hidden">Submit</button>
-    <button type="submit" name="btnCancel" id="btnCancel" style="visibility:hidden">Cancel</button>
+  <body onload="LoadJobs({{personcnt}}, {{gamecnt}}, '{{bestten}}', '{{tenbest1}}', '{{tenbest2}}', '{{tenbest3}}', '{{tenbest4}}', '{{tenbest5}}', '{{tenbest6}}', '{{tenbest7}}', '{{tenbest8}}', '{{tenbest9}}', '{{tenbest10}}', {{tenbestnbr}}, {{minutesleft}})">
+
     <table>
         <tr>
             <td><label>Minutes to run</label></td>
@@ -156,10 +151,14 @@ function FindTenBest(){
             <td></td>
             <td><label>Bads</label></td>
             <td><label>Rating spread</label></td>
+            <td>&emsp;&emsp;
+    <label>Start date:</label>
+
+            </td>
         </tr>
         <tr>
             <td>
-                <input value="1" name="Minutes" id="Minutes" style="width:40px">
+                <input {% if minutesoriginal == 0 %} value="1" {% else %} value={{minutesoriginal}} {% endif %} name="Minutes" id="Minutes" style="width:40px">
                 <input value="Run" type="submit" name="btnRun" id="btnRun">
             </td>
             <td>&emsp;&emsp;</td>
@@ -170,9 +169,18 @@ function FindTenBest(){
             <td>&emsp;&emsp;</td>
             <td><input name="Bads1" id="Bads1" style="width:40px"></td>
             <td><input name="Result1" id="Result1"></td>
+            <td>&emsp;&emsp;
+    <select name="StartDate" id="StartDate" onChange="RevealSubmit()">
+        {% for d in dates %}
+            <option value={{d}} {% if d == selectdate %} selected="selected" {% endif %}>{{d}}</option>
+        {% endfor %}
+    </select>
+
+    <button type="submit" name="AutoSubmit" id="AutoSubmit" style="visibility:hidden"></button>
         </tr>
+        
         <tr>
-            <td></td>
+            <td>{% if minutesleft > 0 %}<label>{{minutesleft}} remaining</label>{% elif minutesleft == 0 %}<label>Done</label>{% endif %}</td>
             <td>&emsp;&emsp;</td>
             <td>
 
@@ -180,6 +188,12 @@ function FindTenBest(){
             <td>&emsp;&emsp;</td>
             <td><input name="Bads2" id="Bads2" style="width:40px"></td>
             <td><input name="Result2" id="Result2"></td>
+
+            <td>&emsp;&emsp;
+    <button type="submit" name="btnStartDate" id="btnStartDate" style="visibility:hidden">Submit</button>
+    <button type="submit" name="btnCancel" id="btnCancel" style="visibility:hidden">Cancel</button>
+    </td>
+    
         </tr>
         <tr>
             <td></td>
@@ -292,6 +306,8 @@ function FindTenBest(){
     <button type="submit" name="btnRequirements">Requirements</button>
     &emsp;&emsp;
     <input type="button" value="Shrink" onclick="Resize()" id="btnShrink" name="btnShrink">
+    <input value="{{minutesleft}}" name="MinutesLeft" id="MinutesLeft" style="visibility:hidden">
+    <input value="{{minutesoriginal}}" name="MinutesOriginal" id="MinutesOriginal" style="visibility:hidden">
   </body>
 
         
