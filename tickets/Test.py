@@ -6,6 +6,18 @@ from random import *
 import random
 
 class Dummy:
+    def MakeTestFile(OwnerID):
+        people = DataJobs.GetPeopleTics(OwnerID)
+        f = open('TestAppFile.txt', 'w')
+        
+        for pCnt, p in enumerate(people):
+             
+            for tCnt, t in enumerate(p):
+                if tCnt == 0:
+                    f.write('***\n') 
+                else:
+                    f.write(str(people[pCnt][tCnt]) + '\n')    
+        f.close()
     def DummyGood(): # Test data for successful results
         DataJobs.AddTries(204, 5640) # Add 5640 tries to owner 204
         Best10 = Dummy.MakeBestTen()

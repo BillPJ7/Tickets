@@ -8,6 +8,7 @@ from .TicketsInfo import DataJobs
 class ImportSchedule:
         
     def ImportTeams(league):
+        ClearOwners(league) #purge old info
         file_path = settings.BASE_DIR
         L = League.objects.get(name=league)
         #DataJobs.DeleteTeams(league)
@@ -35,4 +36,4 @@ class ImportSchedule:
             A = Team.objects.get(name=words[2].rstrip('\n'), league_id=id)
             date_object = datetime.strptime(words[0], "%m/%d/%y")
             post_instance = Schedule.objects.create(date = date_object, hometeam = HomeID, awayteam = A)  
-    
+        

@@ -5,18 +5,47 @@
     <h1>Schedule options</h1>
     <form action="{% url 'tickets:payment' owner.id %}" method="post">
     {% csrf_token %}
+<script>
+    function RevealSubmit() {
+        document.getElementById("Submission").style.visibility = "visible"; 
+        document.getElementById("CardInfo").style.visibility = "visible";
+
+    }
+</script>
     <p></p>
 
   <table>
         <tr>
             <td><button type="submit" name="btnDemo">Demo</button></td>
-            <td><label >Previous schedule</label></td>
+            <td><label>Previous schedule</label></td>
         </tr>
         <tr>
-            <td><button type="submit" name="btnPay">Pay</button></td>
+            <td><button type="button" onclick="RevealSubmit()" name="btnPay">Pay</button></td>
             <td><label>Current schedule</label></td>
         </tr>
   </table>
+  <p></p>
+  <table id="CardInfo" name="CardInfo" style="visibility:hidden">
+        <tr>
+            <td><label>Card number:</label></td>
+            <td><input id="CardNumber" name="CardNumber"></td>
+        </tr>
+        <tr>
+            <td><label>Expiration date:</label></td>
+            <td><input id="Expire" name="Expire"></td>
+        </tr>
+        <tr>
+            <td><label>Amount: $10</label></td>
+        </tr>
+  </table>
+  <p></p>
+  <table>
+
+        <tr>
+            <input type="submit" id="Submission" name="Submission" value="Submit" style="visibility:hidden">
+        </tr>
+  </table>  
+            
   <input {% if user == "new" %} value="UserNew" {% endif %}{% if user == "existing" %} value="UserExisting" {% endif %} name="NewExisting" id="NewExisting" style="visibility:hidden">
     </form>
 </html>

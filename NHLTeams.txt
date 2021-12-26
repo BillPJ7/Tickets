@@ -29,3 +29,4 @@ OTT|Senators|15
 TOR|Maple Leafs|1
 VAN|Canucks|10
 WPG|Jets|5
+SEA|Kraken|5

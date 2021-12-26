@@ -1,3 +1,4 @@
+from .credentials import Cred
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from .models import Owner, League, Team, Schedule, Person, Ticket, Req, BestTen, TenBest, Status, NoResult
@@ -5,6 +6,8 @@ from django.db.models import Q
 from django.conf import settings
 from decimal import Decimal
 from datetime import datetime
+from authorizenet import apicontractsv1
+from authorizenet.apicontrollers import*
 
 class DataJobs:
     GameIDs = []
@@ -64,9 +67,46 @@ Happens before league schedule is imported each season
         O = Owner.objects.get(id=OwnerID)
         return O.paid
     
-    def Pay(OwnerID):
-        Owner.objects.filter(id=OwnerID).update(paid = True)
+    def Pay(OwnerID, card_number, expiration_date):
+        merchantAuth = apicontractsv1.merchantAuthenticationType()
+        merchantAuth.name = Cred.api_login_name
+        merchantAuth.transactionKey = Cred.transaction_key
         
+        creditCard = apicontractsv1.creditCardType()
+        creditCard.cardNumber = card_number
+        creditCard.expirationDate = expiration_date
+         
+        payment = apicontractsv1.paymentType()
+        payment.creditCard = creditCard
+         
+        transactionrequest = apicontractsv1.transactionRequestType()
+        transactionrequest.transactionType ="authCaptureTransaction"
+        transactionrequest.amount = 10.00
+        transactionrequest.payment = payment
+        
+       # print('merchantAuth.name is ' + merchantAuth.name)
+      #  print('merchantAuth.transactionKey is ' + merchantAuth.transactionKey) 
+       # print('card number is ' + card_number)
+      #  print('expiration_date is ' + expiration_date)
+       # print('transactionrequest.amount is ' + str(transactionrequest.amount))
+         
+        createtransactionrequest = apicontractsv1.createTransactionRequest()
+        createtransactionrequest.merchantAuthentication = merchantAuth
+        createtransactionrequest.refId = 'Pied-Piper'
+         
+        createtransactionrequest.transactionRequest = transactionrequest
+        createtransactioncontroller = createTransactionController(createtransactionrequest)
+        createtransactioncontroller.execute()
+     
+        response = createtransactioncontroller.getresponse()
+         
+        if (response.messages.resultCode=="Ok"):
+            print("Transaction ID : %s"% response.transactionResponse.transId)
+            Owner.objects.filter(id=OwnerID).update(paid = True)
+        else:
+            print("response code: %s"% response.messages.resultCode)
+            Owner.objects.filter(id=OwnerID).update(paid = False)
+  
     def ClearDemo(OwnerID):
         Owner.objects.filter(id = OwnerID).update(tries = 0)
         BestTen.objects.filter(owner_id = OwnerID).delete()
@@ -103,10 +143,8 @@ This is the number of tickets, or seats, the owner has for each game
         '''
 Total tickets is the number of games in the season, times tickets per game
         '''
-        print('OwnerID is ' + str(OwnerID))
         O = Owner.objects.get(id=OwnerID)
         T = O.team_id
-        print('home team is ' + str(T))
         if O.paid == True:
             return Schedule.objects.filter(Q(date__gte = O.startdate), hometeam=T, lastyear=0).count() * O.tickets
         return Schedule.objects.filter(Q(date__gte = O.startdate), hometeam=T, lastyear=1).count() * O.tickets
@@ -177,7 +215,7 @@ start with highest tickets
         P = DataJobs.GetPeople(OwnerID)
         for p in P:
             TicsPer = []
-            T = Ticket.objects.filter(person_id=p.id).order_by('-ticketsper')
+            T = Ticket.objects.filter(person_id=p.id).order_by('ticketsper')
             for t in T:
                 Tics = t.ticketsper
                 Left = t.numbergames
@@ -204,6 +242,7 @@ start with highest tickets
     def GetAllGames(OwnerID):
         O = Owner.objects.get(id=OwnerID)
         T = Team.objects.get(id = O.team_id)
+        print('team id is ' + str(O.team_id))
         if O.paid == True:
             return Schedule.objects.filter(hometeam = T.id, lastyear = 0).order_by('date')
         return Schedule.objects.filter(hometeam = T.id, lastyear = 1).order_by('date')
@@ -211,11 +250,33 @@ start with highest tickets
     def GetSeasonStartDate(OwnerID):
         S = DataJobs.GetAllGames(OwnerID) # Ordered by date
         for s in S:
-            print('hi')
             return s.date # Get first one
     
     def SetStartDate(OwnerID, StartDate):
+        CurrStartDate = DataJobs.GetStartDate(OwnerID)
+        if CurrStartDate != StartDate:
+            DataJobs.DeleteResults(OwnerID)
         Owner.objects.filter(id=OwnerID).update(startdate=StartDate)
+        
+    def ClearOwners(league):
+        '''
+Called when importing new teams, delete the owners allowing cascade delete to clear all 
+associated records, but for owners with recent activity, save name/password, create new 
+owner with saved name/password (so owners can keep their login info)
+        '''
+        L = League.objects.get(name=league)
+        T = Team.objects.filter(league=L.id)
+        for t in T:
+            O = Owner.objects.filter(team_id=t.id)
+            if O:
+                for o in O:
+                    if o.team_id == t.id:
+                        if o.tries > 0:
+                            userName = o.username
+                            password = o.password
+                            ownerID = DataJobs.AddInitialOwner(userName, password)
+                for o in O:
+                    o.delete()
 
     def GetStartDate(OwnerID):
         O = Owner.objects.get(id=OwnerID)
@@ -223,11 +284,8 @@ start with highest tickets
        
     def GetStartDateString(OwnerID):
         O = Owner.objects.get(id=OwnerID)
-        print('hay what the f')
         if O.startdate == None:
-            print('date is none')
             d = DataJobs.GetSeasonStartDate(OwnerID)
-            print(str(d))
             DataJobs.SetStartDate(OwnerID, d)
             return datetime.strftime(d, '%m/%d/%y')
         return datetime.strftime(O.startdate, '%m/%d/%y')
@@ -329,6 +387,8 @@ check for requirements which would mean requirements assigned but Run was not hi
 On requirements means get directed to requirements page. Check if all tickets
 were assigned total tickets - tickets assigned (OnDistribution already false)
         '''
+        if DataJobs.GetStartDate(OwnerID)is None:
+            return False
         t = DataJobs.GetTotalTics(OwnerID)
         if t == 0:
             return False # Team and tickets per game not yet selected
