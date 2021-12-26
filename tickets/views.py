@@ -233,12 +233,7 @@ def personinfo(request, owner_id):
         DataJobs.SetStartDate(owner_id, StartDate)
         TicsRemaining = DataJobs.GetTotalTics(owner_id) - DataJobs.GetTicketsAssigned(owner_id)
         if TicsRemaining == 0:
-            schedule = DataJobs.GetSchedule(owner_id)
-            people = DataJobs.GetPeople(owner_id)
-            FromDist = False
-            context = {'owner': newOwner, 'ticsperrange': range(1, TicsPer+1), 'schedule': schedule, 'people': people, 'fromdist': FromDist}            
-            return render(request, 'tickets/requirements.html', context)
-            '''
+            print('combos len is ' + str(len(Distribute.Combos)))
             Distribute.Combos = []
             success = Distribute.DoCombos('People')
             if success == True:
@@ -253,8 +248,6 @@ def personinfo(request, owner_id):
                     From = 'People'
                     context = {'owner': newOwner, 'noresultmessages': NoResultMessages, 'from': From}
                     return render(request, 'tickets/noresult.html', context)
-                    '''
-       # TicsRemaining = DataJobs.GetTotalTics(owner_id) - DataJobs.GetTicketsAssigned(owner_id)
         TicsPer = DataJobs.GetTicsPer(owner_id) # after adding people
         PersonCount = DataJobs.GetPersonCount(owner_id) # after adding people
         peopleTics = DataJobs.GetPeopleTics(owner_id)
